@@ -1,0 +1,95 @@
+/* sass colors? */
+
+:root {
+    --main-color: #031136;
+    --secondary-color: #FFAC12;
+    --head-font: 'Raleway', sans-serif;
+    --second-font: 'Poppins', sans-serif;
+}
+
+
+/* above Footer Section */
+.above-footer{
+    background-color: black;
+    color:white;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.above-footer >div{
+    margin-left:12%;
+    font-size: 35px;
+    
+}
+
+.above-footer >div span{
+    color: #FFAC12;
+}
+
+
+
+
+/* Footer image */
+
+.test-flex{
+    display: flex;
+}
+.logo-socials-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-socials-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.img-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-contain img{
+    height: 50px;
+    width: 50px;
+}
+.img-contain span{
+ font-size: 25px;
+}
+
+.socials{
+    margin-left: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20%;
+}
+.socials i{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+
+
+.click-links p a:hover{
+    color: black!important;
+    background-color: white;
+    border-radius: 5px;
+    padding:2px 5px 2px 5px;
+    transition: all 0.5s ease-in-out;
+
+}
+footer {
+    background-color: var(--main-color);
+}
+
+
+
+
+

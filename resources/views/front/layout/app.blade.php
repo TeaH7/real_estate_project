@@ -15,6 +15,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 
@@ -25,13 +26,16 @@
 
 
 
+    @include('front.components.navbar')
+
+
+    @yield('content')
 
 
 
 
 
 
-    @include('front.components.section-last')
 
     @include('front.components.footer')
 

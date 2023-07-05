@@ -11,12 +11,14 @@
 .presentation-2{
     height: 500px;
     display: flex;
-   
+
 }
 .presentation-2 .div1{
 width: 25%;
 margin-left: 0;
-background-color: black;
+background: rgb(255,172,18);
+background: linear-gradient(90deg, rgba(255,172,18,1) 0%, rgba(3,17,54,1) 100%);
+
 height: 3px;
 margin-bottom: 5%;
 
@@ -36,7 +38,6 @@ margin-bottom: 5%;
     display: flex;
     justify-content: flex-end;
 }
-
 
 .second-half img{
     height: 100%;
@@ -62,7 +63,7 @@ margin-bottom: 5%;
 .above-footer >div{
     margin-left:12%;
     font-size: 35px;
-    
+
 }
 
 .above-footer >div span{
@@ -206,12 +207,7 @@ nav{
 
 
 
-
-
-
-
-
-
+/*hero Image*/
 
 #image-hero {
 
@@ -220,11 +216,102 @@ nav{
 
 }
 
+#image-hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0.6;
+    background: rgb(3,17,54);
+    background: linear-gradient(0deg, rgba(3,17,54,1) 28%, rgba(255,255,255,1) 100%);
+}
+
+
+
+
+.hero-section a{
+
+    text-decoration: none;
+       color: black;
+       font-size: 20px;
+       display: flex;
+       padding-left: 30px;
+   }
+
+   .hero-section a i{
+       color:#FFAC12;
+   }
+
+
+   .custom-pres-card{
+    --bs-card-border-width: 0rem !important;
+    --bs-card-border-radius: 0rem !important;
+}
+
+
+.custom-pres-card .custom-pres-body{
+   height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.img-pres-style{
+
+    object-fit: cover;
+
+}
+
+.img-pres-style img{
+
+    border-radius: 20px;
+    -webkit-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
+    box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
+}
+
+.section-1 a {
+    padding:15px 46px ;
+
+    border-top-right-radius: 20px;
+    background-color: #FFAC12;
+    font-weight: 600;
+    text-decoration: none;
+    color:black;
+}
+.section-1 i{
+    margin-left: 20px;
+    color: black;
+
+}
+
+.section-1 a:hover {
+    background-color: #031136;
+    color: #FFAC12;
+    transition: all 0.5s ease-in-out;
+}
+.section-1 a:hover >  i {
+    color: #FFAC12;
+    transition: all 0.5s ease-in-out;
+}
+
+.line{
+    width: 25%;
+    margin-left: auto;
+    background: rgb(255,172,18);
+background: linear-gradient(90deg, rgba(255,172,18,1) 0%, rgba(3,17,54,1) 100%);
+
+    height: 3px;
+    margin-bottom: 5%;
+    }
 
 
 
 @media only screen and (max-width: 600px) {
-
 
 
     /* Above Footer Media queries */
@@ -241,11 +328,11 @@ nav{
 
     .above-footer >div{
       margin-left: 5%;
-        
-    }
-    
 
-    
+    }
+
+
+
     .above-footer button {
         padding:15px 46px ;
         margin:0 0 10% 0;

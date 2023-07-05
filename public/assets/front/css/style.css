@@ -26,8 +26,14 @@
 
 .above-footer >div span{
     color: #FFAC12;
+
 }
 
+.above-footer button {
+    padding:15px 46px ;
+    margin-right: 20%;
+    border-top-right-radius: 20px;
+}
 
 
 

@@ -7,6 +7,47 @@
     --second-font: 'Poppins', sans-serif;
 }
 
+/* Presentation 2  */
+.presentation-2{
+    height: 500px;
+    display: flex;
+   
+}
+.presentation-2 .div1{
+width: 25%;
+margin-left: 0;
+background-color: black;
+height: 3px;
+margin-bottom: 5%;
+
+}
+.presentation-2 .half{
+    height: 70%;
+    width: 35%;
+    margin-left: 10%;
+}
+.half-btn{
+    margin-top:10%;
+}
+.second-half{
+    width: 50%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.second-half img{
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    -webkit-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
+    box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
+}
+/* End Presentation 2 */
+
 
 /* above Footer Section */
 .above-footer{
@@ -28,14 +69,30 @@
     color: #FFAC12;
 
 }
-
-.above-footer button {
+.button-style a {
     padding:15px 46px ;
-    margin-right: 20%;
+    margin-right:20%;
     border-top-right-radius: 20px;
+    background-color: #FFAC12;
+    font-weight: 600;
+    text-decoration: none;
+    color:black;
+}
+.button-style i{
+    margin-left: 20px;
+    color: black;
+
 }
 
-
+.button-style a:hover {
+    background-color: #031136;
+    color: #FFAC12;
+    transition: all 0.5s ease-in-out;
+}
+.button-style a:hover >  i {
+    color: #FFAC12;
+    transition: all 0.5s ease-in-out;
+}
 
 /* Footer image */
 
@@ -166,4 +223,35 @@ nav{
 
 
 
+@media only screen and (max-width: 600px) {
 
+
+
+    /* Above Footer Media queries */
+    .above-footer{
+        background-color: black;
+        color:white;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .above-footer >div{
+      margin-left: 5%;
+        
+    }
+    
+
+    
+    .above-footer button {
+        padding:15px 46px ;
+        margin:0 0 10% 0;
+        border-top-right-radius: 20px;
+        background-color: #FFAC12;
+        font-weight: 600;
+    }
+     /* End Above Footer Media queries */
+}

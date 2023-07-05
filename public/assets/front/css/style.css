@@ -150,12 +150,6 @@ nav{
 
 
 
-
-
-
-
-
-
 #image-hero {
 
     height: 70vh;
@@ -163,7 +157,48 @@ nav{
 
 }
 
+.hero-section a{
+
+ text-decoration: none;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    padding-left: 30px;
+}
+
+.hero-section a i{
+    color:#FFAC12;
+}
+
+
+.custom-card{
+    --bs-card-border-width: 0rem !important;
+    --bs-card-border-radius: 0rem !important;
+}
 
 
 
+.section-1 a {
+    padding:15px 46px ;
+    margin-right:20%;
+    border-top-right-radius: 20px;
+    background-color: #FFAC12;
+    font-weight: 600;
+    text-decoration: none;
+    color:black;
+}
+.section-1 i{
+    margin-left: 20px;
+    color: black;
 
+}
+
+.section-1 a:hover {
+    background-color: #031136;
+    color: #FFAC12;
+    transition: all 0.5s ease-in-out;
+}
+.section-1 a:hover >  i {
+    color: #FFAC12;
+    transition: all 0.5s ease-in-out;
+}

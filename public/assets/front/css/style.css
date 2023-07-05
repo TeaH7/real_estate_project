@@ -1,0 +1,68 @@
+
+/* header */
+
+.img-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-contain img{
+    height: 50px;
+    width: 50px;
+}
+.img-contain span{
+ font-size: 25px;
+}
+
+.top-bar {
+    background-color: #FFAC12;
+}
+
+
+nav{
+    background-color: #031136;
+}
+
+.custom-nav-homepage .active {
+    border-bottom: 2px solid #FFAC12 !important;
+    color:#FFAC12 !important;
+}
+
+
+.custom-nav-homepage li a.nav-link:hover {
+    color: #FFAC12;
+}
+
+.navbar-toggler{
+    border-color:white;
+}
+
+.navbar-toggler-icon{
+    background-image: none;
+}
+.navbar-toggler-icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+#image-hero {
+
+    height: 70vh;
+    position: relative;
+
+}
+
+
+
+
+

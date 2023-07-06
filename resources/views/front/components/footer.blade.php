@@ -15,7 +15,7 @@
                   <div class="img-contain">  
                     <img class="mb-2" src="{{ asset('assets/front/images/wheat.svg') }}" alt="Logo"
                        >
-                    <span>LOGOIPSUM</span>
+                    <span>TIG ESTATE</span>
                     </div>
                 </a>
                     <div class="mt-3 socials">
@@ -85,7 +85,7 @@
     <!-- Copyright -->
     <div class="text-center p-4 text-white" style="background-color: var(--secondary-color);">
         © <span id="year"></span> Copyright:
-        <a class="text-reset fw-bold" href="/">LOGOIPSUM</a>
+        <a class="text-reset fw-bold" href="/">TIG ESTATE</a>
     </div>
     <!-- Copyright -->
 </footer>

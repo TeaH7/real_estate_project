@@ -1,9 +1,14 @@
 @extends('front.layout.app')
 
+
+@section('title')
+    Kryefaqja
+@endsection
+
 @section('content')
     <!-- Hero Section -->
     <div id="image-hero" class="mb-5 text-center d-flex justify-content-center flex-column"
-        style=" background: url({{ asset('assets/front/images/luca-bravo-O453M2Liufs-unsplash.jpg') }}) center center/cover
+        style=" background: url({{ asset('assets/front/images/house-ge0fcf6f64_1920.jpg') }}) center center/cover
  no-repeat;">
         <div class="container z-3 mt-auto">
             <div class="text-white">

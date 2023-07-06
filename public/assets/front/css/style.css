@@ -1,10 +1,8 @@
-/* sass colors? */
+/* sass colors */
 
 :root {
     --main-color: #031136;
     --secondary-color: #FFAC12;
-    --head-font: 'Raleway', sans-serif;
-    --second-font: 'Poppins', sans-serif;
 }
 
 /* Presentation 2  */
@@ -170,7 +168,7 @@ footer {
     width: 50px;
 }
 .img-contain span{
- font-size: 25px;
+ font-size: 25px;
 }
 
 .top-bar {
@@ -189,7 +187,7 @@ nav{
 
 
 .custom-nav-homepage li a.nav-link:hover {
-    color: #FFAC12;
+    color: #FFAC12 !important;
 }
 
 .navbar-toggler{
@@ -205,13 +203,13 @@ nav{
    align-items: center;
 }
 
-
+/* End Header */
 
 /*hero Image*/
 
 #image-hero {
 
-    height: 70vh;
+    height: 80vh;
     position: relative;
 
 }
@@ -228,7 +226,6 @@ nav{
     background: rgb(3,17,54);
     background: linear-gradient(0deg, rgba(3,17,54,1) 28%, rgba(255,255,255,1) 100%);
 }
-
 
 
 
@@ -259,7 +256,9 @@ nav{
     justify-content: flex-start;
 }
 
+/*end hero section*/
 
+/* Presentation 1*/
 .img-pres-style{
 
     object-fit: cover;
@@ -308,6 +307,114 @@ background: linear-gradient(90deg, rgba(255,172,18,1) 0%, rgba(3,17,54,1) 100%);
     height: 3px;
     margin-bottom: 5%;
     }
+
+
+/* Contact page*/
+
+.image-pages {
+
+    height: 40vh;
+    position: relative;
+
+}
+
+.image-pages::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(3,17,54);
+background: linear-gradient(180deg, rgba(3,17,54,1) 6%, rgba(255,255,255,1) 100%);
+}
+
+.contact-map{
+    border: 1px solid #FFAC12 !important;
+    border-radius: 30px;
+
+}
+
+.custom-form-contact .form-control:focus {
+    border-color:#FFAC12 ;
+    box-shadow: 0 0 0 0.25rem rgba(255, 172, 18, 0.3) ;
+}
+
+
+.contact-button {
+    border-radius: 0px;
+    padding: 10px 20px;
+    font-size: large;
+    background-color: #FFAC12;
+    border: #FFAC12;
+}
+
+.contact-button:hover {
+    background-color: white;
+    border: 1px solid #FFAC12;
+    color: #FFAC12;
+}
+
+.contact-info {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.media-body h6 {
+    color: rgba(0, 0, 0, 0.9);
+    margin: 0px !important;
+}
+
+/* Contact page End*/
+
+
+/*About Us */
+
+.about-section-1{
+    background-color: #f9f9f9;
+}
+
+
+
+.img-about-us{
+    object-fit: cover;
+}
+
+.img-about-us img{
+    border-radius: 20px;
+    -webkit-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.3);
+    box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.3);
+}
+
+
+.services-about{
+    background-color:#f9f9f9;
+}
+
+.single-services {
+    border: 1px solid rgba(255, 172, 18, 0.4) ;
+    border-radius: 10px;
+    padding: 50px 0;
+}
+
+.single-services:hover {
+    box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
+    transition: all 250ms ease-in-out;
+}
+
+.service-icon {
+    font-size: 45px;
+    color: #FFAC12;
+
+}
+
+.service-body h5 {
+    font-weight: 300;
+}
+
+/* About Us End */
+
+
 
 
 

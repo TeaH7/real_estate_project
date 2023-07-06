@@ -54,7 +54,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav custom-nav-homepage">
-                    <li class="nav-item mx-3 ">
+                    <li class="nav-item mx-3 {{ request()->routeIs('home') ? 'active' : '' }}">
                         <a class="nav-link text-uppercase fs-6 fw-semibold text-white" aria-current="page"
                             href="/">Kryefaqja</a>
                     </li>
@@ -62,11 +62,11 @@
                     <li class="nav-item mx-3 ">
                         <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/about-us">Prona</a>
                     </li>
-                    <li class="nav-item mx-3 ">
+                    <li class="nav-item mx-3 {{ request()->routeIs('about-us') ? 'active' : '' }}">
                         <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/about-us">Rreth
                             Nesh</a>
                     </li>
-                    <li class="nav-item mx-3 ">
+                    <li class="nav-item mx-3 {{ request()->routeIs('contact-us') ? 'active' : '' }}">
                         <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/contact-us">Kontakt</a>
                     </li>
 

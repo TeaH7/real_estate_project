@@ -40,6 +40,38 @@
     </div>
     <!-- Hero Section End -->
 
+    <!-- Presentation Section 1 -->
+    <section class="py-md-5 py-sm-0">
+        <div class="container d-flex py-4 ">
+            <div class="row ">
+                <div class="col-12 col-md-6">
+                    <div class="img-pres-style">
+                        <img src="{{ asset('assets/front/images/WhatsApp Image 2023-07-05 at 13.56.59.jpg') }}"
+                            alt="" width="100%" height="90%">
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="mt-5 mt-md-0 pe-3">
+                        <div class="line"></div>
+                        <h1 class="display-6 text-end">You're in good hands</h1>
+                        <p class="mt-5 text-end">Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne
+                            ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre
+                            iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
+                            accusantium doloremque.</p>
+
+
+                        <div class="section-1 d-flex align-items-center justify-content-end">
+                            <a href="#">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
     {{-- Search Bar --}}

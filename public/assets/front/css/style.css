@@ -5,6 +5,10 @@
     --secondary-color: #FFAC12;
 }
 
+/* Search bar */
+
+#search{
+    border: 1px solid black;
 /* Presentation 2  */
 .presentation-2{
     height: 500px;
@@ -14,9 +18,7 @@
 .presentation-2 .div1{
 width: 25%;
 margin-left: 0;
-background: rgb(255,172,18);
-background: linear-gradient(90deg, rgba(255,172,18,1) 0%, rgba(3,17,54,1) 100%);
-
+background-color: black;
 height: 3px;
 margin-bottom: 5%;
 
@@ -37,6 +39,7 @@ margin-bottom: 5%;
     justify-content: flex-end;
 }
 
+
 .second-half img{
     height: 100%;
     width: 80%;
@@ -45,8 +48,26 @@ margin-bottom: 5%;
     -moz-box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
     box-shadow: -1px -6px 74px -21px rgba(0,0,0,0.75);
 }
-/* End Presentation 2 */
+  .grid-section .card{
+border-radius: 40px;
+height: 80%;
+  }
+  .grid-section img{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+      }
+.icon-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #000;
+    margin: 0 10px;
+  }
 
+.card-img-top{
+    object-fit: cover;
+    height: 70%;
+}
+/* Grid end */
 
 /* above Footer Section */
 .above-footer{
@@ -69,6 +90,7 @@ margin-bottom: 5%;
 
 }
 .button-style a {
+
     padding:15px 46px ;
     margin-right:20%;
     border-top-right-radius: 20px;
@@ -84,7 +106,7 @@ margin-bottom: 5%;
 }
 
 .button-style a:hover {
-    background-color: #031136;
+    background-color: #ffffff;
     color: #FFAC12;
     transition: all 0.5s ease-in-out;
 }
@@ -150,9 +172,6 @@ margin-bottom: 5%;
 footer {
     background-color: var(--main-color);
 }
-
-
-
 
 
 
@@ -421,6 +440,7 @@ background: linear-gradient(180deg, rgba(3,17,54,1) 6%, rgba(255,255,255,1) 100%
 @media only screen and (max-width: 600px) {
 
 
+
     /* Above Footer Media queries */
     .above-footer{
         background-color: black;
@@ -431,12 +451,16 @@ background: linear-gradient(180deg, rgba(3,17,54,1) 6%, rgba(255,255,255,1) 100%
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        text-align: center;
     }
 
     .above-footer >div{
       margin-left: 5%;
 
     }
+    .button-style a {
+        padding:12px 25px ;
+        margin-right:0%;
 
 
 
@@ -446,6 +470,13 @@ background: linear-gradient(180deg, rgba(3,17,54,1) 6%, rgba(255,255,255,1) 100%
         border-top-right-radius: 20px;
         background-color: #FFAC12;
         font-weight: 600;
+        text-decoration: none;
+        color:black;
     }
      /* End Above Footer Media queries */
+
 }
+
+
+
+

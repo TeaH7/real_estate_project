@@ -78,42 +78,6 @@
 
     {{-- GRID SECTION --}}
     <section class="bg-light py-3 card-section">
-        {{-- Search Bar --}}
-        {{-- <div class="container mb-5 w-100 search-bar">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card shadow border-0">
-                        <div class="card-body">
-                            <form class="d-flex align-items-center">
-                                <div class="input-group">
-
-                                    <select class="form-select form-select-lg custom-select">
-                                        <option disabled selected>Looking For</option>
-                                        <option value="sale">Blerje</option>
-                                        <option value="rent">Shitje</option>
-                                    </select>
-                                    <div class="separator"></div>
-                                    <input type="text" class="form-select form-select-lg form-input"
-                                        placeholder="Vendodhja">
-                                    <div class="separator"></div>
-                                    <input type="text" class="form-select form-select-lg form-input"
-                                        placeholder="Lloji i Pronës">
-                                    <div class="separator"></div>
-                                    <select class="form-select form-select-lg custom-select">
-                                        <option value="none">Price Range </option>
-                                        <option value="1000">0-1000</option>
-                                        <option value="10000">1000-10000</option>
-                                        <option value="50000">10000-50000</option>
-                                        <option value="100000">50000-100000</option>
-                                    </select>
-                                </div>
-                                <button class="btn btn-primary ms-3 search-button p-2 px-4" type="submit">Search</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
         <div class="container mb-4">
             <div class="card border-0 shadow">

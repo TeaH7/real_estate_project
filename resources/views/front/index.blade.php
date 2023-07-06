@@ -74,222 +74,278 @@
     </section>
 
 
-    {{-- Search Bar --}}
-    <div class="container mb-5 w-100 search-bar">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <form class="d-flex align-items-center">
-                            <div class="input-group">
 
-                                <select class="form-select form-select-lg custom-select">
-                                    <option value="none">Looking For</option>
-                                    <option value="sale">Blerje</option>
-                                    <option value="rent">Shitje</option>
-                                </select>
-                                <div class="separator"></div>
-                                <select class="form-select form-select-lg custom-select">
-                                    <option value="none">Location</option>
-                                    <option value="city1">City 1</option>
-                                    <option value="city2">City 2</option>
-                                    <option value="city3">City 3</option>
-                                    <option value="city4">City 4</option>
-                                    <option value="city5">City 5</option>
-                                </select>
-                                <div class="separator"></div>
-                                <select class="form-select form-select-lg custom-select">
-                                    <option value="none">Property type</option>
-                                    <option value="apartment">Apartment</option>
-                                    <option value="studio">Studio</option>
-                                    <option value="villa">Villa</option>
-                                </select>
-                                <div class="separator"></div>
-                                <select class="form-select form-select-lg custom-select">
-                                    <option value="none">Price Range </option>
-                                    <option value="1000">0-1000</option>
-                                    <option value="10000">1000-10000</option>
-                                    <option value="50000">10000-50000</option>
-                                    <option value="100000">50000-100000</option>
-                                </select>
-                            </div>
-                            <button class="btn btn-primary ms-3 search-button p-2 px-4" type="submit">Search</button>
-                        </form>
+
+    {{-- GRID SECTION --}}
+    <section class="bg-light py-3 card-section">
+        {{-- Search Bar --}}
+        {{-- <div class="container mb-5 w-100 search-bar">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <form class="d-flex align-items-center">
+                                <div class="input-group">
+
+                                    <select class="form-select form-select-lg custom-select">
+                                        <option disabled selected>Looking For</option>
+                                        <option value="sale">Blerje</option>
+                                        <option value="rent">Shitje</option>
+                                    </select>
+                                    <div class="separator"></div>
+                                    <input type="text" class="form-select form-select-lg form-input"
+                                        placeholder="Vendodhja">
+                                    <div class="separator"></div>
+                                    <input type="text" class="form-select form-select-lg form-input"
+                                        placeholder="Lloji i Pronës">
+                                    <div class="separator"></div>
+                                    <select class="form-select form-select-lg custom-select">
+                                        <option value="none">Price Range </option>
+                                        <option value="1000">0-1000</option>
+                                        <option value="10000">1000-10000</option>
+                                        <option value="50000">10000-50000</option>
+                                        <option value="100000">50000-100000</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary ms-3 search-button p-2 px-4" type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div> --}}
+
+        <div class="container mb-4">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <form>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <select name="" id="" class="form-select py-2">
+                                <option disabled selected class="text-gray">Looking for</option>
+                                <option value="rent">Rent</option>
+                                <option value="buy">Buy</option>
+                            </select>
+                            <input type="text" placeholder="Property Type" class="form-control py-2">
+                            <input type="text" placeholder="Location" class="form-control py-2">
+                            <select name="" id="" class="form-select py-2">
+                                <option disabled selected class="text-gray">Price Range</option>
+                                <option value="10000">0-10000</option>
+                                <option value="50000">10000-50000</option>
+                                <option value="100000">50000-100000</option>
+                            </select>
+                            <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-    {{-- End search bar --}}
 
-    {{-- GRID SECTION --}}
-    <section class="grid-section">
+        {{-- End search bar --}}
         <div class="container mx-auto">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card w-75 pb-5">
-                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}" class="card-img-top h-sm-50"
-                            alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold p-3">Property Name</h5>
-
-                            <div class="separate"></div>
-                            <div
-                                class="card-icons d-flex justify-content-between align-items-center m-0 p-0 pb-sm-4 pb-md-4 pb-lg-5 pb-xl-0">
-                                <div class="icon">
-                                    <i class="bi bi-door-open"></i>
-                                    <span>3</span>
+            <div class="row my-2">
+                <div class="col-12">
+                    <h2 class="h2 fw-bold text-uppercase text-center">Më Të Fundit</h2>
+                </div>
+            </div>
+            <div class="row mb-3 g-3">
+                <div class="col-12 col-md-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card rounded border-0 shadow">
+                            <div class="card-body p-2">
+                                <div class="position-relative">
+                                    <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        class="card-img-top rounded" alt="Property Image">
+                                    <span
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>2</span>
-                                </div>
-                                <div class="icon">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>2</span>
+                                <div class="my-3">
+                                    <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum dolor sit.
+                                    </h3>
+                                    <p class="my-2 text-dark ms-2">
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color ">
+                                            <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                        </div>
+                                    </div>
+                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card w-75 pb-5">
-                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}" class="card-img-top h-sm-50"
-                            alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold p-3">Property Name</h5>
-
-                            <div class="separate"></div>
-                            <div
-                                class="card-icons d-flex justify-content-between align-items-center m-0 p-0 pb-sm-4 pb-md-4 pb-lg-5 pb-xl-0">
-                                <div class="icon">
-                                    <i class="bi bi-door-open"></i>
-                                    <span>3</span>
+                <div class="col-12 col-md-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card rounded border-0 shadow">
+                            <div class="card-body p-2">
+                                <div class="position-relative">
+                                    <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        class="card-img-top rounded" alt="Property Image">
+                                    <span
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>2</span>
-                                </div>
-                                <div class="icon">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>2</span>
+                                <div class="my-3">
+                                    <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum dolor sit.
+                                    </h3>
+                                    <p class="my-2 text-dark ms-2">
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color ">
+                                            <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                        </div>
+                                    </div>
+                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card w-75 pb-5">
-                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}" class="card-img-top h-sm-50"
-                            alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold p-3">Property Name</h5>
-
-                            <div class="separate"></div>
-                            <div
-                                class="card-icons d-flex justify-content-between align-items-center m-0 p-0 pb-sm-4 pb-md-4 pb-lg-5 pb-xl-0">
-                                <div class="icon">
-                                    <i class="bi bi-door-open"></i>
-                                    <span>3</span>
+                <div class="col-12 col-md-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card rounded border-0 shadow">
+                            <div class="card-body p-2">
+                                <div class="position-relative">
+                                    <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        class="card-img-top rounded" alt="Property Image">
+                                    <span
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>2</span>
-                                </div>
-                                <div class="icon">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>2</span>
+                                <div class="my-3">
+                                    <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum dolor sit.
+                                    </h3>
+                                    <p class="my-2 text-dark ms-2">
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color ">
+                                            <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                        </div>
+                                    </div>
+                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col d-flex justify-content-center">
-                    <div class="card w-75 pb-5">
-                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}" class="card-img-top h-sm-50"
-                            alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold p-3">Property Name</h5>
-
-                            <div class="separate"></div>
-                            <div
-                                class="card-icons d-flex justify-content-between align-items-center m-0 p-0 pb-sm-4 pb-md-4 pb-lg-5 pb-xl-0">
-                                <div class="icon">
-                                    <i class="bi bi-door-open"></i>
-                                    <span>3</span>
+                <div class="col-12 col-md-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card rounded border-0 shadow">
+                            <div class="card-body p-2">
+                                <div class="position-relative">
+                                    <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        class="card-img-top rounded" alt="Property Image">
+                                    <span
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>2</span>
-                                </div>
-                                <div class="icon">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>2</span>
+                                <div class="my-3">
+                                    <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum dolor sit.
+                                    </h3>
+                                    <p class="my-2 text-dark ms-2">
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color ">
+                                            <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                        </div>
+                                    </div>
+                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card w-75 pb-5">
-                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}" class="card-img-top h-sm-50"
-                            alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold p-3">Property Name</h5>
-
-                            <div class="separate"></div>
-                            <div
-                                class="card-icons d-flex justify-content-between align-items-center m-0 p-0 pb-sm-4 pb-md-4 pb-lg-5 pb-xl-0">
-                                <div class="icon">
-                                    <i class="bi bi-door-open"></i>
-                                    <span>3</span>
+                <div class="col-12 col-md-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card rounded border-0 shadow">
+                            <div class="card-body p-2">
+                                <div class="position-relative">
+                                    <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        class="card-img-top rounded" alt="Property Image">
+                                    <span
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>2</span>
-                                </div>
-                                <div class="icon">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>2</span>
+                                <div class="my-3">
+                                    <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum dolor sit.
+                                    </h3>
+                                    <p class="my-2 text-dark ms-2">
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color ">
+                                            <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                        </div>
+                                    </div>
+                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-
-                <div class="col d-flex justify-content-center">
-                    <div class="card w-75 pb-5">
-                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}" class="card-img-top h-sm-50"
-                            alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold p-3">Property Name</h5>
-
-                            <div class="separate"></div>
-                            <div
-                                class="card-icons d-flex justify-content-between align-items-center m-0 p-0 pb-sm-4 pb-md-4 pb-lg-5 pb-xl-0">
-                                <div class="icon">
-                                    <i class="bi bi-door-open"></i>
-                                    <span>3</span>
+                <div class="col-12 col-md-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card rounded border-0 shadow">
+                            <div class="card-body p-2">
+                                <div class="position-relative">
+                                    <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        class="card-img-top rounded" alt="Property Image">
+                                    <span
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>2</span>
-                                </div>
-                                <div class="icon">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>2</span>
+                                <div class="my-3">
+                                    <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum dolor sit.
+                                    </h3>
+                                    <p class="my-2 text-dark ms-2">
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color ">
+                                            <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                        </div>
+                                        <div class="badge px-2 py-1 bg-second-color">
+                                            <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                        </div>
+                                    </div>
+                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-
 
             </div>
         </div>

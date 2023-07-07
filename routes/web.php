@@ -15,3 +15,7 @@ Route::get('/about-us', function () {
 Route::get('/contact-us', function () {
     return view('front.contact');
 })->name('contact-us');
+
+Route::get('/prone', function () {
+    return view('front.property-page');
+})->name('single-property');

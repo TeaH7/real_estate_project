@@ -60,7 +60,7 @@
                     </li>
 
                     <li class="nav-item mx-3 ">
-                        <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/about-us">Prona</a>
+                        <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="">Prona</a>
                     </li>
                     <li class="nav-item mx-3 {{ request()->routeIs('about-us') ? 'active' : '' }}">
                         <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/about-us">Rreth

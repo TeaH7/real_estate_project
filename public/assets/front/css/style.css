@@ -397,6 +397,20 @@ nav {
 
 /* About Us End */
 
+/* Single PAge*/
+
+.carousel-col {
+    width: 65% !important;
+}
+
+.agent-icons {
+    font-size: 25px;
+}
+
+.agent-href {
+    color: #ffac12;
+}
+
 @media only screen and (max-width: 600px) {
     /* Above Footer Media queries */
     .above-footer {

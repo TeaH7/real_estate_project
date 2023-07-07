@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="{{ asset('assets/front/css/presentation2.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,400;1,100;1,600&family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
     <title>
         @yield('title')
     </title>

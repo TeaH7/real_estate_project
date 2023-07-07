@@ -15,7 +15,7 @@
                 <h1 class="display-5 text-start"> Mirësevini në TIG Estate</h1>
                 <div class="row">
                     <div class="col-6">
-                        <p class="mt-4 text-start"> Lorem Ipsum is simply dummy text of the printing and typesetting
+                        <p class="mt-4 text-start text-white bg-shade"> Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem
                             Ipsum has
                             been the
@@ -31,7 +31,7 @@
         <div class="container display-flex justify-content-center align-items-end mt-auto hero-section">
             <div class="card w-75 custom-pres-card mx-auto">
                 <div class="card-body custom-pres-body">
-                    <a href="">ShIKO TE GJITHA PRONAT <span><i class="bi bi-arrow-right ms-2"></i></span></a>
+                    <a href="/all-listings">SHIKO TE GJITHA PRONAT <span><i class="bi bi-arrow-right ms-2"></i></span></a>
 
                 </div>
             </div>
@@ -54,15 +54,19 @@
                 <div class="col-12 col-md-6">
                     <div class="mt-5 mt-md-0 pe-3">
                         <div class="line"></div>
-                        <h1 class="display-6 text-end">You're in good hands</h1>
-                        <p class="mt-5 text-end">Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne
-                            ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre
-                            iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
-                            accusantium doloremque.</p>
+                        <h1 class="display-6 text-end">Jeni ne duar te sigurta</h1>
+                        <p class="mt-5 text-end"> Ne TIG ESTATE ,ne ri-definojmë mënyrën se si eksploroni, blini dhe shisni pronat. 
+                            Platforma jonë e avancuar për pasuritë e patundshme ofron një përvojë përdoruesi të qëndrueshme, 
+                            duke ju fuqizuar me listat e pasurive të plota, informacion të saktë mbi 
+                            tregun dhe udhëzime ekspertesh. Pavarësisht nëse jeni një investitor i përvojshëm ose një blerës i parë këmbë, TIG Estate ofron një udhëtim të personalizuar, duke ju lidhur me pronën e ëndrrave tuaja.
+                            <br> Zbuloni një botë të mundësive me platformën tonë inovative, 
+                                e mbështetur nga angazhimi ynë për transparencë, ndershmëri dhe 
+                                shërbim të shkëlqyer. Përjetoni shkëlqimin e pasurive të patundshme me 
+                                TIG Estate sot.</p>
 
 
                         <div class="section-1 d-flex align-items-center justify-content-end">
-                            <a href="#">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
+                            <a href="/all-listings">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
 
                         </div>
                     </div>
@@ -76,7 +80,7 @@
 
 
 
-    {{-- GRID SECTION --}}
+    {{-- Search SECTION --}}
     <section class="bg-light py-3 card-section">
 
         <div class="container mb-4">
@@ -103,10 +107,12 @@
                 </div>
             </div>
         </div>
-
+  
         {{-- End search bar --}}
-        <div class="container mx-auto">
-            <div class="row my-2">
+        {{-- GRID CARDS --}}
+     
+        <div class="container mx-auto card-padding " >
+            <div class="row my-2 ">
                 <div class="col-12">
                     <h2 class="h2 fw-bold text-uppercase text-center">Më Të Fundit</h2>
                 </div>
@@ -322,18 +328,14 @@
 
         <div class="present2-half">
             <div class="div1"></div>
-            <h2>You're in good hands</h2>
-            <div id="good-hands">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nisi libero nesciunt nam
-                voluptate eos fugiat ipsa voluptas, voluptatibus, enim assumenda accusamus voluptatum similique beatae nemo!
-                Accusamus eaque eligendi in debitis facilis beatae ipsam saepe quia doloribus, eius quam similique quibusdam
-                fuga laborum sint qui corrupti? Sed similique, dolore laudantium voluptates deserunt asperiores dignissimos
-                sit, consequatur minus, veniam earum? Soluta quas illum iste, laudantium nobis ad, aspernatur officia
-                consequatur illo molestiae quae aliquid ab maiores? Ad, accusantium unde doloremque inventore quas eum,
-                consequatur architecto non
-                .
+            <h2>Avantazhe të pabarazueshme për shitësit & bleresit e pronave.</h2>
+            <div id="good-hands">
+                <p>
+                TIG Estate është destinacioni juaj përfundimtar si për blerësit ashtu edhe për shitësit e pronave. Platforma jonë inovative bashkon pa probleme blerësit dhe shitësit, duke krijuar një treg dinamik të mundësive të pasurive të paluajtshme. Si blerës, ju mund të eksploroni një gamë të gjerë pronash, të aksesoni informacione të detajuara dhe të merrni udhëzime të ekspertëve për të gjetur shtëpinë ose investimin tuaj të ëndrrave.
+           <br> Zbuloni mundësitë dhe zhbllokoni qëllimet tuaja të pasurive të paluajtshme me TIG Estate sot.</p>
             </div>
             <div class="button-style half-btn">
-                <a href="#">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="/all-listings">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
         </div>
         <div class="present2-second-half">

@@ -3,6 +3,22 @@
 :root {
     --main-color: #031136;
     --secondary-color: #ffac12;
+    --head-font: 'Poppins', sans-serif;
+    --second-font: 'Kanit', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--head-font);
+}
+p{
+    color: gray;
+    font-family: 'Kanit', sans-serif;
+}
+.bg-shade{
+    padding:2px 2px 2px 4px;
+    border-radius: 5px;
+    background-color: rgba(46, 43, 43, 0.144);
+    -webkit-box-shadow: 0px 0px 50px 22px rgba(255,255,255,0.38); 
+    box-shadow: 0px 0px 50px 22px rgba(108, 104, 104, 0.38);
 }
 
 /* Utilities Classes */
@@ -53,6 +69,11 @@
     appearance: none;
 }
 
+
+/* Card Section */
+.card-padding{
+    padding-bottom: 12%;
+}
 /* above Footer Section */
 .above-footer {
     background-color: black;
@@ -119,9 +140,7 @@
     height: 50px;
     width: 50px;
 }
-.img-contain span {
-    font-size: 25px;
-}
+
 
 .socials {
     margin-left: 2%;
@@ -155,6 +174,7 @@ footer {
 .img-contain {
     display: flex;
     align-items: center;
+  
     justify-content: center;
 }
 .img-contain img {
@@ -162,7 +182,7 @@ footer {
     width: 50px;
 }
 .img-contain span {
-    font-size: 25px;
+    font-size: 40px;
 }
 
 .top-bar {
@@ -396,7 +416,13 @@ nav {
 }
 
 /* About Us End */
-
+/* ALl listings */
+.pagination-div{
+    display: flex;
+    justify-content: center;
+    margin-top:25px;
+}
+/* End - all listings */
 @media only screen and (max-width: 600px) {
     /* Above Footer Media queries */
     .above-footer {

@@ -39,11 +39,11 @@
     </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="/">
                 <div class="img-contain">
                     <img class="mb-2" src="{{ asset('assets/front/images/wheat-svgrepo-com.svg') }}" alt="Logo"
                         width="250px">
-                    <span class="text-white">TIG ESTATE</span>
+                    <span class="text-white logo-name">TIG ESTATE</span>
 
                 </div>
             </a>
@@ -59,8 +59,8 @@
                             href="/">Kryefaqja</a>
                     </li>
 
-                    <li class="nav-item mx-3 ">
-                        <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/about-us">Prona</a>
+                    <li class="nav-item mx-3 {{ request()->routeIs('all-listings') ? 'active' : '' }}">
+                        <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/all-listings">Prona</a>
                     </li>
                     <li class="nav-item mx-3 {{ request()->routeIs('about-us') ? 'active' : '' }}">
                         <a class="nav-link text-uppercase fs-6 fw-semibold text-white" href="/about-us">Rreth

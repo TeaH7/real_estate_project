@@ -14,7 +14,7 @@
                         <a href="#">
                             <div class="img-contain">
                                 <img class="mb-2" src="{{ asset('assets/front/images/wheat.svg') }}" alt="Logo">
-                                <span>LOGOIPSUM</span>
+                                <span>TIG ESTATE</span>
                             </div>
                         </a>
                         <div class="mt-3 socials">
@@ -56,7 +56,7 @@
                         <a href="#" class="text-reset">Ne Shitje </a>
                     </p>
                     <p>
-                        <a href="#" class="text-reset">Të Gjitha</a>
+                        <a href="{{route('all-listings')}}" class="text-reset">Të Gjitha</a>
                     </p>
                 </div>
                 <!-- Grid column -->

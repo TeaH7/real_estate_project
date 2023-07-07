@@ -15,3 +15,10 @@ Route::get('/about-us', function () {
 Route::get('/contact-us', function () {
     return view('front.contact');
 })->name('contact-us');
+
+Route::get('/all-listings',function(){
+    return view('front.all-listings');
+})->name('all-listings');
+Route::get('/search',function(){
+    return view('front.search-page');
+})->name('search-listings');

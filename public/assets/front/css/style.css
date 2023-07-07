@@ -3,21 +3,26 @@
 :root {
     --main-color: #031136;
     --secondary-color: #ffac12;
-    --head-font: 'Poppins', sans-serif;
-    --second-font: 'Kanit', sans-serif;
+    --head-font: "Poppins", sans-serif;
+    --second-font: "Kanit", sans-serif;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--head-font);
 }
-p{
+p {
     color: gray;
-    font-family: 'Kanit', sans-serif;
+    font-family: "Kanit", sans-serif;
 }
-.bg-shade{
-    padding:2px 2px 2px 4px;
+.bg-shade {
+    padding: 2px 2px 2px 4px;
     border-radius: 5px;
     background-color: rgba(46, 43, 43, 0.144);
-    -webkit-box-shadow: 0px 0px 50px 22px rgba(255,255,255,0.38); 
+    -webkit-box-shadow: 0px 0px 50px 22px rgba(255, 255, 255, 0.38);
     box-shadow: 0px 0px 50px 22px rgba(108, 104, 104, 0.38);
 }
 
@@ -69,9 +74,8 @@ p{
     appearance: none;
 }
 
-
 /* Card Section */
-.card-padding{
+.card-padding {
     padding-bottom: 12%;
 }
 /* above Footer Section */
@@ -141,7 +145,6 @@ p{
     width: 50px;
 }
 
-
 .socials {
     margin-left: 2%;
     width: 100%;
@@ -174,7 +177,7 @@ footer {
 .img-contain {
     display: flex;
     align-items: center;
-  
+
     justify-content: center;
 }
 .img-contain img {
@@ -316,6 +319,20 @@ nav {
     height: 3px;
     margin-bottom: 5%;
 }
+/* search */
+
+.search-button {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+}
+.search-button:hover {
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    color: var(--main-color);
+}
+/* end search*/
 
 /* Contact page*/
 
@@ -423,6 +440,17 @@ nav {
     width: 65% !important;
 }
 
+.agent-card {
+    border-radius: 30px;
+}
+
+.agent-card img {
+    border-radius: 50px;
+}
+.agent-card i {
+    color: #ffac12;
+}
+
 .agent-icons {
     font-size: 25px;
 }
@@ -431,12 +459,35 @@ nav {
     color: #ffac12;
 }
 
+.location-style {
+    font-size: 14px;
+}
+.custom-carousel {
+    border-radius: 30px;
+}
+
+.icons-styles ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.icons-styles ul li {
+    font-size: 17px;
+    color: #697488;
+}
+
+.icons-styles i {
+    color: #5eb861;
+    font-size: 18px;
+}
+
 /* ALl listings */
-.pagination-div{
+.pagination-div {
     display: flex;
     justify-content: center;
-    margin-top:25px;
+    margin-top: 25px;
 }
+
 /* End - all listings */
 @media only screen and (max-width: 600px) {
     /* Above Footer Media queries */

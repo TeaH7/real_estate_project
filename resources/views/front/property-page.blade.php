@@ -4,39 +4,36 @@
 @endsection
 
 @section('content')
-    <section class="single-page-title py-2 mb-3" style="background-color: #031136 ; margin-top: 2px;">
+    <section class="single-page-title py-2" style="background-color: #031136 ; margin-top: 2px;">
         <div class="container head-single-page">
             <div class="row">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <div class="col-6">
+                        <div class="col-12">
                             <h2 class="text-white">Titulli</h2>
 
                         </div>
-                        <div class="col-6">
-                            <span class="text-white"><i class="bi bi-geo-alt"></i>Shqiperi</span>
+                        <div class="col-12">
+                            <span class="text-white location-style"><i class="bi bi-geo-alt me-1"></i>Shqiperi</span>
                         </div>
                     </div>
 
                     <div>
-                        <div class="col-6">
-                            <h2 class="text-white">Cmimi</h2>
+                        <div class="col-12">
+                            <h2 class="text-white">450$</h2>
 
                         </div>
-                        <div class="col-6">
-                            <p class="text-white">Rent</p>
+                        <div class="col-12">
+                            <p class="text-end m-0 badge" style="background-color: #ffac12; color:#031136">Rent
+                            </p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
     </section>
 
-    <section>
+    <section class="bg-light pt-3">
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-between">
@@ -45,7 +42,7 @@
                             <div class="col-12">
                                 <div>
                                     <div id="carouselExampleIndicators" class="carousel slide">
-                                        <div class="carousel-indicators">
+                                        <div class="carousel-indicators ">
                                             <button type="button" data-bs-target="#carouselExampleIndicators"
                                                 data-bs-slide-to="0" class="active" aria-current="true"
                                                 aria-label="Slide 1"></button>
@@ -61,7 +58,7 @@
                                                 data-bs-slide-to="3" aria-label="Slide 4"></button>
 
                                         </div>
-                                        <div class="carousel-inner">
+                                        <div class="carousel-inner custom-carousel">
                                             <div class="carousel-item active">
                                                 <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
                                                     class="d-block w-100" alt="...">
@@ -101,7 +98,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row icons-styles">
+                        <div class="row bg-white mt-3" style="border-radius: 30px">
                             <div class="col-12">
                                 <h3 class="mt-4 mb-4">Përshkrimi</h3>
                                 <p class="mb-5" style="color: #697488;">Lorem ipsum dolor sit amet consectetur,
@@ -130,26 +127,28 @@
                                     deserunt ratione. Dicta, quo?</p>
                             </div>
 
-                            <div class="col-12 icons-styles">
+                            <div class="col-12 ">
                                 <h5 class="mb-4">Detaje</h5>
 
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-3 icons-styles">
                                         <ul>
 
-                                            <li>Banjo</li>
-                                            <li>Dhoma</li>
-                                            <li>Dhoma</li>
-                                            <li>Dhoma</li>
+                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+
+                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
                                         </ul>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-3 icons-styles">
                                         <ul>
 
-                                            <li>Banjo</li>
-                                            <li>Dhoma</li>
-                                            <li>Dhoma</li>
-                                            <li>Dhoma</li>
+                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+
+                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
 
 
                                         </ul>
@@ -161,62 +160,61 @@
 
                     </div>
                     <div class="col-6 col-lg-4">
-
-                        <form action="">
-                            <div class="card">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-center">
-                                            <div class="mt-2"><img src="{{ asset('assets/front/images/dude.jpeg') }}"
-                                                    alt="" width="100px" height="100px"></div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-center mt-2">
-                                            <h6>Emer Mbiemer</h6>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-center">
-                                            <div>
-                                                <a href="" class="text-decoration-none agent-href me-2"><i
-                                                        class="fa-brands fa-facebook agent-icons"></i></a>
-                                            </div>
-                                            <div>
-                                                <a href=""class="text-decoration-none agent-href"><i
-                                                        class="fa-brands fa-instagram agent-icons"></i></i></a>
-                                            </div>
-
-
-                                        </div>
+                        <div class="card agent-card py-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="mt-2"><img src="{{ asset('assets/front/images/dude.jpeg') }}"
+                                                alt="" width="100px" height="100px"></div>
                                     </div>
 
-
-                                    <div class="col-12 d-flex justify-content-center mt-3">
-
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <h6>Emer Mbiemer</h6>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center">
                                         <div>
-                                            <h6>Kontakto Agjent</h6>
+                                            <a href="" class="text-decoration-none agent-href me-2"><i
+                                                    class="fa-brands fa-facebook agent-icons"></i></a>
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="text-center mt-3">
-                                            <div>
-                                                <p class="mb-1"> <i class="fa-regular fa-phone"></i> +355 68 06 635</p>
-                                            </div>
-                                            <div>
-                                                <p> <i class="fa-regular fa-envelope"></i> xhimi.neutro@property.al</p>
-                                            </div>
-
-
+                                        <div>
+                                            <a href=""class="text-decoration-none agent-href"><i
+                                                    class="fa-brands fa-instagram agent-icons"></i></i></a>
                                         </div>
+
+
                                     </div>
-
-
                                 </div>
 
 
-                                {{-- <div class="row">
+                                <div class="col-12 d-flex justify-content-center mt-3">
+
+                                    <div>
+                                        <h6>Kontakto Agjent</h6>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="text-center mt-3">
+                                        <div>
+                                            <p class="mb-1"><i class="fa-solid fa-phone"></i> +355 68 06 635
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p> <i class="fa-regular fa-envelope"></i> xhimi.neutro@property.al</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            {{-- <div class="row">
                                     <div class="col-12">
                                         <div class="mb-3">
                                             <label class="form-label">Your Name</label>
@@ -244,10 +242,10 @@
                                         <button type="submit" class="btn btn-primary w-100">Dergo</button>
                                     </div>
                                 </div> --}}
-                            </div>
+                        </div>
 
                     </div>
-                    </form>
+
                 </div>
             </div>
 
@@ -256,7 +254,7 @@
     </section>
 
 
-    <section class="pt-4">
+    <section class="pt-4 bg-light">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12">
@@ -266,7 +264,7 @@
                         <div class="row my-2">
 
                         </div>
-                        <div class="row mb-3 g-3">
+                        {{-- <div class="row mb-3 g-3">
                             <div class="col-12 col-md-4">
                                 <a href="#" class="text-decoration-none">
                                     <div class="card rounded border-0 shadow">
@@ -375,6 +373,211 @@
 
 
 
+                        </div> --}}
+                        <div class="row">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+
+                                    <div class="swiper-slide">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card rounded border-0 shadow">
+                                                <div class="card-body p-2">
+                                                    <div class="position-relative">
+                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                            class="card-img-top rounded" alt="Property Image">
+                                                        <span
+                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                    </div>
+                                                    <div class="my-3">
+                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                            Lorem ipsum
+                                                            dolor sit.
+                                                        </h3>
+                                                        <p class="my-2 text-dark ms-2">
+                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                                        </p>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color ">
+                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card rounded border-0 shadow">
+                                                <div class="card-body p-2">
+                                                    <div class="position-relative">
+                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                            class="card-img-top rounded" alt="Property Image">
+                                                        <span
+                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                    </div>
+                                                    <div class="my-3">
+                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                            Lorem ipsum
+                                                            dolor sit.
+                                                        </h3>
+                                                        <p class="my-2 text-dark ms-2">
+                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                                        </p>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color ">
+                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card rounded border-0 shadow">
+                                                <div class="card-body p-2">
+                                                    <div class="position-relative">
+                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                            class="card-img-top rounded" alt="Property Image">
+                                                        <span
+                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                    </div>
+                                                    <div class="my-3">
+                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                            Lorem ipsum
+                                                            dolor sit.
+                                                        </h3>
+                                                        <p class="my-2 text-dark ms-2">
+                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                                        </p>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color ">
+                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card rounded border-0 shadow">
+                                                <div class="card-body p-2">
+                                                    <div class="position-relative">
+                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                            class="card-img-top rounded" alt="Property Image">
+                                                        <span
+                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                    </div>
+                                                    <div class="my-3">
+                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                            Lorem ipsum
+                                                            dolor sit.
+                                                        </h3>
+                                                        <p class="my-2 text-dark ms-2">
+                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                                        </p>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color ">
+                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card rounded border-0 shadow">
+                                                <div class="card-body p-2">
+                                                    <div class="position-relative">
+                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                            class="card-img-top rounded" alt="Property Image">
+                                                        <span
+                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                    </div>
+                                                    <div class="my-3">
+                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                            Lorem ipsum
+                                                            dolor sit.
+                                                        </h3>
+                                                        <p class="my-2 text-dark ms-2">
+                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
+                                                        </p>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color ">
+                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
+                                                            </div>
+                                                            <div class="badge px-2 py-1 bg-second-color">
+                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

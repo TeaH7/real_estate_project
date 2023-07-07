@@ -16,6 +16,10 @@ Route::get('/contact-us', function () {
     return view('front.contact');
 })->name('contact-us');
 
+Route::get('/prone', function () {
+    return view('front.property-page');
+})->name('single-property');
+
 Route::get('/all-listings',function(){
     return view('front.all-listings');
 })->name('all-listings');

@@ -416,6 +416,21 @@ nav {
 }
 
 /* About Us End */
+
+/* Single PAge*/
+
+.carousel-col {
+    width: 65% !important;
+}
+
+.agent-icons {
+    font-size: 25px;
+}
+
+.agent-href {
+    color: #ffac12;
+}
+
 /* ALl listings */
 .pagination-div{
     display: flex;

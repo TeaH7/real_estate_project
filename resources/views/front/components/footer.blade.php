@@ -32,10 +32,10 @@
                     <h6 class="text-uppercase fw-bold mb-4">
                         Kompania
                     </h6>
-                    <p>
+                    <p class="text-white">
                         <a href="#" class="text-reset">Rreth Nesh</a>
                     </p>
-                    <p>
+                    <p class="text-white">
                         <a href="#" class="text-reset">Kontakt</a>
                     </p>
 
@@ -49,13 +49,13 @@
                         Prona
                     </h6>
 
-                    <p>
+                    <p class="text-white">
                         <a href="#" class="text-reset">Me Qera</a>
                     </p>
-                    <p>
+                    <p class="text-white">
                         <a href="#" class="text-reset">Ne Shitje </a>
                     </p>
-                    <p>
+                    <p class="text-white">
                         <a href="{{route('all-listings')}}" class="text-reset">Të Gjitha</a>
                     </p>
                 </div>
@@ -65,15 +65,15 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Na Kontaktoni</h6>
-                    <p>
+                    <p class="text-white">
                         <i class="bi bi-geo-alt me-1"></i>
                         Rruga Don Bosko, Tiranë, Shqipëri
                     </p>
-                    <p>
+                    <p class="text-white">
                         <i class="bi bi-envelope me-1"></i>
                         property@real-estate.com
                     </p>
-                    <p><i class="bi bi-phone me-1"></i> +355 68 XX 58 XXX</p>
+                    <p class="text-white"><i class="bi bi-phone me-1"></i> +355 68 XX 58 XXX</p>
 
                 </div>
                 <!-- Grid column -->

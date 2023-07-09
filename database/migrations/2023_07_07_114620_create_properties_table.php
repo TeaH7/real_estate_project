@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('img2');
             $table->string('img3');
             $table->string('img4');
+            $table->string('slug');
             $table->integer('nr_of_beds');
             $table->integer('nr_of_baths');
             $table->double('price');

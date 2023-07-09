@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PropertyController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +31,12 @@ Route::get('/search', function () {
 
 
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.adminIndex');
+    })->name('admin');
+
+    Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
 });
 
 Auth::routes();

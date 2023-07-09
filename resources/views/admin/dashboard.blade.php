@@ -74,74 +74,68 @@
 
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
-                    <li class="menu-item">
-                        <a href="" class="menu-link">
+                    <li class="menu-item {{ request()->routeIs('admin') ? 'active' : '' }}">
+                        <a href="{{ route('admin') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
-
                     <!-- Layouts -->
                     <li class="menu-item ">
                         <a href="javascript:void(0);" class="menu-link menu-toggle ">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
-                            <div data-i18n="Tours">Tours</div>
+                            <div data-i18n="Properties">Properties</div>
                         </a>
-
                         <ul class="menu-sub">
                             <li class="menu-item">
-                                <a href="" class="menu-link">
-                                    <div data-i18n="Without menu">All Tours</div>
+                                <a href="{{ route('properties.index') }}" class="menu-link">
+                                    <div data-i18n="Without menu">All Properties</div>
                                 </a>
                             </li>
                             <li class="menu-item">
                                 <a href="" class="menu-link">
-                                    <div data-i18n="Without navbar">Create Tour</div>
+                                    <div data-i18n="Without navbar">Create Property</div>
                                 </a>
                             </li>
-
-
-
                         </ul>
                     </li>
                     <li class="menu-item ">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle ">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
-                            <div data-i18n="Reservations">Reservations</div>
+                            <div data-i18n="Properties">Agents</div>
                         </a>
-
                         <ul class="menu-sub">
                             <li class="menu-item">
-                                <a href="" class="menu-link">
-                                    <div data-i18n="Without menu">All Reservations</div>
+                                <a href="{{ route('properties.index') }}" class="menu-link">
+                                    <div data-i18n="Without menu">All Agents</div>
                                 </a>
                             </li>
-
-
+                            <li class="menu-item">
+                                <a href="" class="menu-link">
+                                    <div data-i18n="Without navbar">Create Agent</div>
+                                </a>
+                            </li>
                         </ul>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="javascript:void(0);" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-layout"></i>
+                            <div data-i18n="Properties">Waiting For Aproval</div>
+                        </a>
                     </li>
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Contacts">Contacts</div>
                         </a>
-
                         <ul class="menu-sub">
                             <li class="menu-item">
                                 <a href="" class="menu-link">
                                     <div data-i18n="Without menu">All Contacts</div>
                                 </a>
                             </li>
-
-
-
                         </ul>
                     </li>
-
-
-
-
-
                 </ul>
             </aside>
             <!-- / Menu -->
@@ -159,23 +153,18 @@
                     </div>
 
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
-
-
                             <!-- User -->
                             <li>
-
                                 <a class="btn btn-danger" href=""
                                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
-
-                                <form id="logout-form" action="" method="POST" class="d-none">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    class="d-none">
                                     @csrf
                                 </form>
-
                             </li>
                             <!--/ User -->
                         </ul>
@@ -200,11 +189,6 @@
                 @yield('admin_content')
 
                 <!-- / Navbar -->
-
-
-
-
-
                 <div class="content-backdrop fade"></div>
             </div>
             <!-- Content wrapper -->

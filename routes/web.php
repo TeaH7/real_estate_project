@@ -1,11 +1,8 @@
 <?php
 
-<<<<<<< Updated upstream
-=======
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\AgentController;
 use Illuminate\Support\Facades\Auth;
->>>>>>> Stashed changes
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,10 +28,8 @@ Route::get('/all-listings', function () {
 })->name('all-listings');
 Route::get('/search', function () {
     return view('front.search-page');
-<<<<<<< Updated upstream
 })->name('search-listings');
-=======
-})->name('search-listings');
+
 
 
 
@@ -56,7 +51,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 Auth::routes(['register' => false]);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> Stashed changes
 
 
 

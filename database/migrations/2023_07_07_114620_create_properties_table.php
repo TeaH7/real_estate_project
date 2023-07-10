@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('location');
             $table->string('area');
             $table->string('cover_image');
-            $table->string('img1');
-            $table->string('img2');
-            $table->string('img3');
-            $table->string('img4');
+            $table->string('img1')->nullable();
+            $table->string('img2')->nullable();
+            $table->string('img3')->nullable();
+            $table->string('img4')->nullable();
             $table->string('slug');
             $table->integer('nr_of_beds');
             $table->integer('nr_of_baths');

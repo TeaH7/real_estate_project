@@ -82,22 +82,11 @@
                     </li>
                     <!-- Layouts -->
                     <li class="menu-item ">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle ">
+                        <a href="{{ route('properties.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Properties">Properties</div>
                         </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="{{ route('properties.index') }}" class="menu-link">
-                                    <div data-i18n="Without menu">All Properties</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="" class="menu-link">
-                                    <div data-i18n="Without navbar">Create Property</div>
-                                </a>
-                            </li>
-                        </ul>
+
                     </li>
                     <li class="menu-item ">
                         <a href="javascript:void(0);" class="menu-link menu-toggle ">
@@ -224,7 +213,7 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    @yield('script')
+
 </body>
 
 </html>

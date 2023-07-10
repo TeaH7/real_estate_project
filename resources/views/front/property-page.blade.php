@@ -37,7 +37,7 @@
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-between">
-                    <div class="col-6 carousel-col">
+                    <div class="col-12 col-md-6 carousel-col">
                         <div class="row">
                             <div class="col-12">
                                 <div>
@@ -159,7 +159,7 @@
                         </div>
 
                     </div>
-                    <div class="col-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="card agent-card py-3">
                             <div class="row">
                                 <div class="col-12">
@@ -261,9 +261,7 @@
                     <div class="line mb-3" style="margin-left: 5px; width:10%"></div>
                     <h2>Te ngjashme</h2>
                     <div class="container mx-auto">
-                        <div class="row my-2">
 
-                        </div>
                         {{-- <div class="row mb-3 g-3">
                             <div class="col-12 col-md-4">
                                 <a href="#" class="text-decoration-none">
@@ -374,7 +372,7 @@
 
 
                         </div> --}}
-                        <div class="row">
+                        <div class="row mb-3 my-2">
                             <div class="swiper">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">

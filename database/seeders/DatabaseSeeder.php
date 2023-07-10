@@ -18,5 +18,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+<<<<<<< Updated upstream
+=======
+
+
+        $this->call([
+            RoleSeeder::class,
+            UserSeeder::class,
+            StatusSeeder::class
+        ]);
+>>>>>>> Stashed changes
     }
 }

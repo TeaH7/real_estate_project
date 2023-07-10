@@ -5,7 +5,7 @@
         <div class="d-flex align-items-center justify-content-between mt-3">
             <h4 class="fw-bold py-3">Lista e pronave</h4>
             {{-- @if (auth()->user()->role_id === 2) --}}
-            <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
+                <a href="#" class="btn btn-outline-primary">Add Property</a>
             {{-- @endif --}}
         </div>
         <hr class="mt-0" />
@@ -15,36 +15,17 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Type</th>
-                            <th>Address</th>
-                            <th>Price</th>
-                            <th>For</th>
+                            <th>Project</th>
+                            <th>Client</th>
+                            <th>Users</th>
                             <th>Status</th>
-                            <th>Is Aproved</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
                         <tr>
-                            <td>Prona 1</td>
-                            <td>Apartment</td>
-                            <td>Don Bosko, Tirane</td>
-                            <td>400$</td>
-                            <td>Rent</td>
-                            <td>
-                                @php
-                                    $status = 1;
-                                @endphp
-                                @if ($status !== null)
-                                    <span class="badge bg-label-{{ $status === 1 ? 'success' : 'danger' }} me-1">
-                                        {{ $status === 1 ? 'Active' : 'Refused' }}
-                                    </span>
-                                @else
-                                    <span class="badge bg-label-warning me-1">
-                                        Waiting for aproval
-                                    </span>
-                                @endif
-                            </td>
+                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                            <td>Albert Cook</td>
                             <td>
                                 @php
                                     $is_aproved = 1;

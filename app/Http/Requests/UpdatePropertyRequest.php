@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PropertyRequest extends FormRequest
+class UpdatePropertyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class PropertyRequest extends FormRequest
             'address' => ['required'],
             'location' => ['required'],
             'area' => ['nullable'],
-            'cover_image' => ['required'],
+            'cover_image' => ['nullable'],
             'img1' => ['nullable'],
             'img2' => ['nullable'],
             'img3' => ['nullable'],

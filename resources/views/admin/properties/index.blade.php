@@ -10,51 +10,105 @@
         </div>
         <hr class="mt-0" />
         <div class="card">
-            <h5 class="card-header">Table Basic</h5>
-            <div class="table-responsive text-nowrap">
+
+            <div class="table-responsive text-nowrap ">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Project</th>
-                            <th>Client</th>
-                            <th>Users</th>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Address</th>
+                            <th>Price</th>
+                            <th>For</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <th>Is Aproved</th>
+                            @if (auth()->user()->role_id === 1)
+                                <th>Agent</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                        <tr>
-                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
-                            <td>Albert Cook</td>
-                            <td>
-                                @php
-                                    $is_aproved = 1;
-                                @endphp
-                                @if ($is_aproved !== null)
-                                    <span class="badge bg-label-{{ $is_aproved === 1 ? 'success' : 'danger' }} me-1">
-                                        {{ $is_aproved === 1 ? 'Active' : 'Refused' }}
-                                    </span>
-                                @else
-                                    <span class="badge bg-label-warning me-1">
-                                        Waiting for aproval
-                                    </span>
-                                @endif
-                            </td>
-                            <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                        data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i
-                                                class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
-                                            Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                        @if ($properties->count())
+                            @foreach ($properties as $property)
+                                <tr>
+                                    <td>{{ $property->title }}</td>
+                                    <td>{{ $property->type_of_property }}</td>
+                                    <td>{{ $property->address }},{{ $property->location }}</td>
+                                    <td>{{ $property->price }}</td>
+                                    <td>{{ $property->sale_rent === 0 ? 'Rent' : 'Sale' }}</td>
+
+                                    <td>
+                                        @if ($property->status_id == 1)
+                                            <span class="badge bg-label-success me-1">
+                                                {{ $property->status->name }}
+                                            </span>
+                                        @endif
+
+                                        @if ($property->status_id == 2)
+                                            <span class="badge bg-label-warning me-1">
+                                                {{ $property->status->name }}
+                                            </span>
+                                        @endif
+
+                                        @if ($property->status_id == 3)
+                                            <span class="badge bg-label-info me-1">
+                                                {{ $property->status->name }}
+                                            </span>
+                                        @endif
+
+                                    </td>
+                                    <td>
+
+                                        @if ($property->is_aproved !== null)
+                                            <span
+                                                class="badge bg-label-{{ $property->is_aproved === 1 ? 'success' : 'danger' }} me-1">
+                                                {{ $property->is_aproved === 1 ? 'Active' : 'Refused' }}
+                                            </span>
+                                        @else
+                                            <span class="badge bg-label-warning me-1">
+                                                Waiting for aproval
+                                            </span>
+                                        @endif
+                                    </td>
+
+                                    @if (auth()->user()->role_id === 1)
+                                        <td>{{ $property->user->first_name }}</td>
+                                    @endif
+
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown">
+                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item"
+                                                    href="{{ route('properties.edit', $property->slug) }}"><i
+                                                        class="bx bx-edit-alt me-1"></i>
+                                                    Edit</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('properties.show', $property->slug) }}"><i
+                                                        class="bx bx-edit-alt me-1"></i>
+                                                    Show</a>
+                                                <form action="{{ route('properties.destroy', $property->id) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="dropdown-item"><i class="bx bx-trash me-1"></i>
+                                                        Delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="7">No Properties</td>
+                            </tr>
+                        @endif
+
+
                     </tbody>
                 </table>
             </div>

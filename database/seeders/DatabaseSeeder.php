@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\RoleSeeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\StatusSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,8 +21,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-<<<<<<< Updated upstream
-=======
 
 
         $this->call([
@@ -27,6 +28,5 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             StatusSeeder::class
         ]);
->>>>>>> Stashed changes
     }
 }

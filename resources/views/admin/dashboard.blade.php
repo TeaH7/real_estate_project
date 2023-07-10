@@ -80,22 +80,11 @@
                     </li>
                     <!-- Layouts -->
                     <li class="menu-item ">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle ">
+                        <a href="{{ route('properties.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Properties">Properties</div>
                         </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="{{ route('properties.index') }}" class="menu-link">
-                                    <div data-i18n="Without menu">All Properties</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="" class="menu-link">
-                                    <div data-i18n="Without navbar">Create Property</div>
-                                </a>
-                            </li>
-                        </ul>
+
                     </li>
                     <li class="menu-item ">
                         <a href="{{ route('agents.index') }}" class="menu-link  ">
@@ -148,8 +137,7 @@
                                                      document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </li>

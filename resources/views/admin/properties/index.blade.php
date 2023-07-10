@@ -5,7 +5,7 @@
         <div class="d-flex align-items-center justify-content-between mt-3">
             <h4 class="fw-bold py-3">Lista e pronave</h4>
             {{-- @if (auth()->user()->role_id === 2) --}}
-                <a href="#" class="btn btn-outline-primary">Add Property</a>
+            <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
             {{-- @endif --}}
         </div>
         <hr class="mt-0" />

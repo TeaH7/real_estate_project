@@ -331,4 +331,32 @@ class PropertyController extends Controller
 
         return redirect()->route('properties.index')->with('success', 'Property Deleted Successfully');
     }
+
+
+    public function forAproval()
+
+    {
+        $properties = Property::where('is_aproved', '=', null)->get();
+        return view('admin.properties.aprove-properties', ['properties' => $properties]);
+    }
+
+    public function aproveProperty($id)
+    {
+        $property = Property::where('id', $id)->first();
+
+        $property->update([
+            'is_aproved' => 1
+        ]);
+        return redirect()->route('properties.index')->with('success', 'Property Aproved.');
+    }
+
+    public function refuseProperty($id)
+    {
+        $property = Property::where('id', $id)->first();
+
+        $property->update([
+            'is_aproved' => 0
+        ]);
+        return redirect()->route('properties.index')->with('success', 'Property Refused.');
+    }
 }

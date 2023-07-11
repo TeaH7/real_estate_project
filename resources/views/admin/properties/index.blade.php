@@ -4,9 +4,9 @@
     <div class="container">
         <div class="d-flex align-items-center justify-content-between mt-3">
             <h4 class="fw-bold py-3">Lista e pronave</h4>
-            {{-- @if (auth()->user()->role_id === 2) --}}
-            <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
-            {{-- @endif --}}
+            @if (auth()->user()->role_id === 2)
+                <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
+            @endif
         </div>
         <hr class="mt-0" />
         <div class="card">
@@ -75,31 +75,33 @@
                                         <td>{{ $property->user->first_name }}</td>
                                     @endif
 
-                                    <td>
-                                        <div class="dropdown">
-                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown">
-                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item"
-                                                    href="{{ route('properties.edit', $property->slug) }}"><i
-                                                        class="bx bx-edit-alt me-1"></i>
-                                                    Edit</a>
-                                                <a class="dropdown-item"
-                                                    href="{{ route('properties.show', $property->slug) }}"><i
-                                                        class="bx bx-edit-alt me-1"></i>
-                                                    Show</a>
-                                                <form action="{{ route('properties.destroy', $property->id) }}"
-                                                    method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button class="dropdown-item"><i class="bx bx-trash me-1"></i>
-                                                        Delete</button>
-                                                </form>
+                                    @if (auth()->user()->role_id !== 1)
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('properties.edit', $property->slug) }}"><i
+                                                            class="bx bx-edit-alt me-1"></i>
+                                                        Edit</a>
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('properties.show', $property->slug) }}"><i
+                                                            class="bx bx-edit-alt me-1"></i>
+                                                        Show</a>
+                                                    <form action="{{ route('properties.destroy', $property->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="dropdown-item"><i class="bx bx-trash me-1"></i>
+                                                            Delete</button>
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
+                                        </td>
+                                    @endif
                                 </tr>
                             @endforeach
                         @else

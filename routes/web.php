@@ -41,15 +41,16 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
     Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
     Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+    Route::get('/properties/for-aproval', [PropertyController::class, 'forAproval'])->name('properties.for.aproval');
     Route::get('/properties/{slug}', [PropertyController::class, 'show'])->name('properties.show');
     Route::get('/properties/{slug}/edit', [PropertyController::class, 'edit'])->name('properties.edit');
     Route::patch('/properties/{slug}', [PropertyController::class, 'update'])->name('properties.update');
     Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
-    Route::get('/properties/for-aproval{id}', [PropertyController::class, 'forAproval'])->name('properties.for.aproval');
+
     Route::put('/properties/aprove{id}', [PropertyController::class, 'aproveProperty'])->name('properties.aprove');
     Route::put('/properties/refuse{id}', [PropertyController::class, 'refuseProperty'])->name('properties.refuse');
 
-    Route::get('/agents', [AgentController::class, 'show'])->name('agents.index');
+    Route::get('/agents', [AgentController::class, 'index'])->name('agents.index');
     Route::get('/agents/create', [AgentController::class, 'create'])->name('agents.create');
     Route::post('/agents/create', [AgentController::class, 'store'])->name('agents.store');
     Route::get('/agents/edit/{id}', [AgentController::class, 'edit'])->name('agents.edit');

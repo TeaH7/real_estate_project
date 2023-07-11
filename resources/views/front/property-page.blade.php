@@ -35,215 +35,212 @@
 
     <section class="bg-light pt-3">
         <div class="container">
-            <div class="row">
-                <div class="d-flex justify-content-between">
-                    <div class="col-12 col-md-6 carousel-col">
+            <div class="row g-2">
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <div id="carouselExampleIndicators" class="carousel slide">
+                                    <div class="carousel-indicators ">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+                                    </div>
+                                    <div class="carousel-inner custom-carousel">
+                                        <div class="carousel-item active">
+                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                class="d-block w-100" alt="...">
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                class="d-block w-100" alt="...">
+                                        </div>
+
+
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                class="d-block w-100" alt="...">
+                                        </div>
+
+
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                                class="d-block w-100" alt="...">
+                                        </div>
+
+
+
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bg-white mt-3" style="border-radius: 30px">
+                        <div class="col-12">
+                            <h3 class="mt-4 mb-4">Përshkrimi</h3>
+                            <p class="mb-5" style="color: #697488;">Lorem ipsum dolor sit amet consectetur,
+                                adipisicing
+                                elit.
+                                At
+                                officia et enim, odit natus quibusdam soluta velit molestiae vitae quaerat omnis,
+                                voluptates
+                                voluptatum animi. At omnis maxime ratione corrupti. Molestiae excepturi enim inventore
+                                non
+                                facilis
+                                necessitatibus. Assumenda corporis ipsa commodi voluptatem ipsam consequatur cumque
+                                sint?
+                                Tempore,
+                                quisquam in! Distinctio vel id error voluptate doloremque, amet voluptates ut aperiam
+                                incidunt
+                                delectus adipisci voluptatem quaerat alias voluptatibus earum possimus ullam sed
+                                asperiores
+                                fuga
+                                nulla? Repudiandae, ipsam repellendus magni assumenda molestiae incidunt fugit,
+                                doloremque
+                                iste,
+                                veritatis repellat sunt tempore sit commodi quasi quibusdam sint delectus quae illo
+                                corrupti
+                                culpa
+                                deserunt ratione. Dicta, quo?</p>
+                        </div>
+
+                        <div class="col-12 ">
+                            <h5 class="mb-4">Detaje</h5>
+
+                            <div class="row">
+                                <div class="col-3 icons-styles">
+                                    <ul>
+
+                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+
+                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3 icons-styles">
+                                    <ul>
+
+                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+
+                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card agent-card py-3">
                         <div class="row">
                             <div class="col-12">
-                                <div>
-                                    <div id="carouselExampleIndicators" class="carousel slide">
-                                        <div class="carousel-indicators ">
-                                            <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="0" class="active" aria-current="true"
-                                                aria-label="Slide 1"></button>
-
-                                            <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
-
-                                            <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
-
-
-                                            <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="3" aria-label="Slide 4"></button>
-
-                                        </div>
-                                        <div class="carousel-inner custom-carousel">
-                                            <div class="carousel-item active">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="d-block w-100" alt="...">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="d-block w-100" alt="...">
-                                            </div>
-
-
-                                            <div class="carousel-item">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="d-block w-100" alt="...">
-                                            </div>
-
-
-                                            <div class="carousel-item">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="d-block w-100" alt="...">
-                                            </div>
-
-
-
-                                        </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="mt-2"><img src="{{ asset('assets/front/images/dude.jpeg') }}"
+                                            alt="" width="100px" height="100px"></div>
                                 </div>
+
                             </div>
-                        </div>
-                        <div class="row bg-white mt-3" style="border-radius: 30px">
                             <div class="col-12">
-                                <h3 class="mt-4 mb-4">Përshkrimi</h3>
-                                <p class="mb-5" style="color: #697488;">Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing
-                                    elit.
-                                    At
-                                    officia et enim, odit natus quibusdam soluta velit molestiae vitae quaerat omnis,
-                                    voluptates
-                                    voluptatum animi. At omnis maxime ratione corrupti. Molestiae excepturi enim inventore
-                                    non
-                                    facilis
-                                    necessitatibus. Assumenda corporis ipsa commodi voluptatem ipsam consequatur cumque
-                                    sint?
-                                    Tempore,
-                                    quisquam in! Distinctio vel id error voluptate doloremque, amet voluptates ut aperiam
-                                    incidunt
-                                    delectus adipisci voluptatem quaerat alias voluptatibus earum possimus ullam sed
-                                    asperiores
-                                    fuga
-                                    nulla? Repudiandae, ipsam repellendus magni assumenda molestiae incidunt fugit,
-                                    doloremque
-                                    iste,
-                                    veritatis repellat sunt tempore sit commodi quasi quibusdam sint delectus quae illo
-                                    corrupti
-                                    culpa
-                                    deserunt ratione. Dicta, quo?</p>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <h6>Emer Mbiemer</h6>
+                                </div>
                             </div>
-
-                            <div class="col-12 ">
-                                <h5 class="mb-4">Detaje</h5>
-
-                                <div class="row">
-                                    <div class="col-3 icons-styles">
-                                        <ul>
-
-                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
-
-                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
-                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
-                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3 icons-styles">
-                                        <ul>
-
-                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
-
-                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
-                                            <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
-                                            <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
-
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card agent-card py-3">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-center">
-                                        <div class="mt-2"><img src="{{ asset('assets/front/images/dude.jpeg') }}"
-                                                alt="" width="100px" height="100px"></div>
-                                    </div>
-
-                                </div>
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-center mt-2">
-                                        <h6>Emer Mbiemer</h6>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-center">
-                                        <div>
-                                            <a href="" class="text-decoration-none agent-href me-2"><i
-                                                    class="fa-brands fa-facebook agent-icons"></i></a>
-                                        </div>
-                                        <div>
-                                            <a href=""class="text-decoration-none agent-href"><i
-                                                    class="fa-brands fa-instagram agent-icons"></i></i></a>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 d-flex justify-content-center mt-3">
-
+                            <div class="col-12">
+                                <div class="d-flex justify-content-center">
                                     <div>
-                                        <h6>Kontakto Agjent</h6>
+                                        <a href="" class="text-decoration-none agent-href me-2"><i
+                                                class="fa-brands fa-facebook agent-icons"></i></a>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="text-center mt-3">
-                                        <div>
-                                            <p class="mb-1"><i class="fa-solid fa-phone"></i> +355 68 06 635
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p> <i class="fa-regular fa-envelope"></i> xhimi.neutro@property.al</p>
-                                        </div>
-
-
+                                    <div>
+                                        <a href=""class="text-decoration-none agent-href"><i
+                                                class="fa-brands fa-instagram agent-icons"></i></i></a>
                                     </div>
+
+
                                 </div>
-
-
                             </div>
 
 
-                            {{-- <div class="row">
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Your Name</label>
-                                            <input type="text" placeholder="John" class="form-control"
-                                                id="name">
-                                        </div>
+                            <div class="col-12 d-flex justify-content-center mt-3">
+
+                                <div>
+                                    <h6>Kontakto Agjent</h6>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="text-center mt-3">
+                                    <div>
+                                        <p class="mb-1"><i class="fa-solid fa-phone"></i> +355 68 06 635
+                                        </p>
                                     </div>
-                                    <div class="col-">
-                                        <div class="mb-3">
-                                            <label class="form-label">Email</label>
-                                            <input type="email" placeholder="john.doe@gmail.com"
-                                                class="form-control em-1" id="email">
-                                        </div>
+                                    <div>
+                                        <p> <i class="fa-regular fa-envelope"></i> xhimi.neutro@property.al</p>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label">Example
-                                                textarea</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                        </div>
-                                    </div>
 
-                                    <div class="w-100 d-block">
-                                        <button type="submit" class="btn btn-primary w-100">Dergo</button>
-                                    </div>
-                                </div> --}}
+                                </div>
+                            </div>
+
+
                         </div>
 
+
+                        {{-- <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Your Name</label>
+                                        <input type="text" placeholder="John" class="form-control"
+                                            id="name">
+                                    </div>
+                                </div>
+                                <div class="col-">
+                                    <div class="mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" placeholder="john.doe@gmail.com"
+                                            class="form-control em-1" id="email">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Example
+                                            textarea</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="w-100 d-block">
+                                    <button type="submit" class="btn btn-primary w-100">Dergo</button>
+                                </div>
+                            </div> --}}
                     </div>
 
                 </div>

@@ -86,32 +86,30 @@
                         </a>
 
                     </li>
-                    <li class="menu-item ">
-                        <a href="{{ route('agents.index') }}" class="menu-link  ">
-                            <i class="menu-icon tf-icons bx bx-layout"></i>
-                            <div data-i18n="Properties">Agents</div>
-                        </a>
 
-                    </li>
-                    <li class="menu-item ">
-                        <a href="{{ route('properties.for.aproval') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-layout"></i>
-                            <div data-i18n="Properties">Waiting For Aproval</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-layout"></i>
-                            <div data-i18n="Contacts">Contacts</div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="" class="menu-link">
-                                    <div data-i18n="Without menu">All Contacts</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    @if (auth()->user()->role_id === 1)
+                        <li class="menu-item ">
+                            <a href="{{ route('agents.index') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Properties">Agents</div>
+                            </a>
+
+                        </li>
+                        <li class="menu-item ">
+                            <a href="{{ route('properties.for.aproval') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Properties">Waiting For Aproval</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Contacts">Contacts</div>
+                            </a>
+
+                        </li>
+                    @endif
+
                 </ul>
             </aside>
             <!-- / Menu -->
@@ -128,8 +126,22 @@
                         </a>
                     </div>
 
-                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                    <div class="navbar-nav-right d-flex align-items-center justify-content-between"
+                        id="navbar-collapse">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <img src="{{ asset('/storage/' . auth()->user()->image) }}" alt=""
+                                    class="w-px-40 h-auto rounded-circle">
+                            </div>
+                            <div>
+                                <span class="fw-semibold ms-2">{{ auth()->user()->first_name }}
+                                    {{ auth()->user()->last_name }}, {{ auth()->user()->last_name }}
+                                </span>
+                            </div>
+                        </div>
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+
                             <!-- User -->
                             <li>
                                 <a class="btn btn-danger" href=""

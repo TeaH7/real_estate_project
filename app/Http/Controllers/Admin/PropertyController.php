@@ -48,7 +48,6 @@ class PropertyController extends Controller
             $data = $request->validated();
 
 
-
             //* Check if request has a file cover image
             if ($request->hasFile('cover_image')) {
                 $year = date('Y');
@@ -172,7 +171,8 @@ class PropertyController extends Controller
 
             return redirect()->route('properties.index')->with('success', 'Property Created Successfully');
         } catch (\Exception $e) {
-            return redirect()->route('properties.index')->with('error', 'Upss!...Something Went Wrong!');
+            // return redirect()->route('properties.index')->with('error', 'Upss!...Something Went Wrong!');
+            return redirect()->route('properties.index')->with($e->getMessage(), 'Upss!...Something Went Wrong!');
         }
     }
 
@@ -347,7 +347,7 @@ class PropertyController extends Controller
         $property->update([
             'is_aproved' => 1
         ]);
-        return redirect()->route('properties.index')->with('success', 'Property Aproved.');
+        return redirect()->route('properties.for.aproval')->with('success', 'Property Aproved.');
     }
 
     public function refuseProperty($id)
@@ -357,6 +357,6 @@ class PropertyController extends Controller
         $property->update([
             'is_aproved' => 0
         ]);
-        return redirect()->route('properties.index')->with('success', 'Property Refused.');
+        return redirect()->route('properties.for.aproval')->with('success', 'Property Refused.');
     }
 }

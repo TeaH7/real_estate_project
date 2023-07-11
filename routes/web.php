@@ -45,6 +45,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/properties/{slug}/edit', [PropertyController::class, 'edit'])->name('properties.edit');
     Route::patch('/properties/{slug}', [PropertyController::class, 'update'])->name('properties.update');
     Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
+    Route::get('/properties/for-aproval{id}', [PropertyController::class, 'forAproval'])->name('properties.for.aproval');
+    Route::put('/properties/aprove{id}', [PropertyController::class, 'aproveProperty'])->name('properties.aprove');
+    Route::put('/properties/refuse{id}', [PropertyController::class, 'refuseProperty'])->name('properties.refuse');
 
     Route::get('/agents', [AgentController::class, 'show'])->name('agents.index');
     Route::get('/agents/create', [AgentController::class, 'create'])->name('agents.create');

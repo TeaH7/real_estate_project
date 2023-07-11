@@ -219,23 +219,33 @@
 
                             <div class="mt-3">
                                 <label for="exampleFormControlSelect1" class="form-label">Example select</label>
-                                <select class="form-select" id="exampleFormControlSelect1" name="status_id"
-                                    aria-label="Default select example">
+                                <select class="form-select @error('status_id') is-invalid  @enderror"
+                                    id="exampleFormControlSelect1" name="status_id" aria-label="Default select example">
                                     <option selected disabled>Select Status</option>
                                     <option value="1">Publish</option>
                                     <option value="2">Archived</option>
                                     <option value="3">Draft</option>
                                 </select>
+                                @error('status_id')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="mt-3">
                                 <label for="exampleFormControlSelect1" class="form-label">For</label>
-                                <select class="form-select" id="exampleFormControlSelect1" name="sale_rent"
-                                    aria-label="Default select example">
+                                <select class="form-select @error('sale_rent') is-invalid  @enderror"
+                                    id="exampleFormControlSelect1" name="sale_rent" aria-label="Default select example">
                                     <option selected disabled>Rent or Sale</option>
                                     <option value="0">Rent</option>
                                     <option value="1">Sale</option>
 
                                 </select>
+                                @error('sale_rent')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
 

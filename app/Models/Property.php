@@ -45,4 +45,15 @@ class Property extends Model
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
+
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

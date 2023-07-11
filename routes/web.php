@@ -39,13 +39,15 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     })->name('admin');
 
     Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
+    Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
+    Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+    Route::get('/properties/{slug}', [PropertyController::class, 'show'])->name('properties.show');
+    Route::get('/properties/{slug}/edit', [PropertyController::class, 'edit'])->name('properties.edit');
+    Route::patch('/properties/{slug}', [PropertyController::class, 'update'])->name('properties.update');
+    Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
 
 <<<<<<< Updated upstream
-    Route::get('/agents',[AgentController::class,'show'])->name('agents.index');
-    Route::get('/agents/create',[AgentController::class,'create'])->name('agents.create');
-    Route::post('/agents/create',[AgentController::class,'store'])->name('agents.store');
-    Route::get('/agents/edit/{id}',[AgentController::class,'update'])->name('agents.edit');
-=======
+
     Route::get('/agents', [AgentController::class, 'index'])->name('agents.index');
     Route::get('/agents/create', [AgentController::class, 'create'])->name('agents.create');
     Route::post('/agents/create', [AgentController::class, 'store'])->name('agents.store');
@@ -53,28 +55,11 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::put('/agents/update/{id}', [AgentController::class, 'update'])->name('agents.update');
     Route::delete('/agents/{id}', [AgentController::class, 'destroy'])->name('agents.destroy');
     Route::get('/agents/show/{id}',[AgentController::class,'show'])->name('agents.show');
->>>>>>> Stashed changes
+
     // Route::put('/update-agent',[AgentController::class,'update'])->name('agents.update');
 });
 
 
 Auth::routes(['register' => false]);
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
-
-Route::middleware(['auth'])->prefix('admin')->group(function () {
-    Route::get('/', function () {
-        return view('admin.adminIndex');
-    })->name('admin');
-
-    Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
-    Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
-    Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
-});
-
-Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

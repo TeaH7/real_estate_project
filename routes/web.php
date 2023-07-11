@@ -46,7 +46,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::patch('/properties/{slug}', [PropertyController::class, 'update'])->name('properties.update');
     Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
 
-<<<<<<< Updated upstream
+
 
     Route::get('/agents', [AgentController::class, 'index'])->name('agents.index');
     Route::get('/agents/create', [AgentController::class, 'create'])->name('agents.create');

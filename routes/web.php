@@ -17,9 +17,8 @@ Route::get('/about-us', function () {
     return view('front.about');
 })->name('about-us');
 
-Route::get('/contact-us', function () {
-    return view('front.contact');
-})->name('contact-us');
+Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact-us');
+
 
 Route::get('/prone', function () {
     return view('front.property-page');
@@ -51,7 +50,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     Route::put('/properties/aprove{id}', [PropertyController::class, 'aproveProperty'])->name('properties.aprove');
     Route::put('/properties/refuse{id}', [PropertyController::class, 'refuseProperty'])->name('properties.refuse');
-//Agents Routes
+    //Agents Routes
     Route::get('/agents', [AgentController::class, 'index'])->name('agents.index');
     Route::get('/agents/create', [AgentController::class, 'create'])->name('agents.create');
     Route::post('/agents/create', [AgentController::class, 'store'])->name('agents.store');
@@ -60,12 +59,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::delete('/agents/{id}', [AgentController::class, 'destroy'])->name('agents.destroy');
     Route::get('/agents/show/{id}', [AgentController::class, 'show'])->name('agents.show');
 
-//Contact Route
-    Route::get('/contact',[ContactController::class,'index'])->name('contact.index');
-    Route::get('/contact/{id}',[ContactController::class,'show'])->name('contact.show');
-    Route::delete('/contact/detele/{id},',[ContactController::class,'destroy'])->name('contact.destroy');
+    //Contact Route
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+    Route::get('/contact/{id}', [ContactController::class, 'show'])->name('contact.show');
+    Route::delete('/contact/detele/{id},', [ContactController::class, 'destroy'])->name('contact.destroy');
 });
-    Route::post('/contact',[FrontendController::class,'store'])->name('contact.create');
+Route::post('/contact', [FrontendController::class, 'storeContact'])->name('contact.create');
 
 Auth::routes(['register' => false]);
 

@@ -92,6 +92,7 @@
                             <div data-i18n="Properties">Agents</div>
                         </a>
 
+<<<<<<< Updated upstream
                     </li>
                     <li class="menu-item ">
                         <a href="javascript:void(0);" class="menu-link">
@@ -112,6 +113,31 @@
                             </li>
                         </ul>
                     </li>
+=======
+                    @if (auth()->user()->role_id === 1)
+                        <li class="menu-item ">
+                            <a href="{{ route('agents.index') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Properties">Agents</div>
+                            </a>
+
+                        </li>
+                        <li class="menu-item ">
+                            <a href="{{ route('properties.for.aproval') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Properties">Waiting For Aproval</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{route('contact.index')}}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Contacts">Contacts</div>
+                            </a>
+
+                        </li>
+                    @endif
+
+>>>>>>> Stashed changes
                 </ul>
             </aside>
             <!-- / Menu -->

@@ -9,6 +9,7 @@
         'title' => 'Na Kontaktoni',
     ])
 
+
     <section class="py-5" style="background-color: #f9f9f9;">
         <div class="container">
             <!--Google map-->
@@ -21,7 +22,14 @@
 
             <!--Google Maps-->
 
-
+            @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible position-absolute"
+                style="bottom: 15px; right:15px;" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+            </div>
+            @endif
             <div class="row">
                 <div class="col-12 mt-5">
                     <h3 style="color: #031136">Dërgo Një Mesazh</h3>
@@ -32,7 +40,8 @@
             @csrf
             <div class="row">
                 <div class="col-12 col-md-8 mt-4">
-                    <form class="custom-form-contact">
+                    <form class="custom-form-contact" action="{{route('contact.create')}}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-6 mb-4">
                                 <input class="form-control @error('name') is-invalid  @enderror" type="text"

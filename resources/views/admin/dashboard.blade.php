@@ -135,7 +135,7 @@
                             </div>
                             <div>
                                 <span class="fw-semibold ms-2">{{ auth()->user()->first_name }}
-                                    {{ auth()->user()->last_name }}, {{ auth()->user()->last_name }}
+                                    , {{ auth()->user()->role->name }}
                                 </span>
                             </div>
                         </div>

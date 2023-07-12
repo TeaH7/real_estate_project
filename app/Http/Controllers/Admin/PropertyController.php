@@ -43,8 +43,6 @@ class PropertyController extends Controller
     public function store(PropertyRequest $request)
     {
         try {
-
-
             $data = $request->validated();
 
 
@@ -67,7 +65,6 @@ class PropertyController extends Controller
                 $pathLink = $file->storeAs('uploads/' . $year . '/' . $month . '/' . $day, $fileNameCover);
                 $data['cover_image'] = $pathLink;
             }
-
 
             //* Check if request has a file img1
             if ($request->hasFile('img1')) {
@@ -148,8 +145,8 @@ class PropertyController extends Controller
                 $pathLink = $file->storeAs('uploads/' . $year . '/' . $month . '/' . $day, $fileNameImg4);
                 $data['img4'] = $pathLink;
             }
-
-            Property::create([
+            
+             Property::create([
                 'title' => $data['title'],
                 'type_of_property' => $data['type_of_property'],
                 'address' => $data['address'],
@@ -168,7 +165,7 @@ class PropertyController extends Controller
                 'status_id' => $data['status_id'],
                 'user_id' => auth()->user()->id,
             ]);
-
+           
             return redirect()->route('properties.index')->with('success', 'Property Created Successfully');
         } catch (\Exception $e) {
             // return redirect()->route('properties.index')->with('error', 'Upss!...Something Went Wrong!');

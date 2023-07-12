@@ -20,16 +20,16 @@
     <div class="mb-3">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="JohnDoe30" name="username">
+            <input type="text" class="form-control" id="username" placeholder="JohnDoe30" value="{{ $user->username }}" name="username">
           </div>
         <label for="firstName" class="form-label">First Name</label>
-        <input type="text" id="firstName" class="form-control"  placeholder="John" name="first_name">
+        <input type="text" id="firstName" class="form-control"  placeholder="John" name="first_name" value="{{ $user->first_name }}">
         <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" id="lastName" class="form-control"  placeholder="Doe" name="last_name"> 
+        <input type="text" id="lastName" class="form-control"  placeholder="Doe" name="last_name" value="{{ $user->last_name }}"> 
       </div>
       <div class="mb-3">
         <label for="agentEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="agentEmail" placeholder="name@example.com" name="email">
+        <input type="email" class="form-control" id="agentEmail" placeholder="name@example.com" name="email" value="{{ $user->email }}">
       </div>
       <div class="mb-3">
         <label for="agentPassword" class="form-label">Password</label>
@@ -41,15 +41,15 @@
       </div>
       <div class="mb-3">
         <label for="phone" class="form-label">Phone Number</label>
-        <input type="text" id="phone" class="form-control"  placeholder="069 xx 59 xxx" name="phone">
+        <input type="text" id="phone" class="form-control"  placeholder="069 xx 59 xxx" name="phone" value="{{ $user->phone }}">
       </div>
       <div class="mb-3">
         <label for="image" class="form-label">Photo</label>
-        <input class="form-control" type="file" id="image" name="image">
+        <input class="form-control" type="file" id="image" name="image" value="{{ $user->image }}">
       </div>
     <div class="mb-3">
       <label for="agentDesc" class="form-label">Description</label>
-      <textarea class="form-control" id="agentDesc" rows="3" name="description"></textarea>
+      <textarea class="form-control" id="agentDesc" rows="3" name="description" value="{{ $user->description }}"></textarea>
     </div>
     <div class="mb-3">
     <button type="submit" class="btn btn-primary">Save</button>

@@ -94,13 +94,6 @@
                                 <div data-i18n="Properties">Agents</div>
                             </a>
 
-                    @if (auth()->user()->role_id === 1)
-                        <li class="menu-item ">
-                            <a href="{{ route('agents.index') }}" class="menu-link">
-                                <i class="menu-icon tf-icons bx bx-layout"></i>
-                                <div data-i18n="Properties">Agents</div>
-                            </a>
-
                         </li>
                         <li class="menu-item ">
                             <a href="{{ route('properties.for.aproval') }}" class="menu-link">
@@ -218,7 +211,6 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    @yield('script')
 </body>
 
 </html>

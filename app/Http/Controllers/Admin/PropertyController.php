@@ -11,22 +11,17 @@ use Illuminate\Support\Facades\Storage;
 
 class PropertyController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth')->only('index');
-    }
-
 
     public function index()
     {
         if (auth()->user()->role_id === 1) {
-            $properties = Property::where('is_aproved', 1)->latest()->paginate();
+            $properties = Property::where('is_aproved', 1)->latest()->paginate(20);
 
             return view('admin.properties.index', ['properties' => $properties]);
         }
 
         if (auth()->user()->role_id === 2) {
-            $properties = Property::where('user_id', auth()->user()->id)->latest()->paginate();
+            $properties = Property::where('user_id', auth()->user()->id)->latest()->paginate(20);
 
             return view('admin.properties.index', ['properties' => $properties]);
         }
@@ -145,8 +140,8 @@ class PropertyController extends Controller
                 $pathLink = $file->storeAs('uploads/' . $year . '/' . $month . '/' . $day, $fileNameImg4);
                 $data['img4'] = $pathLink;
             }
-            
-             Property::create([
+
+            Property::create([
                 'title' => $data['title'],
                 'type_of_property' => $data['type_of_property'],
                 'address' => $data['address'],
@@ -165,7 +160,7 @@ class PropertyController extends Controller
                 'status_id' => $data['status_id'],
                 'user_id' => auth()->user()->id,
             ]);
-           
+
             return redirect()->route('properties.index')->with('success', 'Property Created Successfully');
         } catch (\Exception $e) {
             // return redirect()->route('properties.index')->with('error', 'Upss!...Something Went Wrong!');
@@ -333,7 +328,7 @@ class PropertyController extends Controller
     public function forAproval()
 
     {
-        $properties = Property::where('is_aproved', '=', null)->get();
+        $properties = Property::where('is_aproved', '=', null)->paginate(3);
         return view('admin.properties.aprove-properties', ['properties' => $properties]);
     }
 

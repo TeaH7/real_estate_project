@@ -97,5 +97,6 @@
                 </table>
             </div>
         </div>
+        {{ $properties->links('pagination::custom-dashboard') }}
     </div>
 @endsection

@@ -91,20 +91,21 @@
         <div class="container mb-4">
             <div class="card border-0 shadow">
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('search') }}" method="GET">
                         <div class="d-flex align-items-center justify-content-center gap-1">
-                            <select name="" id="" class="form-select py-2">
+                            <select name="sale_rent" id="" class="form-select py-2">
                                 <option disabled selected class="text-gray">Looking for</option>
                                 <option value="rent">Rent</option>
-                                <option value="buy">Buy</option>
+                                <option value="sale">Sale</option>
                             </select>
-                            <input type="text" placeholder="Property Type" class="form-control py-2">
-                            <input type="text" placeholder="Location" class="form-control py-2">
-                            <select name="" id="" class="form-select py-2">
+                            <input type="text" name="search_property" placeholder="Property Type"
+                                class="form-control py-2">
+                            <input type="text" name="location" placeholder="Location" class="form-control py-2">
+                            <select name="price" id="" class="form-select py-2">
                                 <option disabled selected class="text-gray">Price Range</option>
-                                <option value="10000">0-10000</option>
-                                <option value="50000">10000-50000</option>
-                                <option value="100000">50000-100000</option>
+                                <option value="100-2000">0-2000</option>
+                                <option value="2000-10000">2000-10000</option>
+                                <option value="10000+">10000+</option>
                             </select>
                             <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
                         </div>

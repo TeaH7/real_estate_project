@@ -7,11 +7,12 @@
     <section class="single-page-title py-2" style="background-color: #031136 ; margin-top: 2px;">
         <div class="container head-single-page">
             <div class="row">
+
                 <div class="d-flex justify-content-between align-items-center">
+
                     <div>
                         <div class="col-12">
                             <h2 class="text-white">Titulli</h2>
-
                         </div>
                         <div class="col-12">
                             <span class="text-white location-style"><i class="bi bi-geo-alt me-1"></i>Shqiperi</span>
@@ -214,36 +215,37 @@
 
 
                         {{-- <div class="row">
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Your Name</label>
-                                        <input type="text" placeholder="John" class="form-control"
-                                            id="name">
-                                    </div>
-                                </div>
-                                <div class="col-">
-                                    <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" placeholder="john.doe@gmail.com"
-                                            class="form-control em-1" id="email">
-                                    </div>
-                                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label class="form-label">Your Name</label>
+                        <input type="text" placeholder="John" class="form-control"
+                            id="name">
+                    </div>
+                </div>
+                <div class="col-">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" placeholder="john.doe@gmail.com"
+                            class="form-control em-1" id="email">
+                    </div>
+                </div>
 
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Example
-                                            textarea</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                    </div>
-                                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example
+                            textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
 
-                                <div class="w-100 d-block">
-                                    <button type="submit" class="btn btn-primary w-100">Dergo</button>
-                                </div>
-                            </div> --}}
+                <div class="w-100 d-block">
+                    <button type="submit" class="btn btn-primary w-100">Dergo</button>
+                </div>
+            </div> --}}
                     </div>
 
                 </div>
+
             </div>
 
         </div>

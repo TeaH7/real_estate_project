@@ -16,7 +16,7 @@ class PropertyController extends Controller
     {
         if (auth()->user()->role_id === 1) {
             $properties = Property::where('is_approved', 1)->latest()->paginate(20);
-              return view('admin.properties.index', ['properties' => $properties]);
+            return view('admin.properties.index', ['properties' => $properties]);
         }
 
         if (auth()->user()->role_id === 2) {
@@ -337,6 +337,7 @@ class PropertyController extends Controller
 
         $property->update([
             'is_approved' => 1
+
         ]);
         return redirect()->route('properties.for.aproval')->with('success', 'Property Approved.');
     }

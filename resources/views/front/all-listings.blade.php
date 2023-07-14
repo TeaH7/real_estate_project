@@ -37,33 +37,10 @@
                         </div>
                     </form>
                 </div>
-=======
-    <div class="container mb-4">
-        <div class="card border-0 shadow">
-            <div class="card-body">
-                <form>
-                    <div class="d-flex align-items-center justify-content-center gap-1">
-                        <select name="" id="" class="form-select py-2">
-                            <option disabled selected class="text-gray">Looking for</option>
-                            <option value="rent">Rent</option>
-                            <option value="buy">Buy</option>
-                        </select>
-                        <input type="text" placeholder="Property Type" class="form-control py-2">
-                        <input type="text" placeholder="Location" class="form-control py-2">
-                        <select name="" id="" class="form-select py-2">
-                            <option disabled selected class="text-gray">Price Range</option>
-                            <option value="10000">0-10000</option>
-                            <option value="50000">10000-50000</option>
-                            <option value="100000">50000-100000</option>
-                        </select>
-                        <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
-                    </div>
-                </form>
->>>>>>> Stashed changes
+
             </div>
         </div>
 
-<<<<<<< Updated upstream
         {{-- End search bar --}}
         {{-- GRID CARDS --}}
 
@@ -111,61 +88,6 @@
 
             </div>
         </div>
-=======
-    {{-- End search bar --}}
-    {{-- GRID CARDS --}}
- 
-    <div class="container mx-auto relative" >
-        <div class="row mb-2 pb-5 g-3 ">
-            
-            @foreach ($properties as $property )
-            <div class="col-12  col-lg-3 col-md-6">
-                <a href="{{route('single-property',$property->id)}}" class="text-decoration-none">
-                    <div class="card rounded border-0 shadow">
-                        <div class="card-body p-2">
-                            <div class="position-relative">
-                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                    class="card-img-top rounded" alt="Property Image">
-                                <span
-                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">{{$property->type_of_property}}</span>
-                            </div>
-                            <div class="my-3">
-                                <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">{{$property->name}}
-                                </h3>
-                                <p class="my-2 text-dark ms-2">
-                                    <i class="fa-sharp fa-solid fa-location-dot"></i> {{$property->location}}
-                                </p>
-                                <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                    <div class="badge px-2 py-1 bg-second-color">
-                                        <i class="fa-sharp fa-solid fa-bed"></i> {{$property->nr_of_beds}}
-                                    </div>
-                                    <div class="badge px-2 py-1 bg-second-color ">
-                                        <i class="fa-sharp fa-solid fa-bath"></i> {{$property->nr_of_baths}}
-                                    </div>
-                                    <div class="badge px-2 py-1 bg-second-color">
-                                        <i class="fa-solid fa-house"></i>  {{$property->area}}m<sup>2</sup>
-                                    </div>
-                                </div>
-                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">${{$property->price}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            @endforeach
-       
-        </div>
-        @if($properties->count() > 0)
-         <div class="position-absolute bottom-0 start-50 translate-middle-x pagination-div ">
-            {{ $properties->links() }}
-         </div>
-         @endif
-    </div>
-   
-</section>
-{{-- END GRID SECTION --}}
-
->>>>>>> Stashed changes
 
     </section>
     {{-- END GRID SECTION --}}

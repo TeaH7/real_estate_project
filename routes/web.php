@@ -18,24 +18,18 @@ Route::get('/about-us', function () {
 //contact page routes
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact-us');
 Route::post('/contact', [FrontendController::class, 'storeContact'])->name('contact.create');
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 
 Route::get('/prone', function () {
     return view('front.property-page');
 })->name('single-property');
 
-<<<<<<< Updated upstream
 
 Route::get('/search', function () {
     return view('front.search-page');
 })->name('search-listings');
-=======
+
 Route::get('/all-listings',[FrontendController::class,'allListings'])->name('all-listings');
-Route::get('/search',[FrontendController::class,'searchPage'])->name('search-listings');
->>>>>>> Stashed changes
 
 Route::get('/all-listings', [FrontendController::class, 'allListings'])->name('all-listings');
 
@@ -81,10 +75,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     });
 });
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 Auth::routes(['register' => false]);
 

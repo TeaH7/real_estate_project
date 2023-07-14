@@ -15,13 +15,8 @@ class PropertyController extends Controller
     public function index()
     {
         if (auth()->user()->role_id === 1) {
-<<<<<<< Updated upstream
             $properties = Property::where('is_aproved', 1)->latest()->paginate(20);
-=======
-            $properties = Property::where('is_approved', 1)->latest()->paginate();
->>>>>>> Stashed changes
-
-            return view('admin.properties.index', ['properties' => $properties]);
+              return view('admin.properties.index', ['properties' => $properties]);
         }
 
         if (auth()->user()->role_id === 2) {
@@ -332,11 +327,7 @@ class PropertyController extends Controller
     public function forAproval()
 
     {
-<<<<<<< Updated upstream
-        $properties = Property::where('is_aproved', '=', null)->paginate(3);
-=======
         $properties = Property::where('is_approved', '=', null)->get();
->>>>>>> Stashed changes
         return view('admin.properties.aprove-properties', ['properties' => $properties]);
     }
 

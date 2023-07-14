@@ -28,7 +28,7 @@ class Property extends Model
         'nr_of_baths',
         'price',
         'description',
-        'is_aproved',
+        'is_approved',
         'sale_rent',
         'status_id',
         'user_id'

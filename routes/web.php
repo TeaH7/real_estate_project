@@ -8,9 +8,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\PropertyController;
 
 
-Route::get('/', function () {
-    return view('front.index');
-})->name('home');
+Route::get('/', [FrontendController::class, 'home'])->name('home');
 
 
 Route::get('/about-us', function () {
@@ -26,10 +24,6 @@ Route::get('/prone', function () {
 })->name('single-property');
 
 
-Route::get('/search', function () {
-    return view('front.search-page');
-})->name('search-listings');
-
 Route::get('/all-listings', [FrontendController::class, 'allListings'])->name('all-listings');
 
 
@@ -42,10 +36,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     //Properties Index for both Manager and Agent
     Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
 
+
     Route::middleware(['manager'])->group(function () {
         Route::get('/properties/for-aproval', [PropertyController::class, 'forAproval'])->name('properties.for.aproval');
-        Route::put('/properties/aprove{id}', [PropertyController::class, 'aproveProperty'])->name('properties.aprove');
-        Route::put('/properties/refuse{id}', [PropertyController::class, 'refuseProperty'])->name('properties.refuse');
+        Route::put('/properties/aprove/{id}', [PropertyController::class, 'aproveProperty'])->name('properties.aprove');
+        Route::put('/properties/refuse/{id}', [PropertyController::class, 'refuseProperty'])->name('properties.refuse');
+
 
         //Agents Routes
         Route::get('/agents', [AgentController::class, 'index'])->name('agents.index');

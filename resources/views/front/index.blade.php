@@ -91,7 +91,7 @@
         <div class="container mb-4">
             <div class="card border-0 shadow">
                 <div class="card-body">
-                    <form action="{{ route('search') }}" method="GET">
+                     <form action="{{ route('search-listings') }}"method="GET">  
                         <div class="d-flex align-items-center justify-content-center gap-1">
                             <select name="sale_rent" id="" class="form-select py-2">
                                 <option disabled selected class="text-gray">Looking for</option>
@@ -133,13 +133,13 @@
                                     <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
                                         class="card-img-top rounded" alt="Property Image">
                                     <span
-                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">{{$property->type_of_property}}</span>
+                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color  fs-6">{{ $property->sale_rent === 0 ? 'Rent' : 'Sale' }}</span>
                                 </div>
                                 <div class="my-3">
                                     <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">{{$property->name}}
                                     </h3>
                                     <p class="my-2 text-dark ms-2">
-                                        <i class="fa-sharp fa-solid fa-location-dot"></i>  {{$property->location}}
+                                        <i class="fa-sharp fa-solid fa-location-dot"></i>{{$property->address}} , {{$property->location}}
                                     </p>
                                     <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
                                         <div class="badge px-2 py-1 bg-second-color">

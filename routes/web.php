@@ -25,13 +25,9 @@ Route::get('/prone', function () {
 })->name('single-property');
 
 
-Route::get('/search', function () {
-    return view('front.search-page');
-})->name('search-listings');
+Route::get('/rezultate',[FrontendController::class,'searchFunction'])->name('search-listings');
 
 Route::get('/all-listings',[FrontendController::class,'allListings'])->name('all-listings');
-
-Route::get('/all-listings', [FrontendController::class, 'allListings'])->name('all-listings');
 
 
 

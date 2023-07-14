@@ -18,8 +18,8 @@
                             </div>
                         </a>
                         <div class="mt-3 socials">
-                            <a href="#"> <i class="fa-brands fa-square-facebook"></i></a> <a href="#"><i
-                                    class="fa-brands fa-instagram"></i></a> <a href="#"><i
+                            <a href="{{route('contact-us')}}"> <i class="fa-brands fa-square-facebook"></i></a> <a href="{{route('contact-us')}}"><i
+                                    class="fa-brands fa-instagram"></i></a> <a href="{{route('contact-us')}}"><i
                                     class="fa-solid fa-envelope"></i></a>
                         </div>
                     </div>
@@ -33,10 +33,10 @@
                         Kompania
                     </h6>
                     <p class="text-white">
-                        <a href="#" class="text-reset">Rreth Nesh</a>
+                        <a href="{{route('about-us')}}" class="text-reset">Rreth Nesh</a>
                     </p>
                     <p class="text-white">
-                        <a href="#" class="text-reset">Kontakt</a>
+                        <a href="{{route('contact-us')}}" class="text-reset">Kontakt</a>
                     </p>
 
                 </div>
@@ -50,10 +50,10 @@
                     </h6>
 
                     <p class="text-white">
-                        <a href="#" class="text-reset">Me Qera</a>
+                        <a href="{{route('search-listings',['sale_rent' => 'rent','search_property'=> '','location'=>''])}}" class="text-reset">Me Qera</a>
                     </p>
                     <p class="text-white">
-                        <a href="#" class="text-reset">Ne Shitje </a>
+                        <a href="{{route('search-listings',['sale_rent' => 'sale','search_property'=> '','location'=>''])}}" class="text-reset">Ne Shitje </a>
                     </p>
                     <p class="text-white">
                         <a href="{{route('all-listings')}}" class="text-reset">Të Gjitha</a>

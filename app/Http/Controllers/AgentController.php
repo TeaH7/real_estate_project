@@ -16,7 +16,7 @@ class AgentController extends Controller
     //load index view for showing all users
     public function index()
     {
-        $users = User::where('role_id', 2)->get();
+        $users = User::where('role_id', 2)->paginate(20);
         return view("admin.agents.index", ['users' => $users]);
     }
 
@@ -65,6 +65,7 @@ class AgentController extends Controller
             $pathLink = $file->storeAs('uploads/' . $year . '/' . $month . '/' . $day, $fileNameImage);
             $incomingData['image'] = $pathLink;
         }
+        
 
         $newUser = User::create([
             'first_name' => $incomingData['first_name'],
@@ -75,7 +76,9 @@ class AgentController extends Controller
             'password' => Hash::make($incomingData['password']),
             'description' => $request->input('description'),
             'role_id' => 2,
-            'image' => $incomingData['image']
+            'image' => $request->input('image'),
+            'icon1' => $request->input('icon1'),
+            'icon2' => $request->input('icon2'),
         ]);
 
 
@@ -104,7 +107,7 @@ class AgentController extends Controller
             'email' => 'required|min:5|max:50|unique:users,email,'.$id,
             'phone' => 'required|min:5|max:50',
             'password' => 'required|min:6|max:25|confirmed',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5000',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:5000',
         ]);
 
         if ($request->hasFile('image')) {
@@ -134,6 +137,8 @@ class AgentController extends Controller
             'password' => Hash::make($incomingData['password']),
             'description' => $request->input('description'),
             'image' => $incomingData['image'],
+            'icon1' => $request->input('icon1'),
+            'icon2' => $request->input('icon2'),
         ]);
         return redirect()->route('agents.index')->with('success', 'User updated!');
     }

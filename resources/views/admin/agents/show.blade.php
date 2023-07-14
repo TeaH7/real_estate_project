@@ -43,6 +43,12 @@
                 <tr> <th>Phone</th>
                     <td>{{$user->phone}}</td>
                 </tr>
+                <tr> <th>Facebook</th>
+                    <td>{{$user->icon1}}</td>
+                </tr>
+                <tr> <th>Instagram</th>
+                    <td>{{$user->icon2}}</td>
+                </tr>
                 <tr> <th>Description</th>
                     <td>{{$user->id}}</td>
                 </tr>

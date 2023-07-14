@@ -20,7 +20,7 @@
                         <th>Agent</th>
                         <th>Email</th>
                         <th>Phone</th>
-                        <th>Status</th>
+            
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -36,20 +36,7 @@
                         <td>
                             {{$user->phone}}
                         </td>
-                        <td>
-                            @php
-                                $is_aproved = 1;
-                            @endphp
-                            @if ($is_aproved !== null)
-                                <span class="badge bg-label-{{ $is_aproved === 1 ? 'success' : 'danger' }} me-1">
-                                    {{ $is_aproved === 1 ? 'Active' : 'Refused' }}
-                                </span>
-                            @else
-                                <span class="badge bg-label-warning me-1">
-                                    Waiting for aproval
-                                </span>
-                            @endif
-                        </td>
+                       
                        
                         <td>
                     
@@ -77,8 +64,11 @@
                     </tr>
                     @endif
                     @endforeach
+                  
                 </tbody>
+                
             </table>
+            {{ $users->links('pagination::custom-dashboard') }}
         </div>
     </div>
 </div>

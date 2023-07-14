@@ -13,7 +13,7 @@
     {{-- Search SECTION --}}
     <section class="bg-light py-3 card-section">
 
-<<<<<<< Updated upstream
+
         <div class="container mb-4">
             <div class="card border-0 shadow">
                 <div class="card-body">

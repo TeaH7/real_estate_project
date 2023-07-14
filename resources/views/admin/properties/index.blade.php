@@ -59,10 +59,10 @@
                                     </td>
                                     <td>
 
-                                        @if ($property->is_aproved !== null)
+                                        @if ($property->is_approved !== null)
                                             <span
-                                                class="badge bg-label-{{ $property->is_aproved === 1 ? 'success' : 'danger' }} me-1">
-                                                {{ $property->is_aproved === 1 ? 'Active' : 'Refused' }}
+                                                class="badge bg-label-{{ $property->is_approved === 1 ? 'success' : 'danger' }} me-1">
+                                                {{ $property->is_approved === 1 ? 'Active' : 'Refused' }}
                                             </span>
                                         @else
                                             <span class="badge bg-label-warning me-1">

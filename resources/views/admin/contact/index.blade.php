@@ -67,6 +67,6 @@
                 </table>
             </div>
         </div>
-        {{ $properties->links('pagination::custom-dashboard') }}
+        {{ $contacts->links('pagination::custom-dashboard') }}
     </div>
 @endsection

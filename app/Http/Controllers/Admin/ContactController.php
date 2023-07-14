@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class ContactController extends Controller
 {
     public function index(){
-        $contacts = Contact::all();
+        $contacts = Contact::latest()->paginate(20);
         return view('admin.contact.index',['contacts'=>$contacts]);
     }
 

@@ -49,16 +49,13 @@ class FrontendController extends Controller
         if ($request->get('sale_rent')) {
             $param = $request->get('sale_rent') === 'sale' ? 1 : 0;
             $query->where(['is_approved' => 1, 'status_id' => 1])->where('sale_rent', $param);
-            $query->where(['is_approved' => 1, 'status_id' => 1])->where('sale_rent', $param);
         }
         if ($request->get('search_property')) {
             $param = $request->get('search_property');
             $query->where(['is_approved' => 1, 'status_id' => 1])->where('type_of_property', 'LIKE', "%{$param}%");
-            $query->where(['is_approved' => 1, 'status_id' => 1])->where('type_of_property', 'LIKE', "%{$param}%");
         }
         if ($request->get('location')) {
             $param = $request->get('location');
-            $query->where(['is_approved' => 1, 'status_id' => 1])->where('location', 'LIKE', "%{$param}%")->orWhere('address', 'LIKE', "%{$param}%");
             $query->where(['is_approved' => 1, 'status_id' => 1])->where('location', 'LIKE', "%{$param}%")->orWhere('address', 'LIKE', "%{$param}%");
         }
         if ($request->get('price')) {
@@ -66,7 +63,6 @@ class FrontendController extends Controller
             if ($request->get('price') !== '10000+') {
                 $explodePrice = explode('-', $request->get('price'));
 
-                $query->where(['is_approved' => 1, 'status_id' => 1])->whereBetween('price', $explodePrice);
                 $query->where(['is_approved' => 1, 'status_id' => 1])->whereBetween('price', $explodePrice);
             } else {
 

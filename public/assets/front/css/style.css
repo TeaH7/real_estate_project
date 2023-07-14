@@ -486,6 +486,14 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 25px;
+}.pagination-div nav {
+background-color: white!important;
+border-radius: 10px;
+}
+.pagination-div nav div{
+    margin-left: 5px;
+background-color: white!important;
+border-radius: 10px;
 }
 
 /* End - all listings */

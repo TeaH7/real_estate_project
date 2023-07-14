@@ -28,7 +28,7 @@ return new class extends Migration
             $table->integer('nr_of_baths');
             $table->double('price');
             $table->longText('description');
-            $table->boolean('is_aproved')->nullable()->default(null);
+            $table->boolean('is_approved')->nullable()->default(null);
             $table->boolean('sale_rent');
             $table->foreignId('status_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();

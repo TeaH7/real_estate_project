@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use App\Models\Property;
 use Illuminate\Http\Request;
+<<<<<<< Updated upstream
 use Symfony\Component\Routing\Matcher\ExpressionLanguageProvider;
 
 class FrontendController extends Controller
@@ -46,12 +46,35 @@ class FrontendController extends Controller
         return view('front.all-listings', ['properties' => $properties]);
     }
 
+=======
+use App\Http\Requests\ContactRequest;
+
+class FrontendController extends Controller
+{
+    public function home() {
+        $properties = Property::where('is_approved', true)
+        ->where('status_id', 1)
+        ->latest()
+        ->limit(6)
+        ->paginate(6);
+         return view('front.index',compact('properties'));
+    }
+>>>>>>> Stashed changes
     public function contact()
     {
         return view('front.contact');
     }
 
-
+    public function allListings(){
+        $properties = Property::where('is_approved', 1)
+                        ->where('status_id', 1)
+                        ->latest()
+                        ->paginate(12);
+        return view('front.all-listings',compact('properties'));
+    }
+    public function searchPage(){
+        return view('front.search-page');
+    }
     public function storeContact(ContactRequest $request)
     {
 

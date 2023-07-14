@@ -15,7 +15,11 @@ class PropertyController extends Controller
     public function index()
     {
         if (auth()->user()->role_id === 1) {
+<<<<<<< Updated upstream
             $properties = Property::where('is_aproved', 1)->latest()->paginate(20);
+=======
+            $properties = Property::where('is_approved', 1)->latest()->paginate();
+>>>>>>> Stashed changes
 
             return view('admin.properties.index', ['properties' => $properties]);
         }
@@ -328,7 +332,11 @@ class PropertyController extends Controller
     public function forAproval()
 
     {
+<<<<<<< Updated upstream
         $properties = Property::where('is_aproved', '=', null)->paginate(3);
+=======
+        $properties = Property::where('is_approved', '=', null)->get();
+>>>>>>> Stashed changes
         return view('admin.properties.aprove-properties', ['properties' => $properties]);
     }
 
@@ -337,9 +345,9 @@ class PropertyController extends Controller
         $property = Property::where('id', $id)->first();
 
         $property->update([
-            'is_aproved' => 1
+            'is_approved' => 1
         ]);
-        return redirect()->route('properties.for.aproval')->with('success', 'Property Aproved.');
+        return redirect()->route('properties.for.aproval')->with('success', 'Property Approved.');
     }
 
     public function refuseProperty($id)
@@ -347,7 +355,7 @@ class PropertyController extends Controller
         $property = Property::where('id', $id)->first();
 
         $property->update([
-            'is_aproved' => 0
+            'is_approved' => 0
         ]);
         return redirect()->route('properties.for.aproval')->with('success', 'Property Refused.');
     }

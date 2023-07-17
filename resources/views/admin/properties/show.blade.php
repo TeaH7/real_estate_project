@@ -101,7 +101,11 @@
                 </div>
                 <div class="col-6">
                     <div>
-                        <h3>{{ $property->price }}$</h3>
+                        @if ($property->sale_rent == 0)
+                            <h3>{{ $property->price }}€/Muaj</h3>
+                        @else
+                            <h3>{{ $property->price }}€</h3>
+                        @endif
                         <h6 class="badge" style="background-color: #ffac12; color:#031136">
                             {{ $property->sale_rent === 0 ? 'Rent' : 'Sale' }}</h6>
                         @if ($property->status_id == 1)

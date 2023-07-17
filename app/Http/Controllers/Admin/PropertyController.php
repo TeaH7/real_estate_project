@@ -11,12 +11,17 @@ use Illuminate\Support\Facades\Storage;
 
 class PropertyController extends Controller
 {
-  
+
+
 
     public function index(Request $request)
     {
-    
+
         if (auth()->user()->role_id === 1) {
+
+
+
+
             $properties = Property::where('is_approved', 1)->latest()->paginate(20);
             return view('admin.properties.index', ['properties' => $properties]);
         }

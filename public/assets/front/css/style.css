@@ -472,13 +472,13 @@ nav {
 }
 
 .icons-styles ul li {
-    font-size: 17px;
-    color: #697488;
+    font-size: 19px;
+    color: var(--main-color);
 }
 
 .icons-styles i {
-    color: #5eb861;
-    font-size: 18px;
+    color: var(--secondary-color);
+    font-size: 30px;
 }
 
 /* ALl listings */
@@ -494,6 +494,15 @@ border-radius: 10px;
     margin-left: 5px;
 background-color: white!important;
 border-radius: 10px;
+}
+.pagination-div nav {
+    background-color: white !important;
+    border-radius: 10px;
+}
+.pagination-div nav div {
+    margin-left: 5px;
+    background-color: white !important;
+    border-radius: 10px;
 }
 
 /* End - all listings */

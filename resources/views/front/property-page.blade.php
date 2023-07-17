@@ -12,21 +12,30 @@
 
                     <div>
                         <div class="col-12">
-                            <h2 class="text-white">Titulli</h2>
+                            <h2 class="text-white">{{ $property->title }}</h2>
                         </div>
                         <div class="col-12">
-                            <span class="text-white location-style"><i class="bi bi-geo-alt me-1"></i>Shqiperi</span>
+                            <span class="text-white location-style"><i
+                                    class="bi bi-geo-alt me-1"></i>{{ $property->address }}, {{ $property->location }}</span>
                         </div>
                     </div>
 
                     <div>
                         <div class="col-12">
-                            <h2 class="text-white">450$</h2>
-
+                            @if ($property->sale_rent === 0)
+                                <h2 class="text-white">{{ $property->price }}€/Muaj</h2>
+                            @else
+                                <h2 class="text-white">{{ $property->price }}€</h2>
+                            @endif
                         </div>
                         <div class="col-12">
-                            <p class="text-end m-0 badge" style="background-color: #ffac12; color:#031136">Rent
-                            </p>
+                            @if ($property->sale_rent == 0)
+                                <p class="text-end m-0 badge" style="background-color: #ffac12; color:#031136">Rent
+                                </p>
+                            @else
+                                <p class="text-end m-0 badge" style="background-color: #ffac12; color:#031136">Sale
+                                </p>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -60,25 +69,45 @@
                                     </div>
                                     <div class="carousel-inner custom-carousel">
                                         <div class="carousel-item active">
-                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                            <img src="{{ asset('storage/' . $property->cover_image) }}"
                                                 class="d-block w-100" alt="...">
                                         </div>
 
                                         <div class="carousel-item">
-                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                class="d-block w-100" alt="...">
+                                            @if ($property->img1)
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('storage/' . $property->img1) }}"
+                                                        class="d-block w-100" alt="...">
+                                                </div>
+                                            @endif
                                         </div>
 
 
                                         <div class="carousel-item">
-                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                class="d-block w-100" alt="...">
+                                            @if ($property->img2)
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('storage/' . $property->img2) }}"
+                                                        class="d-block w-100" alt="...">
+                                                </div>
+                                            @endif
                                         </div>
 
 
                                         <div class="carousel-item">
-                                            <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                class="d-block w-100" alt="...">
+                                            @if ($property->img3)
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('storage/' . $property->img3) }}"
+                                                        class="d-block w-100" alt="...">
+                                                </div>
+                                            @endif
+                                        </div>
+                                        <div class="carousel-item">
+                                            @if ($property->img4)
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('storage/' . $property->img4) }}"
+                                                        class="d-block w-100" alt="...">
+                                                </div>
+                                            @endif
                                         </div>
 
 
@@ -101,30 +130,7 @@
                     <div class="row bg-white mt-3" style="border-radius: 30px">
                         <div class="col-12">
                             <h3 class="mt-4 mb-4">Përshkrimi</h3>
-                            <p class="mb-5" style="color: #697488;">Lorem ipsum dolor sit amet consectetur,
-                                adipisicing
-                                elit.
-                                At
-                                officia et enim, odit natus quibusdam soluta velit molestiae vitae quaerat omnis,
-                                voluptates
-                                voluptatum animi. At omnis maxime ratione corrupti. Molestiae excepturi enim inventore
-                                non
-                                facilis
-                                necessitatibus. Assumenda corporis ipsa commodi voluptatem ipsam consequatur cumque
-                                sint?
-                                Tempore,
-                                quisquam in! Distinctio vel id error voluptate doloremque, amet voluptates ut aperiam
-                                incidunt
-                                delectus adipisci voluptatem quaerat alias voluptatibus earum possimus ullam sed
-                                asperiores
-                                fuga
-                                nulla? Repudiandae, ipsam repellendus magni assumenda molestiae incidunt fugit,
-                                doloremque
-                                iste,
-                                veritatis repellat sunt tempore sit commodi quasi quibusdam sint delectus quae illo
-                                corrupti
-                                culpa
-                                deserunt ratione. Dicta, quo?</p>
+                            <p class="mb-5" style="color: #697488;">{{ $property->description }}</p>
                         </div>
 
                         <div class="col-12 ">
@@ -133,22 +139,32 @@
                             <div class="row">
                                 <div class="col-3 icons-styles">
                                     <ul>
+                                        <li><i
+                                                class="fa-solid fa-house ms-3 me-3 mb-3"></i>{{ $property->type_of_property }}
+                                        </li>
+                                        @if ($property->nr_of_beds == 1)
+                                            <li><i class="fas fa-bed ms-3 me-3 mb-3"></i>{{ $property->nr_of_beds }} Dhomë
+                                            </li>
+                                        @else
+                                            <li><i class="fas fa-bed ms-3 me-3 mb-3"></i>{{ $property->nr_of_beds }} Dhoma
+                                            </li>
+                                        @endif
 
-                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
 
-                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
-                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
-                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+
                                     </ul>
                                 </div>
                                 <div class="col-3 icons-styles">
                                     <ul>
 
-                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
+                                        <li><i class="fas fa-bath ms-3 me-3 mb-3"></i>{{ $property->nr_of_baths }} Banjo
+                                        </li>
 
-                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
-                                        <li><i class="bi bi-check-lg me-2"></i>Dhoma</li>
-                                        <li><i class="bi bi-check-lg me-2"></i>Nuk ka</li>
+
+
+                                        <li><i class="fa-solid fa-chart-area ms-3 me-3 mb-3"></i>{{ $property->area }}
+                                            m<sup>2</sup>
+                                        </li>
 
 
                                     </ul>
@@ -164,25 +180,30 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex justify-content-center">
-                                    <div class="mt-2"><img src="{{ asset('assets/front/images/dude.jpeg') }}"
-                                            alt="" width="100px" height="100px"></div>
+
+                                    @if ($property->user->image)
+                                        <div class="mt-2"><img src="{{ asset('storage/' . $property->user->image) }}"
+                                                alt="" width="100px" height="100px"></div>
+                                    @endif
                                 </div>
 
                             </div>
                             <div class="col-12">
                                 <div class="d-flex justify-content-center mt-2">
-                                    <h6>Emer Mbiemer</h6>
+                                    <h6>{{ $property->user->first_name }} {{ $property->user->last_name }}</h6>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="d-flex justify-content-center">
                                     <div>
-                                        <a href="" class="text-decoration-none agent-href me-2"><i
+                                        <a href="{{ $property->user->icon1 }}" target="_blank"
+                                            class="text-decoration-none agent-href me-2"><i
                                                 class="fa-brands fa-facebook agent-icons"></i></a>
                                     </div>
                                     <div>
-                                        <a href=""class="text-decoration-none agent-href"><i
-                                                class="fa-brands fa-instagram agent-icons"></i></i></a>
+                                        <a href="{{ $property->user->icon2 }}" target="_blank"
+                                            class="text-decoration-none agent-href"><i
+                                                class="fa-brands fa-instagram agent-icons"></i></a>
                                     </div>
 
 
@@ -199,11 +220,11 @@
                             <div class="col-12">
                                 <div class="text-center mt-3">
                                     <div>
-                                        <p class="mb-1"><i class="fa-solid fa-phone"></i> +355 68 06 635
+                                        <p class="mb-1"><i class="fa-solid fa-phone"></i> {{ $property->user->phone }}
                                         </p>
                                     </div>
                                     <div>
-                                        <p> <i class="fa-regular fa-envelope"></i> xhimi.neutro@property.al</p>
+                                        <p> <i class="fa-regular fa-envelope"></i> {{ $property->user->email }}</p>
                                     </div>
 
 
@@ -377,191 +398,66 @@
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
 
-                                    <div class="swiper-slide">
-                                        <a href="#" class="text-decoration-none">
-                                            <div class="card rounded border-0 shadow">
-                                                <div class="card-body p-2">
-                                                    <div class="position-relative">
-                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                            class="card-img-top rounded" alt="Property Image">
-                                                        <span
-                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                                    </div>
-                                                    <div class="my-3">
-                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                            Lorem ipsum
-                                                            dolor sit.
-                                                        </h3>
-                                                        <p class="my-2 text-dark ms-2">
-                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                        </p>
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color ">
-                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                            </div>
+                                    @foreach ($properties as $property)
+                                        <div class="swiper-slide">
+                                            <a href="{{ route('single-property', $property->slug) }}"
+                                                class="text-decoration-none">
+                                                <div class="card rounded border-0 shadow">
+                                                    <div class="card-body p-2">
+                                                        <div class="position-relative">
+                                                            <img src="{{ asset('storage/' . $property->cover_image) }}"
+                                                                class="card-img-top rounded" alt="Property Image">
+                                                            @if ($property->sale_rent == 0)
+                                                                <span
+                                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                            @else
+                                                                <span
+                                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-second-color fs-6">Sale</span>
+                                                            @endif
                                                         </div>
-                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
+                                                        <div class="my-3">
+                                                            <h3
+                                                                class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                                {{ $property->title }}
+                                                            </h3>
+                                                            <p class="my-2 text-dark ms-2">
+                                                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                                                {{ $property->address }}, {{ $property->location }}
+                                                            </p>
+                                                            <div
+                                                                class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                                <div class="badge px-2 py-1 bg-second-color">
+                                                                    <i class="fa-sharp fa-solid fa-bed"></i>
+                                                                    {{ $property->nr_of_beds }}
+                                                                </div>
+                                                                <div class="badge px-2 py-1 bg-second-color ">
+                                                                    <i class="fa-sharp fa-solid fa-bath"></i>
+                                                                    {{ $property->nr_of_baths }}
+                                                                </div>
+                                                                <div class="badge px-2 py-1 bg-second-color">
+                                                                    <i class="fa-solid fa-house"></i>
+                                                                    {{ $property->area }}m<sup>2</sup>
+                                                                </div>
+                                                                <div class="badge px-2 py-1 bg-second-color">
+                                                                    <i class="fa-solid fa-house"></i>
+                                                                    {{ $property->type_of_property }}
+                                                                </div>
+                                                            </div>
+                                                            @if ($property->sale_rent == 0)
+                                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">
+                                                                    {{ $property->price }}€/Muaj</h3>
+                                                            @else
+                                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">
+                                                                    {{ $property->price }}€</h3>
+                                                            @endif
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </a>
+                                            </a>
 
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="text-decoration-none">
-                                            <div class="card rounded border-0 shadow">
-                                                <div class="card-body p-2">
-                                                    <div class="position-relative">
-                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                            class="card-img-top rounded" alt="Property Image">
-                                                        <span
-                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                                    </div>
-                                                    <div class="my-3">
-                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                            Lorem ipsum
-                                                            dolor sit.
-                                                        </h3>
-                                                        <p class="my-2 text-dark ms-2">
-                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                        </p>
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color ">
-                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                            </div>
-                                                        </div>
-                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        </div>
+                                    @endforeach
 
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="text-decoration-none">
-                                            <div class="card rounded border-0 shadow">
-                                                <div class="card-body p-2">
-                                                    <div class="position-relative">
-                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                            class="card-img-top rounded" alt="Property Image">
-                                                        <span
-                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                                    </div>
-                                                    <div class="my-3">
-                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                            Lorem ipsum
-                                                            dolor sit.
-                                                        </h3>
-                                                        <p class="my-2 text-dark ms-2">
-                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                        </p>
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color ">
-                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                            </div>
-                                                        </div>
-                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="text-decoration-none">
-                                            <div class="card rounded border-0 shadow">
-                                                <div class="card-body p-2">
-                                                    <div class="position-relative">
-                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                            class="card-img-top rounded" alt="Property Image">
-                                                        <span
-                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                                    </div>
-                                                    <div class="my-3">
-                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                            Lorem ipsum
-                                                            dolor sit.
-                                                        </h3>
-                                                        <p class="my-2 text-dark ms-2">
-                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                        </p>
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color ">
-                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                            </div>
-                                                        </div>
-                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="text-decoration-none">
-                                            <div class="card rounded border-0 shadow">
-                                                <div class="card-body p-2">
-                                                    <div class="position-relative">
-                                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                            class="card-img-top rounded" alt="Property Image">
-                                                        <span
-                                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                                    </div>
-                                                    <div class="my-3">
-                                                        <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                            Lorem ipsum
-                                                            dolor sit.
-                                                        </h3>
-                                                        <p class="my-2 text-dark ms-2">
-                                                            <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                        </p>
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color ">
-                                                                <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                            </div>
-                                                            <div class="badge px-2 py-1 bg-second-color">
-                                                                <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                            </div>
-                                                        </div>
-                                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                    </div>
 
 
 

@@ -58,7 +58,7 @@ class AgentController extends Controller
             $pathLink = $file->storeAs('uploads/' . $year . '/' . $month . '/' . $day, $fileNameImage);
             $incomingData['image'] = $pathLink;
         }
-        
+
 
         $newUser = User::create([
             'first_name' => $incomingData['first_name'],
@@ -96,11 +96,11 @@ class AgentController extends Controller
         $incomingData = $request->validate([
             'first_name' => 'required|min:2|max:50',
             'last_name' => 'required|min:2|max:50',
-            'username' => 'required|min:4|max:50|unique:users,username,'.$id,
-            'email' => 'required|min:5|max:50|unique:users,email,'.$id,
+            'username' => 'required|min:4|max:50|unique:users,username,' . $id,
+            'email' => 'required|min:5|max:50|unique:users,email,' . $id,
             'phone' => 'required|min:5|max:50',
             'password' => 'required|min:6|max:25|confirmed',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:5000',
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
         ]);
 
         if ($request->hasFile('image')) {
@@ -143,12 +143,13 @@ class AgentController extends Controller
         $user->delete();
         return redirect()->route('agents.index')->with('success', 'User deleted!');
     }
-    
-    public function searchAgent(Request $request){
-        $users = User::where('first_name','LIKE', "%{$request->input('searchName')}")
-        ->orWhere('last_name','LIKE', "%{$request->input('searchName')}")
-        ->paginate(20);
-       
-        return view('admin.agents.index',compact('users'));
+
+    public function searchAgent(Request $request)
+    {
+        $users = User::where('first_name', 'LIKE', "%{$request->input('searchName')}")
+            ->orWhere('last_name', 'LIKE', "%{$request->input('searchName')}")
+            ->paginate(20);
+
+        return view('admin.agents.index', compact('users'));
     }
 }

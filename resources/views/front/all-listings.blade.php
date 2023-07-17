@@ -61,7 +61,7 @@
             <div class="row mb-3 g-3">
                 @foreach ($properties as $property)
                     <div class="col-12  col-lg-3 col-md-6">
-                        <a href="#" class="text-decoration-none">
+                        <a href="{{ route('single-property', $property->slug) }}" class="text-decoration-none">
                             <div class="card rounded border-0 shadow">
                                 <div class="card-body p-2">
                                     <div class="position-relative">

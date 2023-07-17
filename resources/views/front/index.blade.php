@@ -131,17 +131,23 @@
                             <div class="card rounded border-0 shadow">
                                 <div class="card-body p-2">
                                     <div class="position-relative">
-                                        <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
+                                        <img src="{{ asset('storage/' . $property->cover_image) }}"
                                             class="card-img-top rounded" alt="Property Image">
-                                        <span
-                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">{{ $property->type_of_property }}</span>
+                                        @if ($property->sale_rent === 0)
+                                            <span
+                                                class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                        @else
+                                            <span
+                                                class="position-absolute top-0 end-0 mt-2 me-2 badge bg-second-color fs-6">Sale</span>
+                                        @endif
                                     </div>
                                     <div class="my-3">
                                         <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                            {{ $property->name }}
+                                            {{ $property->title }}
                                         </h3>
                                         <p class="my-2 text-dark ms-2">
-                                            <i class="fa-sharp fa-solid fa-location-dot"></i> {{ $property->location }}
+                                            <i class="fa-sharp fa-solid fa-location-dot me-2"></i>{{ $property->address }},
+                                            {{ $property->location }}
                                         </p>
                                         <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
                                             <div class="badge px-2 py-1 bg-second-color">
@@ -153,8 +159,16 @@
                                             <div class="badge px-2 py-1 bg-second-color">
                                                 <i class="fa-solid fa-house"></i> {{ $property->area }}m<sup>2</sup>
                                             </div>
+                                            <div class="badge px-2 py-1 bg-second-color">
+                                                <i class="fa-solid fa-house"></i>
+                                                {{ $property->type_of_property }}
+                                            </div>
                                         </div>
-                                        <h3 class="h4 mt-2 text-dark fw-bold ms-2">${{ $property->price }}</h3>
+                                        @if ($property->sale_rent == 0)
+                                            <h3 class="h4 mt-2 text-dark fw-bold ms-2">{{ $property->price }}€/Muaj</h3>
+                                        @else
+                                            <h3 class="h4 mt-2 text-dark fw-bold ms-2">{{ $property->price }}€</h3>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

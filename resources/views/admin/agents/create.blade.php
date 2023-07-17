@@ -24,6 +24,8 @@
                          {{ $message }}
                      </div>
                  @enderror
+                 </div>
+                 <div class="mb-3">
                 <label for="lastName" class="form-label">Last Name</label>
                 <input type="text" id="lastName" class="form-control  @error('lastName') is-invalid  @enderror" placeholder="Doe" name="last_name" value="{{ old('lastName') }}">
                 @error('lastName')

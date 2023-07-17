@@ -74,7 +74,7 @@
                                                 class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                         @else
                                             <span
-                                                class="position-absolute top-0 end-0 mt-2 me-2 badge bg-second-color fs-6">Sale</span>
+                                                class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Sale</span>
                                         @endif
 
                                     </div>

@@ -133,8 +133,13 @@
                                     <div class="position-relative">
                                         <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
                                             class="card-img-top rounded" alt="Property Image">
-                                        <span
-                                            class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">{{ $property->type_of_property }}</span>
+                                            @if ($property->sale_rent === 0)
+                                            <span
+                                                class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                        @else
+                                            <span
+                                                class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Sale</span>
+                                        @endif
                                     </div>
                                     <div class="my-3">
                                         <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">

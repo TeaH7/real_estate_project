@@ -4,9 +4,18 @@
     <div class="container">
         <div class="d-flex align-items-center justify-content-between mt-3">
             <h4 class="fw-bold py-3">Lista e pronave</h4>
+            <div class="d-flex align-items-center justify-content-end mt-3">
+                <form  method="get" class="d-flex">
+                    @csrf
+                  
+                <input type="text" id="" name="searchProperty" class="form-control me-1" placeholder="Search Property">
+                <button class="btn btn-outline-primary me-3">Search</button>
+        
+               </form>
             @if (auth()->user()->role_id === 2)
                 <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
             @endif
+            </div>
         </div>
         <hr class="mt-0" />
         <div class="card">

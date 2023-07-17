@@ -18,8 +18,8 @@
         <div class="card-body">
             <div class="mb-3">
                 <label for="firstName" class="form-label ">First Name</label>
-                <input type="text" id="firstName" class="form-control  @error('firstName') is-invalid  @enderror" placeholder="John" name="first_name" value="{{ old('firstName') }}">
-                @error('firstName')
+                <input type="text" id="firstName" class="form-control  @error('first_name') is-invalid  @enderror" placeholder="John" name="first_name" value="{{ old('first_name') }}">
+                @error('first_name')
                      <div class="invalid-feedback">
                          {{ $message }}
                      </div>
@@ -27,8 +27,8 @@
                  </div>
                  <div class="mb-3">
                 <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" id="lastName" class="form-control  @error('lastName') is-invalid  @enderror" placeholder="Doe" name="last_name" value="{{ old('lastName') }}">
-                @error('lastName')
+                <input type="text" id="lastName" class="form-control  @error('last_name') is-invalid  @enderror" placeholder="Doe" name="last_name" value="{{ old('last_name') }}">
+                @error('last_name')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
@@ -46,8 +46,8 @@
          </div>
             <div class="mb-3">
                 <label for="agentEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control  @error('email') is-invalid  @enderror" id="agentEmail" placeholder="name@example.com" name="email" value="{{ old('agentEmail') }}">
-                @error('agentEmail')
+                <input type="email" class="form-control  @error('email') is-invalid  @enderror" id="agentEmail" placeholder="name@example.com" name="email" value="{{ old('email') }}">
+                @error('email')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
@@ -56,7 +56,7 @@
             <div class="mb-3">
                 <label for="agentPassword" class="form-label">Password</label>
                 <input type="password" id="agentPassword" class="form-control  @error('password') is-invalid  @enderror" placeholder="here" name="password">
-                @error('agentPassword')
+                @error('password')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>

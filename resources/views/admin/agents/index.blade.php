@@ -4,9 +4,20 @@
 <div class="container">
     <div class="d-flex align-items-center justify-content-between mt-3">
         <h4 class="fw-bold py-3">Lista e Agjenteve</h4>
+
+        <div class="d-flex align-items-center justify-content-end mt-3">
+           
+       <form action="{{route('agents.search')}}" method="post" class="d-flex">
+            @csrf
+        <input type="text" id="" name="searchName" class="form-control me-1" placeholder="Search Agent">
+        <button class="btn btn-outline-primary me-3">Search</button>
+
+       </form>
+        
        
-            <a href="{{route('agents.create')}}" class="btn btn-outline-primary">Add Agent</a>
-       
+       <a href="{{route('agents.create')}}" class="btn btn-outline-primary">Add Agent</a>
+      
+    </div>
     </div>
     <hr class="mt-0" />
     <div class="card">

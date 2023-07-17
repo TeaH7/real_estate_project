@@ -143,7 +143,7 @@
                                     </div>
                                     <div class="my-3">
                                         <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                            {{ $property->name }}
+                                            {{ $property->title }}
                                         </h3>
                                         <p class="my-2 text-dark ms-2">
                                             <i class="fa-sharp fa-solid fa-location-dot"></i> {{ $property->location }}

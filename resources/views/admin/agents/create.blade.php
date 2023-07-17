@@ -11,10 +11,15 @@
         </ul>
     </div>
 @endif
-
+<div class="container-xxl flex-grow-1 container-p-y">
     <form action="{{ route('agents.store') }}" method="post" enctype="multipart/form-data">
         @csrf
-        <h5 class="card-header">Create Agent</h5>
+        <div class="d-flex align-items-center justify-content-between my-3">
+            <h4 class="fw-bold">Create Agent</h4>
+
+            <a href="{{ route('agents.index') }}" class="btn btn-outline-primary">Go Back</a>
+
+        </div>
         <div class="card-body">
             <div class="mb-3">
                 <label for="firstName" class="form-label ">First Name</label>
@@ -108,4 +113,5 @@
           </div>
         </div>
       </form>
+</div>
 @endsection

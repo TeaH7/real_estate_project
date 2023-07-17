@@ -66,6 +66,7 @@ class AgentController extends Controller
             $incomingData['image'] = $pathLink;
         }
 
+
         $newUser = User::create([
             'first_name' => $incomingData['first_name'],
             'last_name' => $incomingData['last_name'],
@@ -100,11 +101,11 @@ class AgentController extends Controller
         $incomingData = $request->validate([
             'first_name' => 'required|min:2|max:50',
             'last_name' => 'required|min:2|max:50',
-            'username' => 'required|min:4|max:50|unique:users',
-            'email' => 'required|min:5|max:50|unique:users',
+            'username' => 'required|min:4|max:50|unique:users,username,' . $id,
+            'email' => 'required|min:5|max:50|unique:users,email,' . $id,
             'phone' => 'required|min:5|max:50',
             'password' => 'required|min:6|max:25|confirmed',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5000',
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
         ]);
 
         if ($request->hasFile('image')) {

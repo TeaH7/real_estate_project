@@ -19,9 +19,7 @@ Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact
 Route::post('/contact', [FrontendController::class, 'storeContact'])->name('contact.create');
 
 
-Route::get('/prone', function () {
-    return view('front.property-page');
-})->name('single-property');
+Route::get('/prone/{slug}', [FrontendController::class, 'showProperty'])->name('single-property');
 
 
 Route::get('/all-listings', [FrontendController::class, 'allListings'])->name('all-listings');

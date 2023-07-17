@@ -61,8 +61,9 @@ class FrontendController extends Controller
     {
         $property = Property::where('slug', $slug)->with('user')->first();
 
+        $properties = Property::where('location', 'LIKE', '%' . 'albania' . '%')->paginate(4);
 
-        return view('front.property-page', ['property' => $property]);
+        return view('front.property-page', ['property' => $property, 'properties' => $properties]);
     }
 
     public function contact()

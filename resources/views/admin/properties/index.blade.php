@@ -2,28 +2,26 @@
 
 @section('admin_content')
     <div class="container-xxl">
-        <div class="d-flex align-items-center justify-content-between mt-3">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-md-row mt-3">
             <h4 class="fw-bold py-3">Lista e pronave</h4>
-            <div class="row ">
-                <div class="col-12 col-md-8 p-0">
+
+            <div class="d-flex justify-content-sm-center">
+                <form action="{{ route('properties.index') }}" method="GET">
                     <div class="d-flex justify-content-end">
-                        <input type="text" id="" name="searchProperty" class="form-control me-1 w-50"
+                        <input type="text" name="searchProperty" class="form-control me-1 w-75"
                             placeholder="Search Property">
                         <button class="btn btn-outline-primary me-3">Search</button>
                     </div>
+                </form>
+                <div class="me-3 text-end">
+                    @if (auth()->user()->role_id === 2)
+                        <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
+                    @endif
                 </div>
-                <div class="col-12 col-md-4 p-md-0">
 
-                    <div class="me-3 text-end">
-                        @if (auth()->user()->role_id === 2)
-                            <a href="{{ route('properties.create') }}" class="btn btn-outline-primary">Add Property</a>
-                        @endif
-                    </div>
-
-                </div>
             </div>
         </div>
-        <hr class="mt-0" />
+        <hr class="mt-3 mt-md-0" />
         <div class="card">
 
             <div class="table-responsive text-nowrap ">

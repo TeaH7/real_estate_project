@@ -135,37 +135,20 @@ p {
     color: white;
 }
 
-.img-contain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .img-contain img {
     height: 50px;
     width: 50px;
 }
 
-.socials {
-    margin-left: 2%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20%;
-}
 .socials i {
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    padding: 3px;
-    border-radius: 5px;
+    font-size: 20px;
 }
 
 .click-links p a:hover {
-    color: black !important;
+    color: var(--secondary-color) !important;
     background-color: white;
-    border-radius: 5px;
-    padding: 2px 5px 2px 5px;
+    /* border-radius: 5px; */
+    padding: 5px;
     transition: all 0.5s ease-in-out;
 }
 footer {
@@ -486,14 +469,15 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 25px;
-}.pagination-div nav {
-background-color: white!important;
-border-radius: 10px;
 }
-.pagination-div nav div{
+.pagination-div nav {
+    background-color: white !important;
+    border-radius: 10px;
+}
+.pagination-div nav div {
     margin-left: 5px;
-background-color: white!important;
-border-radius: 10px;
+    background-color: white !important;
+    border-radius: 10px;
 }
 .pagination-div nav {
     background-color: white !important;

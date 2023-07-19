@@ -100,8 +100,8 @@
                         </div>
 
                         <div class="service-body mt-1">
-                            <h5> Cmimet më të mira
-                                <br> në treg
+                            <h5> Cmimet më të
+                                <br>mira në treg
                             </h5>
                         </div>
                     </div>

@@ -45,8 +45,11 @@
                                         <option value="10000+">10000+</option>
                                     </select>
                                 </div>
-                                <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
+                                <div class="d-flex justify-content-center">
+                                    <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
+                                </div>
                             </div>
+                        </div>
                     </form>
                 </div>
 

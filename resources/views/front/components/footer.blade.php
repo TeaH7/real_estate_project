@@ -12,15 +12,16 @@
 
                     <div class="logo-socials-container">
                         <a href="#">
-                            <div class="img-contain">
+                            <div class="img-contain d-flex align-items-center justify-content-center">
                                 <img class="mb-2" src="{{ asset('assets/front/images/wheat.svg') }}" alt="Logo">
                                 <span>TIG ESTATE</span>
                             </div>
                         </a>
-                        <div class="mt-3 socials">
-                            <a href="{{route('contact-us')}}"> <i class="fa-brands fa-square-facebook"></i></a> <a href="{{route('contact-us')}}"><i
-                                    class="fa-brands fa-instagram"></i></a> <a href="{{route('contact-us')}}"><i
-                                    class="fa-solid fa-envelope"></i></a>
+                        <div class="mt-4 ms-md-3 socials d-flex align-items-center justify-content-center gap-3">
+                            <a href="{{ route('contact-us') }}"> <i
+                                    class="fa-brands fa-square-facebook text-white"></i></a> <a
+                                href="{{ route('contact-us') }}"><i class="fa-brands fa-instagram text-white"></i></a>
+                            <a href="{{ route('contact-us') }}"><i class="fa-solid fa-envelope text-white"></i></a>
                         </div>
                     </div>
                 </div>
@@ -29,14 +30,14 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4 text-white click-links">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4 ">
                         Kompania
                     </h6>
                     <p class="text-white">
-                        <a href="{{route('about-us')}}" class="text-reset">Rreth Nesh</a>
+                        <a href="{{ route('about-us') }}" class="text-reset text-decoration-none">Rreth Nesh</a>
                     </p>
                     <p class="text-white">
-                        <a href="{{route('contact-us')}}" class="text-reset">Kontakt</a>
+                        <a href="{{ route('contact-us') }}" class="text-reset text-decoration-none">Kontakt</a>
                     </p>
 
                 </div>
@@ -50,13 +51,15 @@
                     </h6>
 
                     <p class="text-white">
-                        <a href="{{route('search-listings',['sale_rent' => 'rent','search_property'=> '','location'=>''])}}" class="text-reset">Me Qera</a>
+                        <a href="{{ route('search-listings', ['sale_rent' => 'rent', 'search_property' => '', 'location' => '']) }}"
+                            class="text-reset text-decoration-none">Me Qera</a>
                     </p>
                     <p class="text-white">
-                        <a href="{{route('search-listings',['sale_rent' => 'sale','search_property'=> '','location'=>''])}}" class="text-reset">Ne Shitje </a>
+                        <a href="{{ route('search-listings', ['sale_rent' => 'sale', 'search_property' => '', 'location' => '']) }}"
+                            class="text-reset text-decoration-none">Ne Shitje </a>
                     </p>
                     <p class="text-white">
-                        <a href="{{route('all-listings')}}" class="text-reset">Të Gjitha</a>
+                        <a href="{{ route('all-listings') }}" class="text-reset text-decoration-none">Të Gjitha</a>
                     </p>
                 </div>
                 <!-- Grid column -->

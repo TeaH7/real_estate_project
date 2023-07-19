@@ -51,7 +51,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::put('/agents/update/{id}', [AgentController::class, 'update'])->name('agents.update');
         Route::delete('/agents/{id}', [AgentController::class, 'destroy'])->name('agents.destroy');
         Route::get('/agents/show/{id}', [AgentController::class, 'show'])->name('agents.show');
-        Route::post('/agents/search', [AgentController::class, 'searchAgent'])->name('agents.search');
+       
         //Contact Route
         Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
         Route::get('/contact/{id}', [ContactController::class, 'show'])->name('contact.show');

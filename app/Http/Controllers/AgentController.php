@@ -12,13 +12,21 @@ use Illuminate\Support\Facades\Storage;
 class AgentController extends Controller
 {
 
-
-
     //load index view for showing all users
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::where('role_id', 2)->paginate(20);
-        return view("admin.agents.index", ['users' => $users]);
+        $query = User::query();
+        if($request->get('searchName')){
+            $query->where('role_id', 2)->where('first_name','LIKE',"%".$request->get('searchName')."%")
+            ->orWhere('last_name', 'LIKE', "%".$request->get('searchName')."%");
+        }
+        
+            $users = $query->where('role_id', 2)->paginate(20);
+            return view("admin.agents.index", ['users' => $users]);
+  
+       
+
+       
     }
 
     //show specific user
@@ -144,12 +152,5 @@ class AgentController extends Controller
         return redirect()->route('agents.index')->with('success', 'User deleted!');
     }
 
-    public function searchAgent(Request $request)
-    {
-        $users = User::where('first_name', 'LIKE', "%{$request->input('searchName')}")
-            ->orWhere('last_name', 'LIKE', "%{$request->input('searchName')}")
-            ->paginate(20);
-
-        return view('admin.agents.index', compact('users'));
-    }
+    
 }

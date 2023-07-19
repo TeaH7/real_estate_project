@@ -16,21 +16,15 @@ class PropertyController extends Controller
 
     public function index(Request $request)
     {
-        // $properties = Property::with(['status' => function ($query) use ($request) {
-        //     return $query->where('name', "LIKE", "%" . $request->get('searchProperty') . "%");
-        // }])->where('title', "LIKE", '%' . $request->get('searchProperty') . '%')->get();
-
-
 
         if (auth()->user()->role_id === 1) {
 
             $query = Property::query();
             if ($request->get('searchProperty')) {
-                $query->where('title', 'LIKE', '%' . $request->get('searchProperty') . '%')->orWhereHas('status', function ($q) use ($request) {
+                $query->where('is_approved', 1)->where('title', 'LIKE', '%' . $request->get('searchProperty') . '%')->orWhereHas('status', function ($q) use ($request) {
                     return $q->where('name', 'LIKE', '%' . $request->get('searchProperty') . '%');
                 });
             }
-
             $properties = $query->where('is_approved', 1)->latest()->paginate(20);
             return view('admin.properties.index', ['properties' => $properties]);
         }

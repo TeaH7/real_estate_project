@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="d-flex align-items-center justify-content-between mt-3">
-            <h4 class="fw-bold py-3">Lista e Kontakteve</h4>
+            <h4 class="fw-bold py-3 ">Lista e Kontakteve</h4>
 
 
         </div>

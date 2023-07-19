@@ -15,14 +15,7 @@
                 <h1 class="display-5 text-start"> Mirësevini në TIG Estate</h1>
                 <div class="row">
                     <div class="col-6">
-                        <p class="mt-4 text-start text-white bg-shade"> Lorem Ipsum is simply dummy text of the printing and
-                            typesetting
-                            industry. Lorem
-                            Ipsum has
-                            been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                            type and
-                            scrambled it to make a type specimen book.</p>
+                        <p class="mt-4 text-start text-white bg-shade">Zgjidhni pronën tuaj të ëndrrave me TIG Estate - Partneri juaj i besueshëm në tregun e patundshmërisë. Gjeni, blini, qirani shtëpinë tuaj ideale me ekspertizën tonë të përkushtuar. Bëni hapin drejt një jete të re në një pronë të re!</p>
                     </div>
                 </div>
             </div>
@@ -90,24 +83,38 @@
 
         <div class="container mb-4">
             <div class="card border-0 shadow">
-                <div class="card-body">
+                <div class="card-body ">
+                    
                     <form action="{{ route('search-listings') }}"method="GET">
-                        <div class="d-flex align-items-center justify-content-center gap-1">
-                            <select name="sale_rent" id="" class="form-select py-2">
+                        <div class="row">
+                        <div class="d-md-flex align-items-center justify-content-center  ">
+                          
+                          <div class="col-12 col-md-2 me-2 mb-2 mb-md-0">
+                            <select name="sale_rent" id="" class="form-select py-2 ">
                                 <option disabled selected class="text-gray">Looking for</option>
                                 <option value="rent">Rent</option>
                                 <option value="sale">Sale</option>
                             </select>
+                        </div>
+                       <div class="col-12 col-md-3  me-2 mb-2 mb-md-0"> 
                             <input type="text" name="search_property" placeholder="Property Type"
-                                class="form-control py-2">
+                                class="form-control py-2 col-2">
+                        </div>
+                       <div class="col-12 col-md-2  me-2 mb-2 mb-md-0">
                             <input type="text" name="location" placeholder="Location" class="form-control py-2">
+                        </div>
+                    <div class="col-12 col-md-3  me-2 mb-2 mb-md-0">
                             <select name="price" id="" class="form-select py-2">
                                 <option disabled selected class="text-gray">Price Range</option>
                                 <option value="100-2000">0-2000</option>
                                 <option value="2000-10000">2000-10000</option>
                                 <option value="10000+">10000+</option>
                             </select>
-                            <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
+                    </div>
+                      <div class=" d-flex justify-content-center ">
+                            <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button ">
+                     </div>
+                            </div>
                         </div>
                     </form>
                 </div>

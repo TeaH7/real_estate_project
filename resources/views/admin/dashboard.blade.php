@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="{{ asset('/assets/back/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('/assets/back/vendor/libs/apex-charts/apex-charts.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/back/css/dashboard.css') }}">
 
     <!-- Page CSS -->
 
@@ -55,10 +56,15 @@
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo">
                     <a href="{{ route('home') }}" class="app-brand-link">
-                        <span class="app-brand-logo demo mb-3">
+                       
 
-                            <img src="{{ asset('assets/front/images/Logo-dark.png') }}" alt="logo" width="200">
-                        </span>
+                            <div class="img-contain">
+                                <img class="mb-2" src="{{ asset('assets/front/images/wheat-svgrepo-com.svg') }}" alt="Logo"
+                                    width="250px">
+                                <span class="text-black logo-name">TIG ESTATE</span>
+            
+                            </div>
+                   
 
                     </a>
 

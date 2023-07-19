@@ -7,10 +7,11 @@
     <div class="d-flex align-items-center justify-content-between">
     <h5 class="card-header">Agent No: {{$user->id}}, Information</h5>
     <div class="d-flex flex-column flex-sm-row">
-        <a href="{{route('agents.edit',$user->id)}}" class="btn btn-primary text-white p-0 p-sm-2 " >
+        
+        <a href="{{route('agents.edit',$user->id)}}" class="btn btn-primary text-white p-0 p-sm-2 mt-2 me-2 " >
             <span></span> Edit
         </a>
-        <a href="" class="btn btn-danger text-white p-0 p-sm-2  ms-sm-2 me-sm-2 ">
+        <a href="" class="btn btn-danger text-white p-0 p-sm-2  mt-2 me-2 me-sm-0  ">
         <form  action="{{ route('agents.destroy', $user->id) }}" method="POST" style="display: inline;">
             @csrf
             @method('DELETE')
@@ -19,6 +20,7 @@
             </button>
         </form>
     </a>
+    <a href="{{ route('agents.index') }}" class="btn btn-outline-primary p-0 p-sm-2  ms-sm-2 me-sm-2 mt-2 me-2">Go Back</a>
     </div>    
 </div>
     <div class="table-responsive text-nowrap">

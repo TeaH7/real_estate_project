@@ -34,11 +34,10 @@ class FrontendController extends Controller
                 $query->where(['is_approved' => 1, 'status_id' => 1])->whereBetween('price', $explodePrice);
             } else {
 
-
                 $query->where(['is_approved' => 1, 'status_id' => 1])->where('price', '>=', '10000');
             }
         }
-        $properties = $query->latest()->paginate(8);
+        $properties = $query->where(['is_approved' => 1, 'status_id' => 1])->latest()->paginate(8);
         return view('front.search-page', ['properties' => $properties]);
     }
 

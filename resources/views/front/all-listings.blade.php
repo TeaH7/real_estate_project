@@ -21,23 +21,23 @@
 
                     <form action="{{ route('all-listings') }}" method="GET">
                         <div class="row">
-                            <div class="d-flex justify-content-center ">
+                            <div class="d-md-flex justify-content-center ">
 
-                                <div class="col-md-3 me-2">
+                                <div class="col-md-3 me-2 mb-2 mb-md-0">
                                     <select name="sale_rent" id="" class="form-select py-2">
                                         <option disabled selected class="text-gray">Looking for</option>
                                         <option value="rent">Rent</option>
                                         <option value="sale">Sale</option>
                                     </select>
                                 </div>
-                                <div class="col-md-2 me-2">
+                                <div class="col-md-2 me-2 mb-2 mb-md-0">
                                     <input type="text" name="search_property" placeholder="Property Type"
                                         class="form-control py-2">
                                 </div>
-                                <div class="col-md-2 me-2">
+                                <div class="col-md-2 me-2 mb-2 mb-md-0">
                                     <input type="text" name="location" placeholder="Location" class="form-control py-2">
                                 </div>
-                                <div class="col-md-3 me-2">
+                                <div class="col-md-3 me-2 mb-2 mb-md-0">
                                     <select name="price" id="" class="form-select py-2">
                                         <option disabled selected class="text-gray">Price Range</option>
                                         <option value="100-2000">0-2000</option>
@@ -75,7 +75,7 @@
                                                     class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
                                             @else
                                                 <span
-                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Sale</span>
+                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-second-color fs-6">Sale</span>
                                             @endif
 
                                         </div>

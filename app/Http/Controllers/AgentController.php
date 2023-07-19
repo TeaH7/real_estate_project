@@ -16,17 +16,13 @@ class AgentController extends Controller
     public function index(Request $request)
     {
         $query = User::query();
-        if($request->get('searchName')){
-            $query->where('role_id', 2)->where('first_name','LIKE',"%".$request->get('searchName')."%")
-            ->orWhere('last_name', 'LIKE', "%".$request->get('searchName')."%");
+        if ($request->get('searchName')) {
+            $query->where('role_id', 2)->where('first_name', 'LIKE', "%" . $request->get('searchName') . "%")
+                ->orWhere('last_name', 'LIKE', "%" . $request->get('searchName') . "%");
         }
-        
-            $users = $query->where('role_id', 2)->paginate(20);
-            return view("admin.agents.index", ['users' => $users]);
-  
-       
 
-       
+        $users = $query->where('role_id', 2)->paginate(20);
+        return view("admin.agents.index", ['users' => $users]);
     }
 
     //show specific user
@@ -151,6 +147,4 @@ class AgentController extends Controller
         $user->delete();
         return redirect()->route('agents.index')->with('success', 'User deleted!');
     }
-
-    
 }

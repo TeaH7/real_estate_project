@@ -24,7 +24,7 @@ class AgentRequest extends FormRequest
         return [
             'first_name' => 'required|min:2|max:30',
             'last_name' => 'required|min:2|max:30',
-            'username' => 'required|min:4|max:50|unique:users,username,',
+            
             'email' => 'required|min:5|max:50|unique:users,email,',
             'phone' => 'required|min:5|max:50',
             'password' => 'required|min:6|max:25|confirmed',

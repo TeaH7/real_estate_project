@@ -39,16 +39,7 @@
     @enderror
     </div>
 
-    <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control"  id="username" placeholder="JohnDoe30" 
-         name="username" value="{{  $user->username }}">
-         @error('username')
-        <div class="invalid-feedback">
-          {{ $message }}
-         </div>
- @enderror
-    </div>
+
 
     <div class="mb-3">
         <label for="agentEmail" class="form-label">Email address</label>
@@ -62,7 +53,7 @@
 
     <div class="mb-3">
         <label for="agentPassword" class="form-label">Password</label>
-        <input type="password" id="agentPassword" class="form-control " placeholder="here" name="password">
+        <input type="password" id="agentPassword" class="form-control " placeholder="******" name="password">
         @error('agentPassword')
         <div class="invalid-feedback">
             {{ $message }}
@@ -72,7 +63,7 @@
 
     <div class="mb-3">
         <label for="agentPassword2" class="form-label">Password Confirm</label>
-        <input type="password" id="agentPassword2" class="form-control " placeholder="re-write"
+        <input type="password" id="agentPassword2" class="form-control " placeholder="******"
             name="password_confirmation">
             @error('password_confirmation')
             <div class="invalid-feedback">

@@ -39,16 +39,7 @@
                 </div>
             @enderror
             </div>
-            <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control @error('username') is-invalid  @enderror"  id="username" placeholder="JohnDoe30" 
-             name="username" value="{{ old('username') }}">
-             @error('username')
-             <div class="invalid-feedback">
-                 {{ $message }}
-             </div>
-         @enderror
-         </div>
+            
             <div class="mb-3">
                 <label for="agentEmail" class="form-label">Email address</label>
                 <input type="email" class="form-control  @error('email') is-invalid  @enderror" id="agentEmail" placeholder="name@example.com" name="email" value="{{ old('email') }}">

@@ -42,7 +42,7 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label for="defaultFormControlInput" class="form-label">Price</label>
-                                        <input type="number" class="form-control @error('price') is-invalid  @enderror"
+                                        <input type="text" class="form-control @error('price') is-invalid  @enderror"
                                             id="defaultFormControlInput" placeholder="Euro" name="price"
                                             value="{{ $property->price }}" />
                                         @error('price')

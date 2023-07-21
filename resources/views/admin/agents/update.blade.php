@@ -41,16 +41,6 @@
                     @enderror
                 </div>
 
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="JohnDoe30" name="username"
-                        value="{{ $user->username }}">
-                    @error('username')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
 
                 <div class="mb-3">
                     <label for="agentEmail" class="form-label">Email address</label>

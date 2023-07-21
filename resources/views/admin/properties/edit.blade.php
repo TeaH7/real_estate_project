@@ -153,8 +153,6 @@
                                             class="img-thumbnail mb-2">
                                         <input class="form-control" type="file" id="formFileDisabled"
                                             name="cover_image" />
-
-
                                     </div>
 
                                 </div>

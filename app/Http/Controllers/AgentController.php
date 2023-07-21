@@ -67,7 +67,7 @@ class AgentController extends Controller
         $newUser = User::create([
             'first_name' => $incomingData['first_name'],
             'last_name' => $incomingData['last_name'],
-         
+
             'email' => $incomingData['email'],
             'phone' => $incomingData['phone'],
             'password' => Hash::make($incomingData['password']),
@@ -100,10 +100,9 @@ class AgentController extends Controller
         $incomingData = $request->validate([
             'first_name' => 'required|min:2|max:50',
             'last_name' => 'required|min:2|max:50',
-            
             'email' => 'required|min:5|max:50|unique:users,email,' . $id,
             'phone' => 'required|min:5|max:50',
-            'password' => 'required|min:6|max:25|confirmed',
+            'password' => 'nullable|min:6|confirmed',
             'image' => 'image|mimes:jpeg,png,jpg,gif',
         ]);
 
@@ -128,12 +127,11 @@ class AgentController extends Controller
         $updateUser->update([
             'first_name' => $incomingData['first_name'],
             'last_name' => $incomingData['last_name'],
-           
             'email' => $incomingData['email'],
             'phone' => $incomingData['phone'],
-            'password' => $incomingData['password'] !== null ? $updateUser->password = Hash::make($incomingData['password']) : $updateUser->password ,
+            'password' => $incomingData['password'] !== null ? $updateUser->password = Hash::make($incomingData['password']) : $updateUser->password,
             'description' => $request->input('description'),
-            'image' => $incomingData['image'],
+            'image' => isset($incomingData['image']) ? $incomingData['image'] : $updateUser->image,
             'icon1' => $request->input('icon1'),
             'icon2' => $request->input('icon2'),
         ]);

@@ -73,9 +73,9 @@ class AgentController extends Controller
             'password' => Hash::make($incomingData['password']),
             'description' => $request->input('description'),
             'role_id' => 2,
-            'image' => $request->input('image'),
-            'icon1' => $request->input('icon1'),
-            'icon2' => $request->input('icon2'),
+            'image' => $incomingData['image'],
+            'icon1' => $incomingData['icon1'],
+            'icon2' => $incomingData['icon2'],
         ]);
 
 

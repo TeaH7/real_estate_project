@@ -17,22 +17,35 @@
             <div class="card border-0 shadow">
                 <div class="card-body">
                     <form action="{{ route('search-listings') }}"method="GET">
-                        <div class="d-flex align-items-center justify-content-center gap-1">
-                            <select name="sale_rent" id="" class="form-select py-2">
-                                <option disabled selected class="text-gray">Looking for</option>
-                                <option value="rent">Rent</option>
-                                <option value="sale">Sale</option>
-                            </select>
-                            <input type="text" name="search_property" placeholder="Property Type"
-                                class="form-control py-2">
-                            <input type="text" name="location" placeholder="Location" class="form-control py-2">
-                            <select name="price" id="" class="form-select py-2">
-                                <option disabled selected class="text-gray">Price Range</option>
-                                <option value="100-2000">0-2000</option>
-                                <option value="2000-10000">2000-10000</option>
-                                <option value="10000+">10000+</option>
-                            </select>
-                            <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
+                        <div class="row">
+                            <div class="d-md-flex justify-content-center ">
+
+                                <div class="col-md-3 me-2 mb-2 mb-md-0">
+                                    <select name="sale_rent" id="" class="form-select py-2">
+                                        <option disabled selected class="text-gray">Looking for</option>
+                                        <option value="rent">Rent</option>
+                                        <option value="sale">Sale</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 me-2 mb-2 mb-md-0">
+                                    <input type="text" name="search_property" placeholder="Property Type"
+                                        class="form-control py-2">
+                                </div>
+                                <div class="col-md-2 me-2 mb-2 mb-md-0">
+                                    <input type="text" name="location" placeholder="Location" class="form-control py-2">
+                                </div>
+                                <div class="col-md-3 me-2 mb-2 mb-md-0">
+                                    <select name="price" id="" class="form-select py-2">
+                                        <option disabled selected class="text-gray">Price Range</option>
+                                        <option value="100-2000">0-2000</option>
+                                        <option value="2000-10000">2000-10000</option>
+                                        <option value="10000+">10000+</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input type="submit" value="Kërko" class="btn btn-primary py-2 px-4 search-button">
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

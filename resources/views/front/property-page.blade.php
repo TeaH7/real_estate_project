@@ -51,7 +51,7 @@
                         <div class="col-12">
                             <div>
                                 <div id="carouselExampleIndicators" class="carousel slide">
-                                    <div class="carousel-indicators ">
+                                    <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#carouselExampleIndicators"
                                             data-bs-slide-to="0" class="active" aria-current="true"
                                             aria-label="Slide 1"></button>
@@ -84,44 +84,33 @@
                                                 class="d-block w-100" alt="...">
                                         </div>
 
-                                        <div class="carousel-item">
-                                            @if ($property->img1)
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset('storage/' . $property->img1) }}"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                            @endif
-                                        </div>
+                                        @if ($property->img1)
+                                            <div class="carousel-item">
+                                                <img src="{{ asset('storage/' . $property->img1) }}" class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                        @endif
 
+                                        @if ($property->img2)
+                                            <div class="carousel-item">
+                                                <img src="{{ asset('storage/' . $property->img2) }}" class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                        @endif
 
-                                        <div class="carousel-item">
-                                            @if ($property->img2)
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset('storage/' . $property->img2) }}"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                            @endif
-                                        </div>
+                                        @if ($property->img3)
+                                            <div class="carousel-item">
+                                                <img src="{{ asset('storage/' . $property->img3) }}" class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                        @endif
 
-
-                                        <div class="carousel-item">
-                                            @if ($property->img3)
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset('storage/' . $property->img3) }}"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="carousel-item">
-                                            @if ($property->img4)
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset('storage/' . $property->img4) }}"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                            @endif
-                                        </div>
-
-
+                                        @if ($property->img4)
+                                            <div class="carousel-item">
+                                                <img src="{{ asset('storage/' . $property->img4) }}" class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                        @endif
 
                                     </div>
                                     <button class="carousel-control-prev" type="button"

@@ -28,6 +28,8 @@ class AgentRequest extends FormRequest
             'phone' => 'required|min:5|max:50',
             'password' => 'required|min:6|max:25|confirmed',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5000',
+            'icon1' => 'nullable',
+            'icon2' => 'nullable'
         ];
     }
 

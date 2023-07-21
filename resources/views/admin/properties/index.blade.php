@@ -46,7 +46,7 @@
                                 <tr>
                                     <td>{{ $property->title }}</td>
                                     <td>{{ $property->type_of_property }}</td>
-                                    <td>{{ $property->address }},{{ $property->location }}</td>
+                                    <td>{{ $property->address }}</td>
                                     <td>{{ number_format($property->price) }}</td>
                                     <td>{{ $property->sale_rent === 0 ? 'Rent' : 'Sale' }}</td>
 
@@ -112,6 +112,7 @@
                                                             Delete</button>
                                                     </form>
                                                 </div>
+
                                             </div>
                                         </td>
                                     @endif

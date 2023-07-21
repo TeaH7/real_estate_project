@@ -47,7 +47,7 @@
                                     <td>{{ $property->title }}</td>
                                     <td>{{ $property->type_of_property }}</td>
                                     <td>{{ $property->address }},{{ $property->location }}</td>
-                                    <td>{{ $property->price }}</td>
+                                    <td>{{ number_format($property->price) }}</td>
                                     <td>{{ $property->sale_rent === 0 ? 'Rent' : 'Sale' }}</td>
 
                                     <td>

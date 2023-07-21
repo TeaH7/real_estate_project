@@ -90,7 +90,7 @@
                                                 <i class="fa-sharp fa-solid fa-location-dot"></i>
                                                 {{ $property->address }},{{ $property->location }}
                                             </p>
-                                            <div class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                            <div class="d-flex align-items-center justify-content-start gap-2 my-2 ms-2">
                                                 <div class="badge px-2 py-1 bg-second-color">
                                                     <i class="fa-sharp fa-solid fa-bed"></i> {{ $property->nr_of_beds }}
                                                 </div>
@@ -105,7 +105,13 @@
                                                     {{ $property->type_of_property }}
                                                 </div>
                                             </div>
-                                            <h3 class="h4 mt-2 text-dark fw-bold ms-2">€{{ $property->price }}</h3>
+                                            @if ($property->sale_rent == 0)
+                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">
+                                                    {{ number_format($property->price) }}€/Muaj</h3>
+                                            @else
+                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">
+                                                    {{ number_format($property->price) }}€</h3>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

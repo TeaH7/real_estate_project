@@ -56,15 +56,26 @@
                                             data-bs-slide-to="0" class="active" aria-current="true"
                                             aria-label="Slide 1"></button>
 
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        @if ($property->img1)
+                                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        @endif
 
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        @if ($property->img2)
+                                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        @endif
 
 
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        @if ($property->img3)
+                                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        @endif
+
+                                        @if ($property->img4)
+                                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        @endif
 
                                     </div>
                                     <div class="carousel-inner custom-carousel">
@@ -235,34 +246,6 @@
                         </div>
 
 
-                        {{-- <div class="row">
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" placeholder="John" class="form-control"
-                            id="name">
-                    </div>
-                </div>
-                <div class="col-">
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" placeholder="john.doe@gmail.com"
-                            class="form-control em-1" id="email">
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example
-                            textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="w-100 d-block">
-                    <button type="submit" class="btn btn-primary w-100">Dergo</button>
-                </div>
-            </div> --}}
                     </div>
 
                 </div>

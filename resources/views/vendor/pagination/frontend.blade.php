@@ -19,7 +19,7 @@
             @else
                 <li class="page-item prev">
                     <a class="page-link" href="{{ $paginator->previousPageUrl() }}"><i
-                            class="tf-icon bx bx-chevron-left"></i></a>
+                            class="tf-icon bx bx-chevron-left"></i>@lang('pagination.previous')</a>
                 </li>
             @endif
 

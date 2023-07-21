@@ -23,9 +23,9 @@
                     <div>
                         <div class="col-12">
                             @if ($property->sale_rent === 0)
-                                <h2 class="text-white">{{ $property->price }}€/Muaj</h2>
+                                <h2 class="text-white">{{ number_format($property->price) }}€/Muaj</h2>
                             @else
-                                <h2 class="text-white">{{ $property->price }}€</h2>
+                                <h2 class="text-white">{{ number_format($property->price) }}€</h2>
                             @endif
                         </div>
                         <div class="col-12">

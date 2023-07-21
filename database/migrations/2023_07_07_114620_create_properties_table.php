@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('slug');
             $table->integer('nr_of_beds');
             $table->integer('nr_of_baths');
-            $table->decimal('price');
+            $table->decimal('price', 14, 2);
             $table->longText('description');
             $table->boolean('is_approved')->nullable()->default(null);
             $table->boolean('sale_rent');

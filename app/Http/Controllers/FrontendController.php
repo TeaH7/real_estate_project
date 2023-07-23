@@ -70,7 +70,7 @@ class FrontendController extends Controller
             }
         }
 
-        $properties = $query->where(['is_approved' => 1, 'status_id' => 1])->latest()->paginate(8);
+        $properties = $query->where(['is_approved' => 1, 'status_id' => 1])->latest()->paginate(4);
         return view('front.all-listings', ['properties' => $properties]);
     }
 
@@ -89,7 +89,7 @@ class FrontendController extends Controller
     {
         $property = Property::where('slug', $slug)->with('user')->first();
 
-        $properties = Property::where('location', 'LIKE', '%' . 'albania' . '%')->paginate(4);
+        $properties = Property::where('location', 'LIKE', '%' . $property->location . '%')->where('type_of_property', 'LIKE', '%' . $property->type_of_property . '%')->limit(4)->get();
 
         return view('front.property-page', ['property' => $property, 'properties' => $properties]);
     }

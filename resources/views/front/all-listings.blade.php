@@ -84,11 +84,11 @@
                                         </div>
                                         <div class="my-3">
                                             <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                {{ $property->title }}
+                                                {{ Str::limit($property->title, 23) }}
                                             </h3>
                                             <p class="my-2 text-dark ms-2">
                                                 <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                                {{ $property->address }},{{ $property->location }}
+                                                {{ $property->address }}
                                             </p>
                                             <div class="d-flex align-items-center justify-content-start gap-2 my-2 ms-2">
                                                 <div class="badge px-2 py-1 bg-second-color">

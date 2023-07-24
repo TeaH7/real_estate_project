@@ -122,9 +122,9 @@
                     <div class="col-12 text-center bg-dark text-white">NO MATCHING PROPERTIES</div>
                 @endif
 
-
+                        <div class="d-flex justify-content-center">
                 {{ $properties->links('pagination::frontend') }}
-
+                       </div>
             </div>
         </div>
 

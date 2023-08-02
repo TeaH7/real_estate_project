@@ -41,6 +41,7 @@
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
+                        @if ($users->count())
                         @foreach ($users as $user)
                             @if ($user->id !== Auth::user()->id)
                                 <tr>
@@ -83,7 +84,11 @@
                                 </tr>
                             @endif
                         @endforeach
-
+                        @else
+                        <tr>
+                            <td>No Agents Found</td>
+                        </tr>
+                    @endif
                     </tbody>
 
                 </table>

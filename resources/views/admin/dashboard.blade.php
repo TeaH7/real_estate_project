@@ -56,15 +56,15 @@
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo">
                     <a href="{{ route('home') }}" class="app-brand-link">
-                       
 
-                            <div class="img-contain">
-                                <img class="mb-2" src="{{ asset('assets/front/images/wheat-svgrepo-com.svg') }}" alt="Logo"
-                                    width="250px">
-                                <span class="text-black logo-name">TIG ESTATE</span>
-            
-                            </div>
-                   
+
+                        <div class="img-contain">
+                            <img class="mb-2" src="{{ asset('assets/front/images/wheat-svgrepo-com.svg') }}"
+                                alt="Logo" width="250px">
+                            <span class="text-black logo-name">TIG ESTATE</span>
+
+                        </div>
+
 
                     </a>
 
@@ -85,7 +85,7 @@
                         </a>
                     </li>
                     <!-- Layouts -->
-                    <li class="menu-item ">
+                    <li class="menu-item {{ request()->routeIs('properties.*') ? 'active' : '' }}">
                         <a href="{{ route('properties.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Properties">Properties</div>
@@ -94,21 +94,21 @@
                     </li>
 
                     @if (auth()->user()->role_id === 1)
-                        <li class="menu-item ">
+                        <li class="menu-item {{ request()->routeIs('agents.*') ? 'active' : '' }}">
                             <a href="{{ route('agents.index') }}" class="menu-link">
                                 <i class="menu-icon tf-icons bx bx-layout"></i>
                                 <div data-i18n="Properties">Agents</div>
                             </a>
 
                         </li>
-                        <li class="menu-item ">
-                            <a href="{{ route('properties.for.aproval') }}" class="menu-link">
+                        <li class="menu-item {{ request()->routeIs('property.for.aproval') ? 'active' : '' }}">
+                            <a href="{{ route('property.for.aproval') }}" class="menu-link">
                                 <i class="menu-icon tf-icons bx bx-layout"></i>
                                 <div data-i18n="Properties">Waiting For Aproval</div>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <a href="{{route('contact.index')}}" class="menu-link">
+                        <li class="menu-item {{ request()->routeIs('contact.index') ? 'active' : '' }}">
+                            <a href="{{ route('contact.index') }}" class="menu-link">
                                 <i class="menu-icon tf-icons bx bx-layout"></i>
                                 <div data-i18n="Contacts">Contacts</div>
                             </a>

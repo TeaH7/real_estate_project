@@ -245,65 +245,71 @@
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
 
-                                    @foreach ($properties as $property)
-                                        <div class="swiper-slide">
-                                            <a href="{{ route('single-property', $property->slug) }}"
-                                                class="text-decoration-none">
-                                                <div class="card rounded border-0 shadow">
-                                                    <div class="card-body p-2">
-                                                        <div class="position-relative">
-                                                            <img src="{{ asset('storage/' . $property->cover_image) }}"
-                                                                class="card-img-top rounded" alt="Property Image">
-                                                            @if ($property->sale_rent == 0)
-                                                                <span
-                                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                                            @else
-                                                                <span
-                                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-second-color fs-6">Sale</span>
-                                                            @endif
-                                                        </div>
-                                                        <div class="my-3">
-                                                            <h3
-                                                                class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
-                                                                {{ Str::limit($property->title, 38) }}
-                                                            </h3>
-                                                            <p class="my-2 text-dark ms-2">
-                                                                <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                                                {{ $property->address }}, {{ $property->location }}
-                                                            </p>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                                <div class="badge px-2 py-1 bg-second-color">
-                                                                    <i class="fa-sharp fa-solid fa-bed"></i>
-                                                                    {{ $property->nr_of_beds }}
-                                                                </div>
-                                                                <div class="badge px-2 py-1 bg-second-color ">
-                                                                    <i class="fa-sharp fa-solid fa-bath"></i>
-                                                                    {{ $property->nr_of_baths }}
-                                                                </div>
-                                                                <div class="badge px-2 py-1 bg-second-color">
-                                                                    <i class="fa-solid fa-house"></i>
-                                                                    {{ $property->area }}m<sup>2</sup>
-                                                                </div>
-                                                                <div class="badge px-2 py-1 bg-second-color">
-                                                                    <i class="fa-solid fa-house"></i>
-                                                                    {{ $property->type_of_property }}
-                                                                </div>
+                                    @if ($properties->count())
+                                        @foreach ($properties as $property)
+                                            <div class="swiper-slide">
+                                                <a href="{{ route('single-property', $property->slug) }}"
+                                                    class="text-decoration-none">
+                                                    <div class="card rounded border-0 shadow">
+                                                        <div class="card-body p-2">
+                                                            <div class="position-relative">
+                                                                <img src="{{ asset('storage/' . $property->cover_image) }}"
+                                                                    class="card-img-top rounded" alt="Property Image">
+                                                                @if ($property->sale_rent == 0)
+                                                                    <span
+                                                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
+                                                                @else
+                                                                    <span
+                                                                        class="position-absolute top-0 end-0 mt-2 me-2 badge bg-second-color fs-6">Sale</span>
+                                                                @endif
                                                             </div>
-                                                            @if ($property->sale_rent == 0)
-                                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">
-                                                                    {{ number_format($property->price) }}€/Muaj</h3>
-                                                            @else
-                                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">
-                                                                    {{ number_format($property->price) }}€</h3>
-                                                            @endif
+                                                            <div class="my-3">
+                                                                <h3
+                                                                    class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">
+                                                                    {{ Str::limit($property->title, 38) }}
+                                                                </h3>
+                                                                <p class="my-2 text-dark ms-2">
+                                                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                                                    {{ $property->address }}, {{ $property->location }}
+                                                                </p>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
+                                                                    <div class="badge px-2 py-1 bg-second-color">
+                                                                        <i class="fa-sharp fa-solid fa-bed"></i>
+                                                                        {{ $property->nr_of_beds }}
+                                                                    </div>
+                                                                    <div class="badge px-2 py-1 bg-second-color ">
+                                                                        <i class="fa-sharp fa-solid fa-bath"></i>
+                                                                        {{ $property->nr_of_baths }}
+                                                                    </div>
+                                                                    <div class="badge px-2 py-1 bg-second-color">
+                                                                        <i class="fa-solid fa-house"></i>
+                                                                        {{ $property->area }}m<sup>2</sup>
+                                                                    </div>
+                                                                    <div class="badge px-2 py-1 bg-second-color">
+                                                                        <i class="fa-solid fa-house"></i>
+                                                                        {{ $property->type_of_property }}
+                                                                    </div>
+                                                                </div>
+                                                                @if ($property->sale_rent == 0)
+                                                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">
+                                                                        {{ number_format($property->price) }}€/Muaj</h3>
+                                                                @else
+                                                                    <h3 class="h4 mt-2 text-dark fw-bold ms-2">
+                                                                        {{ number_format($property->price) }}€</h3>
+                                                                @endif
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
 
+                                            </div>
+                                        @endforeach
+                                    @else
+                                        <div class="py-5 ps-2">
+                                            <h6>Nuk ka prona të ngjashme me këtë pronë</h6>
                                         </div>
-                                    @endforeach
+                                    @endif
 
 
 

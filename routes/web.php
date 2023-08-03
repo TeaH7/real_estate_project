@@ -36,9 +36,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     //Properties Index for both Manager and Agent
     Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
-  
+
     Route::middleware(['manager'])->group(function () {
-        Route::get('/properties/for-aproval', [PropertyController::class, 'forAproval'])->name('properties.for.aproval');
+        Route::get('/properties/for-aproval', [PropertyController::class, 'forAproval'])->name('property.for.aproval');
         Route::put('/properties/aprove/{id}', [PropertyController::class, 'aproveProperty'])->name('properties.aprove');
         Route::put('/properties/refuse/{id}', [PropertyController::class, 'refuseProperty'])->name('properties.refuse');
 
@@ -51,7 +51,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::put('/agents/update/{id}', [AgentController::class, 'update'])->name('agents.update');
         Route::delete('/agents/{id}', [AgentController::class, 'destroy'])->name('agents.destroy');
         Route::get('/agents/show/{id}', [AgentController::class, 'show'])->name('agents.show');
-       
+
         //Contact Route
         Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
         Route::get('/contact/{id}', [ContactController::class, 'show'])->name('contact.show');
@@ -61,7 +61,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::middleware(['agent'])->group(function () {
 
         //Properties Routes
-     
+
         Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
         Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
         Route::get('/properties/{slug}', [PropertyController::class, 'show'])->name('properties.show');

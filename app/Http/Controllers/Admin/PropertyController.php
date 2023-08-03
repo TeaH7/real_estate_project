@@ -356,7 +356,7 @@ class PropertyController extends Controller
             'is_approved' => 1
 
         ]);
-        return redirect()->route('properties.for.aproval')->with('success', 'Property Approved.');
+        return redirect()->route('property.for.aproval')->with('success', 'Property Approved.');
     }
 
     public function refuseProperty($id)
@@ -366,6 +366,6 @@ class PropertyController extends Controller
         $property->update([
             'is_approved' => 0
         ]);
-        return redirect()->route('properties.for.aproval')->with('success', 'Property Refused.');
+        return redirect()->route('property.for.aproval')->with('success', 'Property Refused.');
     }
 }

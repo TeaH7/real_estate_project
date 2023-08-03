@@ -7,28 +7,25 @@
     <section class="single-page-title py-2" style="background-color: #031136 ; margin-top: 2px;">
         <div class="container head-single-page">
             <div class="row">
-
-                <div class="d-flex justify-content-between align-items-center">
-
-                    <div>
-                        <div class="col-12">
+                <div class="d-flex justify-content-between align-items-start align-items-md-center flex-column flex-md-row">
+                    <div class="mb-3 mb-md-0">
+                        <div>
                             <h2 class="text-white">{{ $property->title }}</h2>
                         </div>
-                        <div class="col-12">
+                        <div class=>
                             <span class="text-white location-style"><i
                                     class="bi bi-geo-alt me-1"></i>{{ $property->address }}, {{ $property->location }}</span>
                         </div>
                     </div>
-
                     <div>
-                        <div class="col-12">
+                        <div>
                             @if ($property->sale_rent === 0)
                                 <h2 class="text-white">{{ number_format($property->price) }}€/Muaj</h2>
                             @else
                                 <h2 class="text-white">{{ number_format($property->price) }}€</h2>
                             @endif
                         </div>
-                        <div class="col-12">
+                        <div>
                             @if ($property->sale_rent == 0)
                                 <p class="text-end m-0 badge" style="background-color: #ffac12; color:#031136">Rent
                                 </p>
@@ -42,7 +39,6 @@
             </div>
         </div>
     </section>
-
     <section class="bg-light pt-3">
         <div class="container">
             <div class="row g-2">
@@ -135,45 +131,38 @@
 
                         <div class="col-12 ">
                             <h5 class="mb-4">Detaje</h5>
-
                             <div class="row">
-                                <div class="col-3 icons-styles">
+                                <div class="col-6 col-md-3 icons-styles">
                                     <ul>
-                                        <li><i
+                                        <li class="d-flex">
+                                            <i
                                                 class="fa-solid fa-house ms-3 me-3 mb-3"></i>{{ $property->type_of_property }}
                                         </li>
                                         @if ($property->nr_of_beds == 1)
-                                            <li><i class="fas fa-bed ms-3 me-3 mb-3"></i>{{ $property->nr_of_beds }} Dhomë
+                                            <li class="d-flex"><i
+                                                    class="fas fa-bed ms-3 me-3 mb-3"></i>{{ $property->nr_of_beds }} Dhomë
                                             </li>
                                         @else
-                                            <li><i class="fas fa-bed ms-3 me-3 mb-3"></i>{{ $property->nr_of_beds }} Dhoma
+                                            <li class="d-flex"><i
+                                                    class="fas fa-bed ms-3 me-3 mb-3"></i>{{ $property->nr_of_beds }} Dhoma
                                             </li>
                                         @endif
-
-
-
                                     </ul>
                                 </div>
-                                <div class="col-3 icons-styles">
+                                <div class="col-6 col-md-3 icons-styles">
                                     <ul>
-
-                                        <li><i class="fas fa-bath ms-3 me-3 mb-3"></i>{{ $property->nr_of_baths }} Banjo
+                                        <li class="d-flex"><i
+                                                class="fas fa-bath ms-3 me-3 mb-3"></i>{{ $property->nr_of_baths }} Banjo
                                         </li>
-
-
-
-                                        <li><i class="fa-solid fa-chart-area ms-3 me-3 mb-3"></i>{{ $property->area }}
-                                            m<sup>2</sup>
+                                        <li class="d-flex"><i
+                                                class="fa-solid fa-chart-area ms-3 me-3 mb-3"></i>{{ $property->area }}
+                                            m<sup class="top-0">2</sup>
                                         </li>
-
-
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
                 <div class="col-12 col-md-4">
                     <div class="card agent-card py-3">
@@ -238,14 +227,10 @@
                     </div>
 
                 </div>
-
             </div>
-
         </div>
         </div>
     </section>
-
-
     <section class="pt-4 bg-light">
         <div class="container mt-5">
             <div class="row">
@@ -254,116 +239,6 @@
                     <h2>Te ngjashme</h2>
                     <div class="container mx-auto">
 
-                        {{-- <div class="row mb-3 g-3">
-                            <div class="col-12 col-md-4">
-                                <a href="#" class="text-decoration-none">
-                                    <div class="card rounded border-0 shadow">
-                                        <div class="card-body p-2">
-                                            <div class="position-relative">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="card-img-top rounded" alt="Property Image">
-                                                <span
-                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                            </div>
-                                            <div class="my-3">
-                                                <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum
-                                                    dolor sit.
-                                                </h3>
-                                                <p class="my-2 text-dark ms-2">
-                                                    <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                </p>
-                                                <div
-                                                    class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                    <div class="badge px-2 py-1 bg-second-color">
-                                                        <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                    </div>
-                                                    <div class="badge px-2 py-1 bg-second-color ">
-                                                        <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                    </div>
-                                                    <div class="badge px-2 py-1 bg-second-color">
-                                                        <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                    </div>
-                                                </div>
-                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <a href="#" class="text-decoration-none">
-                                    <div class="card rounded border-0 shadow">
-                                        <div class="card-body p-2">
-                                            <div class="position-relative">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="card-img-top rounded" alt="Property Image">
-                                                <span
-                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                            </div>
-                                            <div class="my-3">
-                                                <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum
-                                                    dolor sit.
-                                                </h3>
-                                                <p class="my-2 text-dark ms-2">
-                                                    <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                </p>
-                                                <div
-                                                    class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                    <div class="badge px-2 py-1 bg-second-color">
-                                                        <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                    </div>
-                                                    <div class="badge px-2 py-1 bg-second-color ">
-                                                        <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                    </div>
-                                                    <div class="badge px-2 py-1 bg-second-color">
-                                                        <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                    </div>
-                                                </div>
-                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <a href="#" class="text-decoration-none">
-                                    <div class="card rounded border-0 shadow">
-                                        <div class="card-body p-2">
-                                            <div class="position-relative">
-                                                <img src="{{ asset('assets/front/images/real-estate.jpg') }}"
-                                                    class="card-img-top rounded" alt="Property Image">
-                                                <span
-                                                    class="position-absolute top-0 end-0 mt-2 me-2 badge bg-main-color fs-6">Rent</span>
-                                            </div>
-                                            <div class="my-3">
-                                                <h3 class="h5 text-decoration-none text-dark fw-bold mt-2 ms-2">Lorem ipsum
-                                                    dolor sit.
-                                                </h3>
-                                                <p class="my-2 text-dark ms-2">
-                                                    <i class="fa-sharp fa-solid fa-location-dot"></i> Tirana
-                                                </p>
-                                                <div
-                                                    class="d-flex align-items-center justify-content-start gap-3 my-2 ms-2">
-                                                    <div class="badge px-2 py-1 bg-second-color">
-                                                        <i class="fa-sharp fa-solid fa-bed"></i> 4
-                                                    </div>
-                                                    <div class="badge px-2 py-1 bg-second-color ">
-                                                        <i class="fa-sharp fa-solid fa-bath"></i> 2
-                                                    </div>
-                                                    <div class="badge px-2 py-1 bg-second-color">
-                                                        <i class="fa-solid fa-house"></i> 150m<sup>2</sup>
-                                                    </div>
-                                                </div>
-                                                <h3 class="h4 mt-2 text-dark fw-bold ms-2">$1500</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-                        </div> --}}
                         <div class="row mb-3 my-2">
                             <div class="swiper">
                                 <!-- Additional required wrapper -->

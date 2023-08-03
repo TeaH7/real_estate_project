@@ -185,14 +185,26 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-center">
                                     <div>
-                                        <a href="{{ $property->user->icon1 }}" target="_blank"
-                                            class="text-decoration-none agent-href me-2"><i
-                                                class="fa-brands fa-facebook agent-icons"></i></a>
+                                        @if ($property->user->icon1)
+                                            <a href="{{ $property->user->icon1 }}" target="_blank"
+                                                class="text-decoration-none agent-href me-2"><i
+                                                    class="fa-brands fa-facebook agent-icons"></i></a>
+                                        @else
+                                            <a href="#" class="text-decoration-none agent-href me-2"><i
+                                                    class="fa-brands fa-facebook agent-icons"></i></a>
+                                        @endif
                                     </div>
                                     <div>
-                                        <a href="{{ $property->user->icon2 }}" target="_blank"
-                                            class="text-decoration-none agent-href"><i
-                                                class="fa-brands fa-instagram agent-icons"></i></a>
+                                        @if ($property->user->icon2)
+                                            <a href="{{ $property->user->icon2 }}" target="_blank"
+                                                class="text-decoration-none agent-href"><i
+                                                    class="fa-brands fa-instagram agent-icons"></i></a>
+                                        @else
+                                            <a href="{{ $property->user->icon2 }}"
+                                                class="text-decoration-none agent-href"><i
+                                                    class="fa-brands fa-instagram agent-icons"></i></a>
+                                        @endif
+
                                     </div>
 
 

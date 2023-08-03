@@ -2,7 +2,13 @@
 
 @section('admin_content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Update Property</h4>
+
+        <div class="d-flex align-items-center justify-content-between my-3">
+            <h4 class="fw-bold">Update Property</h4>
+
+            <a href="{{ route('properties.index') }}" class="btn btn-outline-primary">Go Back</a>
+
+        </div>
 
         <form action="{{ route('properties.update', $property->slug) }}" method="POST" enctype="multipart/form-data">
             @csrf

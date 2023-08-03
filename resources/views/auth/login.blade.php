@@ -55,35 +55,46 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email or Username</label>
-                                <input type="text" class="form-control" id="email" name="email"
-                                    placeholder="Enter your email..." autofocus />
+                                <input type="text" class="form-control @error('email') is-invalid  @enderror"
+                                    id="email" name="email" placeholder="Enter your email..." autofocus />
+                                @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
-                            <div class="mb-3 form-password-toggle">
-                                <div class="d-flex justify-content-between">
-                                    <label class="form-label" for="password">Password</label>
-
-                                </div>
-                                <div class="input-group input-group-merge">
-                                    <input type="password" id="password" class="form-control" name="password"
-                                        placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                        aria-describedby="password" />
-                                    {{-- <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span> --}}
-                                </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control @error('password') is-invalid  @enderror"
+                                    id="password" name="password" placeholder="Enter your password..." autofocus />
+                                @error('password')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
-
                             <div class="mb-1 mt-3">
                                 <button class="btn btn-primary d-grid w-100" type="submit">Log in</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
+    <script src="{{ asset('assets/back/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('assets/back/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('assets/back/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/back/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
+    <script src="{{ asset('assets/back/vendor/js/menu.js') }}"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="{{ asset('assets/back/js/main.js') }}"></script>
 </body>
 
 </html>

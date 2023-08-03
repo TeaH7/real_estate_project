@@ -89,7 +89,7 @@ class FrontendController extends Controller
     {
         $property = Property::where('slug', $slug)->with('user')->first();
 
-        $properties = Property::where('location', 'LIKE', '%' . $property->location . '%')->where('type_of_property', 'LIKE', '%' . $property->type_of_property . '%')->limit(4)->get();
+        $properties = Property::where('id', '!=', $property->id)->where('location', 'LIKE', '%' . $property->location . '%')->where('type_of_property', 'LIKE', '%' . $property->type_of_property . '%')->limit(4)->get();
 
         return view('front.property-page', ['property' => $property, 'properties' => $properties]);
     }

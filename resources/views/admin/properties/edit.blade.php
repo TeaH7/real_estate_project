@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="defaultFormControlInput" class="form-label">City</label>
+                                        <label for="defaultFormControlInput" class="form-label">Country</label>
                                         <input type="text" class="form-control @error('location') is-invalid  @enderror"
                                             id="defaultFormControlInput" placeholder="Albania" name="location"
                                             value="{{ $property->location }}" />

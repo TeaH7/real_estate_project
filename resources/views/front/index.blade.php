@@ -66,7 +66,7 @@
 
 
                         <div class="section-1 d-flex align-items-center justify-content-end">
-                            <a href="/all-listings">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
+                            <a href="/all-listings">Shko Tek Pronat<i class="fa-solid fa-arrow-right-long"></i></a>
 
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                 </p>
             </div>
             <div class="button-style half-btn">
-                <a href="/all-listings">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="/all-listings">Shko Tek Pronat<i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
         </div>
         <div class="present2-second-half">
@@ -227,7 +227,7 @@
     {{-- Above Footer Section --}}
     <section class="above-footer button-style">
         <div>FIND YOUR DREAM <span>HOME</span></div>
-        <a href="#">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a>
+        {{-- <a href="#">TO PROPERTIES<i class="fa-solid fa-arrow-right-long"></i></a> --}}
 
     </section>
     {{-- Above-footer End --}}

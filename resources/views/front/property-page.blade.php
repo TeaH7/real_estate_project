@@ -417,10 +417,10 @@
                                                             </div>
                                                             @if ($property->sale_rent == 0)
                                                                 <h3 class="h4 mt-2 text-dark fw-bold ms-2">
-                                                                    {{ number_format($property->price, 3) }}€/Muaj</h3>
+                                                                    {{ number_format($property->price) }}€/Muaj</h3>
                                                             @else
                                                                 <h3 class="h4 mt-2 text-dark fw-bold ms-2">
-                                                                    {{ number_format($property->price, 3) }}€</h3>
+                                                                    {{ number_format($property->price) }}€</h3>
                                                             @endif
                                                         </div>
                                                     </div>

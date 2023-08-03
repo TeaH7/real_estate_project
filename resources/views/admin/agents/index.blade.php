@@ -87,8 +87,9 @@
                     </tbody>
 
                 </table>
-                {{ $users->links('pagination::custom-dashboard') }}
+
             </div>
         </div>
+        {{ $users->links('pagination::custom-dashboard') }}
     </div>
 @endsection

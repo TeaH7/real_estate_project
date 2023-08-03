@@ -62,7 +62,7 @@
                                     <div class="mb-3">
                                         <label for="defaultFormControlInput" class="form-label">Address</label>
                                         <input type="text" class="form-control @error('address') is-invalid  @enderror"
-                                            id="defaultFormControlInput" placeholder="RR. Don Bosko" name="address"
+                                            id="defaultFormControlInput" placeholder="RR. Don Bosko, Tirane" name="address"
                                             value="{{ old('address') }}" />
                                         @error('address')
                                             <div class="invalid-feedback">
@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="defaultFormControlInput" class="form-label">City</label>
+                                        <label for="defaultFormControlInput" class="form-label">Country</label>
                                         <input type="text" class="form-control @error('location') is-invalid  @enderror"
                                             id="defaultFormControlInput" placeholder="Albania" name="location"
                                             value="{{ old('location') }}" />
